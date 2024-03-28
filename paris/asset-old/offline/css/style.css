@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'fkdisplay';
+    src: url('../police/fkdisplay.woff2') format('woff2'),
+         url('../police/fkdisplay.woff') format('woff');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fadeIn {
+animation: fadeIn 0.5s;
+}
+.fadeOut {
+animation: fadeOut 0.5s;
+}
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+from { opacity: 1; }
+to { opacity: 0; }
+}
+
+body{
+	font-family: 'fkdisplay' !important;
+}
+
+.align-center
+{
+	align-items: center;
+
+}
+.container-custom
+{
+	padding: 2% 7% !important;
+}
+.black
+{
+	color: black !important;
+}
+.bg-white
+{
+	background-color: white !important;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, button, span
+{
+	font-family: 'fkdisplay' !important;
+	color: white !important;
+}
+
+body
+{
+	background-color: black !important;
+}
+
+.line
+{
+	border-top: 1px solid white;
+}
+
+.header-1,
+{
+	background-color: black;
+	
+	
+}
+.menu 
+{
+	height: 100vh;
+	width: 100% !important;
+	position: fixed;
+	top: 0;
+	z-index: 999;
+	background-image:url('../img/bg-menu.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: none;
+
+	
+	display:;
+}
+
+.footer-1
+{
+	padding: 5%;
+}
+.sect-logo img
+{
+	width: 10vw;
+}
+
+.sect-menu img
+{
+	width: 3vw;
+}
+.btn-custom
+{
+	padding: 10px 20px !important;
+	border-radius: 50px;
+	color: black !important;
+}
+.btn-1
+{
+	background-color: #B7EB0F;
+}
+.btn-2
+{
+	background-color: white;
+}
+
+.sect-social img
+{
+	width: 2vw;
+	margin: 0 2%;
+}
+
+
+
+@media (max-width: 768px) {
+
+.sect-logo img
+{
+	width: 100px;
+}
+
+.sect-menu img
+{
+	width: 30px;
+}
+}

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>GlobalForumCities</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="asset/css/style.css">
+  <link rel="stylesheet" href="asset/css/global.css">
+  <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+  <link rel="stylesheet" href="asset/css/all.css">
+  <link rel="stylesheet" href="asset/css/index.css">
+  <link rel="stylesheet" href="./asset/css/cart.css">
+  <script src="asset/js/jquery.slim.min.js"></script>
+  <script src="asset/js/popper.min.js"></script>
+  <script src="asset/js/bootstrap.bundle.min.js"></script>
+  <script src="asset/js/jquery3-6-0.min.js"></script>
+  <script src="asset/js/jquery.min.js"></script>
+  <script src="asset/js/owl.carousel.js"></script>
+</head>
+<style>
+  .forum-1 {
+    margin-left: 14%;
+  }
+
+  .forum h2 {
+    font-size: 1.7rem !important;
+  }
+
+  .forum-2 h2 {
+    font-size: 1.7rem !important;
+  }
+
+  @media screen and (max-width: 768px) {
+    h1.forum-1 {
+      font-size: 35px !important;
+    }
+
+    p.forum-1 {
+      font-size: 0.8rem !important;
+    }
+
+    .forum h2 {
+      font-size: 1rem !important;
+    }
+
+    .forum-2 h2 {
+      font-size: 1.5rem !important;
+    }
+  }
+</style>
+
+<body>
+
+
+  <div class="panier-div-global">
+    <div class="text-center position-fixed panier-div justify-content-end" id="myDIV" style="display: none;">
+      <img src="asset/img/panier1.png" onclick="afficherPanier()" data-toggle="modal" data-target="#exampleModal"
+        class="mr-5" style="width: 6rem; cursor: pointer;" alt="">
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="text-white modal-title bold" id="exampleModalLabel">Basket's details</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- <span id="panier"></span>  -->
+            <div id="cart-1" class="item-cart cart-modal-div" style="width: 100%; color: white!important;font-size:1vw;text-align:
+                center;">
+              <div class="mb-3 content-modal">
+                <div class="content-1">
+                  <div class="" style="width:12%;">Title</div>
+                  <div class="" style="width:36%"></div>
+                  <div class="" style="width:12%">Price</div>
+                  <div class="ml-lg-2 " style="width:12%">Quantity</div>
+                  <div class="ml-lg-4 " style="width:25%">SubTotal(Excluding VAT)</div>
+                </div>
+                <!-- <div class="content-2 conte">
+                          contenue ajouté dinamiquement par js 
+                    </div> -->
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="checkout.html" class="btn btn-sm btn-secondary">PROCEED TO CHECKOUT</a>
+          <button type="button" class="btn btn-sm btn-danger" onclick="effacerPanier()" data-dismiss="modal"
+            data-dismiss="modal">Delete Basket</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- H E A D E R -->
+
+  <div class="container-custom header-1">
+    <div class="align-center" style="display: flex; flex-wrap: nowrap;">
+      <div class="sect-menu " style="width: 42%;">
+        <img src="asset/img/menu-web.png" class="menu-bugger" id="click-menu">
+      </div>
+      <div class="sect-logo " style="width: 42%;">
+        <a href="./index.html"><img src="asset/img/logo.png"></a>
+      </div>
+      <div class="text-center sect-bouton" style="width: 16%;">
+        <a href="book.html"><button class="col-12 btn-custom btn-1" style="margin-bottom: 8%; border: none;"><span
+              class="text-button text-dark">BUY TICKETS</span></button></a> <br>
+        <a href="sponsoring.html"><button class="col-12 btn-custom btn-2" style="border: none;"><span
+              class="text-button1 text-dark">SPONSOR</span></button></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- M E N U-->
+
+  <div class="container-custom menu hide-menu"
+    style="height: 100%; overflow-x: hidden!important;overflow-y: scroll!important;">
+    <div class="align-center" style="display: flex; flex-wrap: nowrap;">
+      <div class="sect-menu" style="width: 42%;">
+        <img src="asset/img/fermer.png" class="hide-menu">
+      </div>
+      <div class="sect-logo hide-menu" style="width: 42%;">
+        <img src="asset/img/logo.png">
+      </div>
+      <div class="text-center sect-bouton" style="width: 16%;">
+        <a href="book.html"><button class="col-12 btn-custom btn-1" style="margin-bottom: 8%; border: none;"><span
+              class="text-button text-dark">BUY TICKETS</span></button></a> <br>
+        <a href="sponsoring.html"><button class="col-12 btn-custom btn-2" style="border: none;"><span
+              class="text-button1 text-dark">SPONSOR</span></button></a>
+      </div>
+    </div>
+
+    <div class="justify-center mt-5 text-center text-menu">
+      <a href="index.html" class="hide-menu">
+        <h4>About</h4>
+      </a><br>
+      <a href="speaker.html" class="hide-menu">
+        <h4>Speakers</h4>
+      </a><br>
+      <a href="sectors.html" class="hide-menu">
+        <h4>Sectors</h4>
+      </a><br>
+      <a href="landscape.html" class="hide-menu">
+        <h4>Agenda</h4>
+      </a><br>
+      <!--  <a href="agenda.html" class="hide-menu">
+       <h4>Agenda & Speaker</h4>
+      </a><br>-->
+      <a href="sponsoring.html" class="hide-menu">
+        <h4>Sponsoring</h4>
+      </a><br>
+      <a href="podcast.html" class="hide-menu">
+        <h4>Podcast</h4>
+      </a><br>
+      <a href="book.html" class="hide-menu">
+        <h4>Buy Tickets</h4>
+      </a><br>
+      <!-- <a href="speaker.html" class="hide-menu"><h4>Podcasts</h4></a><br> -->
+      <a href="contact.html" class="hide-menu">
+        <h4>Contact</h4>
+      </a><br>
+    </div>
+  </div>
+
+  <!-- S O C I A L -->
+
+  <div id="social" class="mt-3 container-custom social-fixe vp-hidden v-show">
+    <div class="text-right align-center">
+      <img src="asset/img/linkedin.png"><br>
+      <img src="asset/img/instagram.png"><br>
+      <img src="asset/img/twitter.png"><br>
+      <img src="asset/img/facebook.png"><br>
+      <img src="asset/img/tiktok.png">
+    </div>
+  </div>
+
+  <!-- B O D Y -->
+
+  <div class="container-custom">
+    <h1 id="speaker-title" class="title-index" style="margin:10% 0; text-align: left;">Contact</h1>
+  </div>
+
+  <div class="bg-white container-custom-2">
+    <div class="justify-center row g-0">
+      <div class="px-md-5 px-1 my-sm-5 my-3 col-sm-6 col-10 mx-auto forum-2"
+        style="border-right: 1px solid black; border-left: 2px solid black;">
+        <!-- <p style="color: black!important;">Lorem ipsum dolor sit amet.</p> -->
+        <h1 class=" forum-1" style="color: black!important; margin-bottom: 10% !important;">Forum</h1>
+
+        <h2 class="forum-1 " style="color: black!important; ">Speakers</h2>
+        <p class="forum-1" style="color: black!important;">speakers@globalforumcities.com</p>
+
+        <h2 class="forum-1 " style="color: black!important;">Attendees</h2>
+        <p class="forum-1" style="color: black!important;">attendees@globalforumcities.com</p>
+
+        <h2 class="forum-1 " style="color: black!important;">Sponsors</h2>
+        <p class="forum-1" style="color: black!important;">sponsors@globalforumcities.com</p>
+
+        <h2 class="forum-1 " style="color: black!important;">Partners</h2>
+        <p class="forum-1" style="color: black!important;">partners@globalforumcities.com</p>
+
+        <h2 class="forum-1 " style="color: black!important;">Exhibitors</h2>
+        <p class="forum-1" style="color: black!important;">exhibitors@globalforumcities.com</p>
+
+        <h2 class="forum-1 " style="color: black!important;">Enquiries</h2>
+        <p class="forum-1" style="color: black!important;">enquiries@globalforumcities.com</p>
+
+      </div>
+      <div class="px-md-5 px-1 my-sm-5 my-3 col-sm-6 col-10 mx-auto forum"
+        style="border-right: 2px solid black; border-left: 1px solid black;">
+        <!-- <p style="color: black!important;">Lorem ipsum dolor sit amet.</p> -->
+        <h1 class="mb-5 forum-1" style="color: black!important;margin-bottom: 10% !important;">Careers</h1>
+
+        <h2 class="forum-1 " class="ml-5" style="color: black!important;">London</h2>
+        <p class="forum-1" class="ml-5" style="color: black!important;">london@globalforumcities.com</p>
+
+        <h2 class="forum-1 " style="color: black!important;">Paris</h2>
+        <p class="forum-1" style="color: black!important;">paris@globalforumcities.com</p>
+
+        <h2 class="forum-1 " style="color: black!important;">Singapore</h2>
+        <p class="forum-1" style="color: black!important;">singapore@globalforumcities.com</p>
+
+        <h2 class="forum-1 " style="color: black!important;">New York</h2>
+        <p class="forum-1" style="color: black!important;">newyork@globalforumcities.com</p>
+
+        <h2 class="forum-1 " style="color: black!important;">Dubai</h2>
+        <p class="forum-1" style="color: black!important;">dubai@globalforumcities.com</p>
+
+        <h2 class="forum-1 " style="color: black!important;">Shanghai</h2>
+        <p class="forum-1" style="color: black!important;">shanghai@globalforumcities.com</p>
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- F O O T E R -->
+
+  <div class="container footer-1 footer1">
+    <hr class="footer-line">
+    <div class="row">
+      <div class="sect-logo d-flex justify-content-center" style="width:30%;">
+        <img src="asset/img/logo.png">
+      </div>
+      <div class="text-center sect-social footer-div0" style="width:40%;">
+        <p class="fs-01" style="font-size: 1.2vw;">Connect with us</p>
+        <div class="footer-img">
+          <img src="asset/img/linkedin.png">
+          <img src="asset/img/instagram.png">
+          <img src="asset/img/twitter.png">
+          <img src="asset/img/facebook.png">
+          <img src="asset/img/tiktok.png">
+        </div>
+      </div>
+      <div class="text-left footer-div1" style="width:13%;">
+        <a href="index.html" class="fs-07" style="font-size: 1.2vw;">About</a><br class="br-footer">
+        <a href="speaker.html" class="fs-07" style="font-size: 1.2vw;">Speakers</a><br class="br-footer">
+        <a href="sectors.html" class="fs-07" style="font-size: 1.2vw;">Sectors</a><br class="br-footer">
+        <!-- <a href="sectors.html" class="fs-07" style="font-size: 1.2vw;">Agenda & Speaker</a><br class="br-footer"> -->
+        <a href="landscape.html" class="fs-07" style="font-size: 1.2vw;">Agenda</a>
+      </div>
+      <div class="text-left footer-div2" style="width:10%;">
+        <a href="sponsoring.html" class="fs-07 ml" style="font-size: 1.2vw;">Sponsoring</a><br class="br-footer">
+        <a href="book.html" class="fs-07 ml" style="font-size: 1.2vw;">Buy tickets</a><br class="br-footer">
+
+      </div>
+      <div class="text-left footer-div3" style="width:7%;">
+        <a href="podcast.html" class="fs-07" style="font-size: 1.2vw;">Podcast</a>
+        <a href="contact.html" class="fs-07" style="font-size: 1.2vw;">Contact</a>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <hr class="line col-1">
+      <p class="fs-01" style="font-size: 1.2vw;"> &copy;The Global Forum On Cities 2023 &copy;</p>
+    </div>
+  </div>
+
+  <div class="container footer-1 footer2" style="display: none;">
+    <div class="row">
+      <div class="mr-4 sect-logo" style="width:30%;">
+        <img src="asset/img/logo.png">
+      </div>
+      <div class="text-left footer-div1" style="width:13%;">
+        <a href="index.html" class="fs-01" style="font-size: 1.2vw;">About</a><br class="br-footer">
+        <a href="speaker.html" class="fs-01" style="font-size: 1.2vw;">Speakers</a><br class="br-footer">
+        <a href="sectors.html" class="fs-01" style="font-size: 1.2vw;">Sectors</a><br class="br-footer">
+        <!-- <a href="sectors.html" class="fs-01" style="font-size: 1.2vw;">Agenda & Speaker</a><br class="br-footer"> -->
+        <a href="landscape.html" class="fs-01" style="font-size: 1.2vw;">Agenda</a>
+      </div>
+      <div class="text-left footer-div2" style="width:10%;">
+        <a href="sponsoring.html" class="fs-01" style="font-size: 1.2vw;">Sponsoring</a><br class="br-footer">
+        <a href="book.html" class="fs-01 " style="font-size: 1.2vw;">Buy tickets</a><br class="br-footer">
+        <a href="podcast.html" class="fs-01" style="font-size: 1.2vw;">Podcast</a>
+      </div>
+      <div class="text-left footer-div3" style="width:7%;">
+        <a href="contact.html" class="fs-01" style="font-size: 1.2vw;">Contact</a>
+      </div>
+    </div>
+    <div class="mt-3 text-center sect-social footer-div0 mt-lg-0">
+      <p class="fs-01" style="font-size: 1.2vw;">Connect with us</p>
+      <div class="footer-img">
+        <img src="asset/img/linkedin.png">
+        <img src="asset/img/instagram.png">
+        <img src="asset/img/twitter.png">
+        <img src="asset/img/facebook.png">
+        <img src="asset/img/tiktok.png">
+      </div>
+    </div>
+
+    <div class="text-center">
+      <hr class="line col-1">
+      <p class="fs-01" style="font-size: 1.2vw;">&copy; The Global Forum On Cities 2023 &copy;</p>
+    </div>
+  </div>
+
+
+
+
+  <script src="asset/js/main.js"></script>
+  <script src="asset/js/social.js"></script>
+  <script src="asset/js/basket.js"></script>
+  <script>
+    $(function () {
+
+
+      const local = window.sessionStorage.getItem('books');
+      let books = local ? JSON.parse(local) : [];
+
+      let subTotal = 0;
+
+      books.map((book, i) => {
+        const divModal = `
+        <div class="content-2 conte">
+          <div class="" style="width:22%;">
+            <img src="asset/img/logo.png" style="width:5vw;"/>
+          </div>
+          <div class="" style="width:36%">
+              <span class="nom" style="text-align:
+                  start!important;">Tickets London - ${book.namebook}</span>
+          </div>
+          <div class="prix" style="width:12%">${book.prixbook}SGD</div>
+          <div class="" style="width:12%">
+              <div class="" style="align-items:
+                  center;height: 3vw;justify-content:
+                  space-between;display: flex; flex-direction:
+                  row;border: 1px solid white;width: 100%; padding:0 8%; align-items: center;">
+                  <img src="asset/img/moins.png"alt=""
+                      class="img-tab btn-minus" style="width: 0.4rem" data-indexboo=${i} style="cursor:pointer" >
+                  <p class="pt-3 quantity" style="font-size: 1vw;">${book.quantite}</p>
+                  <img src="asset/img/plus.png" alt=""
+                      class="img-tab btn-plus" style="width: 0.4rem" data-indexbook=${i} style="cursor:pointer" >
+              </div>
+          </div>
+          <div class="price" style="width:15%;">${book.prixbook * book.quantite}SGD</div>
+        </div>`
+        subTotal = subTotal + (parseInt(book.prixbook * book.quantite))
+        total = parseInt($('.tva').text().replace('$', '')) + subTotal;
+
+        $('.content-modal').append(divModal);
+        if (i === books.length - 1) {
+          $('.subT').text(subTotal + "SGD")
+          $('.total').text(total + "SGD")
+        }
+      })
+
+      $(document).on('click', '.btn-plus', function () {
+        const btnActif = $(this)
+        const indexbook = btnActif.data('indexbook')
+        let quantite = btnActif.siblings('p')
+        let sub = 0;
+        let total = 0;
+        quantite.text(parseInt(quantite.text()) + 1)
+
+        books = books.map((book, i) => {
+          if (i == indexbook) {
+            book.quantite += 1
+            $(this).parent().parent().siblings('.price').text(book.quantite * book.prixbook + "SGD")
+          }
+          sub += parseInt(book.quantite * book.prixbook)
+          total = parseInt($('.tva').text().replace('$', '')) + sub
+          return book
+        })
+        $('.subT').text(sub + "SGD");
+        $('.total').text(total + "SGD");
+        window.sessionStorage.setItem('books', JSON.stringify(books));
+
+      });
+
+      $(document).on('click', '.btn-minus', function () {
+        const btnMoins = $(this)
+        const indexboo = btnMoins.data('indexboo')
+        let quantite = btnMoins.siblings('p')
+        let sub = 0;
+        if (parseInt(quantite.text()) - 1 > 0) {
+          quantite.text(parseInt(quantite.text()) - 1)
+        }
+
+        books = books.map((book, i) => {
+          if (i == indexboo) {
+            if (book.quantite - 1 > 0) {
+              book.quantite -= 1
+            }
+            $(this).parent().parent().siblings('.price').text(book.quantite * book.prixbook)
+          }
+          sub -= parseInt(book.quantite * book.prixbook)
+          total = parseInt($('.tva').text().replace('$', '')) - sub
+
+          return book
+        })
+        $('.subT').text(-sub + "SGD");
+        $('.total').text(total + "SGD");
+        window.sessionStorage.setItem('books', JSON.stringify(books));
+      });
+
+      $(".continue").click(function () {
+        var lien = "pass_London.html";
+        window.location.href = lien;
+      });
+
+      $(document).on('click', '.supp ', function () {
+        $('.conte').remove();
+        $('.subT').remove();
+        $('.total').remove();
+        books.splice(0, books.length);
+        window.sessionStorage.setItem('books', JSON.stringify(books));
+        window.location.href = "pass_London.html";
+      })
+    });
+  </script>
+</body>
+
+</html>

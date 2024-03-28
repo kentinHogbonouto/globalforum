@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url('../police/OpenSans-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSans-BoldItalic';
+    src: url('../police/OpenSans-BoldItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans-LightItalic';
+    src: url('../police/OpenSans-LightItalic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'OpenSans-ExtraBoldItalic';
+    src: url('../police/OpenSans-ExtraBoldItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans-ExtraBold';
+    src: url('../police/OpenSans-ExtraBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans-Italic';
+    src: url('../police/OpenSans-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans-Light';
+    src: url('../police/OpenSans-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans-LightItalic';
+    src: url('../police/OpenSans-LightItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url('../police/OpenSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans-Semibold';
+    src: url('../police/OpenSans-Semibold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans-SemiboldItalic';
+    src: url('../police/OpenSans-SemiboldItalic.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+<<<<<<< HEAD
+
+=======
+@font-face {
+    font-family: 'abel';
+    src: url('../police/abel.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+>>>>>>> origin/verification
+
+@font-face {
+    font-family: 'fkdisplayAlt-1';
+    src: url('../police/FKDisplay-RegularAlt.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+<<<<<<< HEAD
+
+@font-face {
+    font-family: 'abel';
+    src: url('../police/abel.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+=======
+>>>>>>> origin/verification

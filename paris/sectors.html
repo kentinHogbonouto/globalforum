@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Sectors</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="asset/css/style.css">
+  <link rel="stylesheet" href="asset/css/global.css">
+  <link rel="stylesheet" href="asset/css/sectors-modif-lahatra.css">
+  <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+  <link rel="stylesheet" href="asset/css/index.css">
+  <link rel="stylesheet" href="./asset/css/cart.css">
+  <!-- <link rel="stylesheet" href="asset/css/speaker2.css"> -->
+  <!-- <link rel="stylesheet" href="asset/css/book.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="asset/js/jquery.slim.min.js"></script>
+  <script src="asset/js/popper.min.js"></script>
+  <script src="asset/js/bootstrap.bundle.min.js"></script>
+  <script src="asset/js/jquery3-6-0.min.js"></script>
+  <script src="asset/js/jquery.min.js"></script>
+  <script src="asset/js/owl.carousel.js"></script>
+</head>
+
+<body>
+
+  <div class="panier-div-global">
+    <div class="text-center position-fixed panier-div justify-content-end" id="myDIV" style="display: none;">
+      <img src="asset/img/panier1.png" onclick="afficherPanier()" data-toggle="modal" data-target="#exampleModal"
+        class="mr-5" style="width: 6rem; cursor: pointer;" alt="">
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="text-white modal-title bold" id="exampleModalLabel">Basket's details</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- <span id="panier"></span>  -->
+            <div id="cart-1" class="item-cart cart-modal-div" style="width: 100%; color: white!important;font-size:1vw;text-align:
+                center;">
+              <div class="mb-3 content-modal">
+                <div class="content-1">
+                  <div class="" style="width:12%;">Title</div>
+                  <div class="" style="width:36%"></div>
+                  <div class="" style="width:12%">Price</div>
+                  <div class="ml-lg-2 " style="width:12%">Quantity</div>
+                  <div class="ml-lg-4 " style="width:25%">SubTotal(Excluding VAT)</div>
+                </div>
+                <!-- <div class="content-2 conte">
+                          contenue ajouté dinamiquement par js 
+                    </div> -->
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="checkout.html" class="btn btn-sm btn-secondary">PROCEED TO CHECKOUT</a>
+          <button type="button" class="btn btn-sm btn-danger" onclick="effacerPanier()" data-dismiss="modal"
+            data-dismiss="modal">Delete Basket</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- H E A D E R -->
+
+  <div class="container-custom header-1">
+    <div class="align-center" style="display: flex; flex-wrap: nowrap;">
+      <div class="sect-menu " style="width: 42%;">
+        <img src="asset/img/menu-web.png" class="menu-bugger" id="click-menu">
+      </div>
+      <div class="sect-logo " style="width: 42%;">
+        <a href="index.html"><img src="asset/img/logo.png"></a>
+      </div>
+      <div class="text-center sect-bouton" style="width: 16%;">
+        <a href="book.html"><button class="col-12 btn-custom btn-1" style="margin-bottom: 8%; border: none;"><span
+              class="text-button text-dark">BUY TICKETS</span></button></a> <br>
+        <a href="sponsoring.html"><button class="col-12 btn-custom btn-2" style="border: none;"><span
+              class="text-button1 text-dark">SPONSOR</span></button></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- M E N U-->
+
+  <div class="container-custom menu hide-menu"
+    style="height: 100%; overflow-x: hidden!important;overflow-y: scroll!important;">
+    <div class="align-center" style="display: flex; flex-wrap: nowrap;">
+      <div class="sect-menu" style="width: 42%;">
+        <img src="asset/img/fermer.png" class="hide-menu">
+      </div>
+      <div class="sect-logo hide-menu" style="width: 42%;">
+        <img src="asset/img/logo.png">
+      </div>
+      <div class="text-center sect-bouton" style="width: 16%;">
+        <a href="book.html"><button class="col-12 btn-custom btn-1" style="margin-bottom: 8%; border: none;"><span
+              class="text-button text-dark">BUY TICKETS</span></button></a> <br>
+        <a href="sponsoring.html"><button class="col-12 btn-custom btn-2" style="border: none;"><span
+              class="text-button1 text-dark">SPONSOR</span></button></a>
+      </div>
+    </div>
+
+    <div class="justify-center mt-5 text-center text-menu">
+      <a href="index.html" class="hide-menu">
+        <h4>About</h4>
+      </a><br>
+      <a href="speaker.html" class="hide-menu">
+        <h4>Speakers</h4>
+      </a><br>
+      <a href="sectors.html" class="hide-menu">
+        <h4>Sectors</h4>
+      </a><br>
+      <a href="landscape.html" class="hide-menu">
+        <h4>Agenda</h4>
+      </a><br>
+      <!--  <a href="agenda.html" class="hide-menu">
+       <h4>Agenda & Speaker</h4>
+      </a><br>-->
+      <a href="sponsoring.html" class="hide-menu">
+        <h4>Sponsoring</h4>
+      </a><br>
+      <a href="podcast.html" class="hide-menu">
+        <h4>Podcast</h4>
+      </a><br>
+      <a href="book.html" class="hide-menu">
+        <h4>Buy Tickets</h4>
+      </a><br>
+      <!-- <a href="speaker.html" class="hide-menu"><h4>Podcasts</h4></a><br> -->
+      <a href="contact.html" class="hide-menu">
+        <h4>Contact</h4>
+      </a><br>
+    </div>
+  </div>
+
+  <!-- S O C I A L -->
+
+  <div id="social" class="mt-3 container-custom social-fixe vp-hidden v-show">
+    <div class="text-right align-center">
+      <img src="asset/img/linkedin.png"><br>
+      <img src="asset/img/instagram.png"><br>
+      <img src="asset/img/twitter.png"><br>
+      <img src="asset/img/facebook.png"><br>
+      <img src="asset/img/tiktok.png">
+    </div>
+  </div>
+
+  <!-- B O D Y -->
+
+  <div class="container-custom">
+    <div class="my-5 content-sponsor">
+      <div style="flex-basis: 50%;">
+        <h1 id="speaker-title" class="mb-5 ml-2 text-left title-index"
+          style="text-align: left !important; font-size: 4vw ;">Sectors</h1>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-custom  white pitogramme1" style="padding-bottom: 10% !important;">
+    <div class="all  row d-flex justify-content-center mt-5">
+      <!-- Boite -->
+      <div class="box col-lg-2 col-md-6">
+        <div class="img-btn">
+          <img src="asset/pictoblack/train.png">
+
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Transport Infrastructure <br>& logistics<br> Summit</h3>
+        </div>
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-lg-2 col-md-6">
+        <div class="img-btn">
+          <img src="asset/pictoblack/energie-eolienne.png">
+
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Environment, Energy & Utility Summit</h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-lg-2 col-md-6">
+        <div class="img-btn">
+          <img src="asset/pictoblack/gouvernance.png">
+
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Government & Public Policy & Social<br> Impact Summit</h3>
+        </div>
+
+      </div>
+
+
+      <!-- Boite -->
+      <div class="box col-lg-2 col-md-6">
+        <div class="img-btn">
+          <img src="asset/pictoblack/innovation.png">
+
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Technology & Digital Revolution Summit</h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-lg-2 col-md-6">
+        <div class="img-btn">
+          <img src="asset/pictoblack/banking.png">
+
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Financial Services & Insurance Summit</h3>
+        </div>
+
+      </div>
+    </div>
+    <div class="all  row d-flex justify-content-center">
+      <!-- Boite -->
+      <div class="box col-lg-2 col-md-6">
+        <div class="img-btn">
+          <img src="asset/pictoblack/electrocardiogram.png">
+
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Healthcare, Pharmaceuticals &<br> Biotechnology Summit</h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-lg-2 col-md-6">
+        <div class="img-btn">
+          <img src="asset/pictoblack/construction.png">
+
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Construction & Real Estate Summit</h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-lg-2 col-md-6">
+        <div class="img-btn">
+          <img src="asset/pictoblack/industrial-automation.png">
+
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Industrial Automation Summit </h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-lg-2 col-md-6">
+        <div class="img-btn">
+          <img src="asset/pictoblack/profits.png">
+
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Investment Summit</h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-lg-2 col-md-6">
+        <div class="img-btn">
+          <img src="asset/pictoblack/consulting.png">
+
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Consulting and Services Summit</h3>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="all  row d-flex justify-content-center">
+      <!-- Boite -->
+      <div class="box col-lg-2 col-md-6">
+        <div class="img-btn">
+          <img src="asset/pictoblack/balance.png">
+
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Legal Summit</h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-lg-2 col-md-6">
+        <div class="img-btn">
+          <img src="asset/pictoblack/food-summit.png">
+
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Food Summit</h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-lg-2 col-md-6">
+        <div class="img-btn">
+          <img src="asset/pictoblack/man-walking-with-shopping-cart.png">
+
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Consumer Good Summit</h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-lg-2 col-md-6">
+        <div class="img-btn">
+          <img src="asset/pictoblack/quality.png">
+
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Lifestyle & Luxury Good Summit</h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-lg-2 col-md-6">
+        <div class="img-btn">
+          <img src="asset/pictoblack/book.png">
+
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Education and Learning Summit</h3>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="all  row d-flex justify-content-center">
+      <!-- Boite -->
+      <div class="box col-lg-2 col-md-6">
+        <div class="img-btn">
+          <img src="asset/pictoblack/mona-lisa.png">
+
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Creative Industries & Design Summit</h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-lg-2 col-md-6">
+        <div class="img-btn">
+          <img src="asset/pictoblack/film.png">
+
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Media & Film Summit</h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-lg-2 col-md-6">
+        <div class="img-btn">
+          <img src="asset/pictoblack/logo-des-jeux-olympiques.png">
+
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Sports Summit</h3>
+        </div>
+        <div class="mt-5 text mt-lg-0 sector-subtitle">
+
+        </div>
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-lg-2 col-md-6">
+        <div class="img-btn">
+          <img src="asset/pictoblack/diversity.png">
+
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Women, Gender & Diversity Summit</h3>
+        </div>
+        <div class="mt-5 text mt-lg-0 sector-subtitle">
+
+        </div>
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-lg-2 col-md-6">
+        <div class="img-btn">
+          <img src="asset/pictoblack/passport.png">
+
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Hospitality, Travel & Tourism Summit</h3>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-custom white pitogramme2 " style="padding-bottom: 10% !important;">
+    <div class="all row">
+
+      <!-- Boite -->
+      <div class="box col-4">
+        <div class="img-btn">
+          <img src="asset/pictoblack/train.png">
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Transport Infrastructure <br>& logistics<br> Summit</h3>
+        </div>
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-4">
+        <div class="img-btn">
+          <img src="asset/pictoblack/energie-eolienne.png">
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Environment, Energy & Utility Summit</h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-4">
+        <div class="img-btn">
+          <img src="asset/pictoblack/gouvernance.png">
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Government & Public Policy & Social<br> Impact Summit</h3>
+        </div>
+
+      </div>
+
+
+      <!-- Boite -->
+      <div class="box col-4">
+        <div class="img-btn">
+          <img src="asset/pictoblack/innovation.png">
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Technology & Digital Revolution Summit</h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-4">
+        <div class="img-btn">
+          <img src="asset/pictoblack/banking.png">
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Financial Services & Insurance Summit</h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-4">
+        <div class="img-btn">
+          <img src="asset/pictoblack/electrocardiogram.png">
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Healthcare, Pharmaceuticals &<br> Biotechnology Summit</h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-4">
+        <div class="img-btn">
+          <img src="asset/pictoblack/construction.png">
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Construction & Real Estate Summit</h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-4">
+        <div class="img-btn">
+          <img src="asset/pictoblack/industrial-automation.png">
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Industrial Automation Summit </h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-4">
+        <div class="img-btn">
+          <img src="asset/pictoblack/profits.png">
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Investment Summit</h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-4">
+        <div class="img-btn">
+          <img src="asset/pictoblack/consulting.png">
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Consulting and Services Summit</h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-4">
+        <div class="img-btn">
+          <img src="asset/pictoblack/balance.png">
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Legal Summit</h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-4">
+        <div class="img-btn">
+          <img src="asset/pictoblack/food-summit.png">
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Food Summit</h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-4">
+        <div class="img-btn">
+          <img src="asset/pictoblack/man-walking-with-shopping-cart.png">
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Consumer Good Summit</h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-4">
+        <div class="img-btn">
+          <img src="asset/pictoblack/quality.png">
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Lifestyle & Luxury Good Summit</h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-4">
+        <div class="img-btn">
+          <img src="asset/pictoblack/book.png">
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Education and Learning Summit</h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-4">
+        <div class="img-btn">
+          <img src="asset/pictoblack/mona-lisa.png">
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Creative Industries & Design Summit</h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-4">
+        <div class="img-btn">
+          <img src="asset/pictoblack/film.png">
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Media & Film Summit</h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-4">
+        <div class="img-btn">
+          <img src="asset/pictoblack/logo-des-jeux-olympiques.png">
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Sports Summit</h3>
+        </div>
+        <div class="mt-5 text mt-lg-0 sector-subtitle">
+
+        </div>
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-4">
+        <div class="img-btn">
+          <img src="asset/pictoblack/diversity.png">
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Women, Gender & Diversity Summit</h3>
+        </div>
+        <div class="mt-5 text mt-lg-0 sector-subtitle">
+
+        </div>
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-4">
+        <div class="img-btn">
+          <img src="asset/pictoblack/passport.png">
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Hospitality, Travel & Tourism Summit</h3>
+        </div>
+
+      </div>
+
+      <!-- Boite -->
+      <div class="box col-4">
+        <div class="img-btn">
+          <img src="asset/img/picto-black/24.png">
+        </div>
+        <div class="mt-5 titlebox text mt-lg-0">
+          <h3>Emerging &amp; Future Cities Summit </h3>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="liste-secteurs">
+    <div class="row liste-secteur">
+      <div class="col-md-4">
+        <h3 class="secteur-titre">Construction & Real Estate Summit</h3>
+        <p class="sous-secteur">Architecture and Planning</p>
+        <p class="sous-secteur">Building Materials</p>
+        <p class="sous-secteur">Civil Engineering</p>
+        <p class="sous-secteur">Commerical Real Estate</p>
+        <p class="sous-secteur">Construction</p>
+        <p class="sous-secteur">Real Estate</p>
+      </div>
+
+      <div class="col-md-4">
+        <h3 class="secteur-titre">Food Summit</h3>
+        <p class="sous-secteur">Dairy</p>
+        <p class="sous-secteur">Farming</p>
+        <p class="sous-secteur">Food & Beverages</p>
+        <p class="sous-secteur">Food Production</p>
+        <p class="sous-secteur">Supermarkets</p>
+      </div>
+
+      <div class="col-md-4">
+        <h3 class="secteur-titre">Legal Summit</h3>
+        <p class="sous-secteur">Law Practice</p>
+        <p class="sous-secteur">Legal Services</p>
+        <p class="sous-secteur">Legislative Office</p>
+      </div>
+    </div>
+
+
+    <div class="row liste-secteur">
+      <div class="col-md-4">
+        <h3 class="secteur-titre">Consulting and Services Summit</h3>
+        <p class="sous-secteur">Human Resources</p>
+        <p class="sous-secteur">Management consulting</p>
+        <p class="sous-secteur">Market Research</p>
+        <p class="sous-secteur">Marketing & Advertising</p>
+        <p class="sous-secteur">Public Relations and Communications</p>
+        <p class="sous-secteur">Program Development</p>
+        <p class="sous-secteur">Research</p>
+      </div>
+
+      <div class="col-md-4">
+        <h3 class="secteur-titre">Government & Public Policy & Social Impact Summit</h3>
+        <p class="sous-secteur">Civic & Social Organization</p>
+        <p class="sous-secteur">Government Administration</p>
+        <p class="sous-secteur">Government Relations</p>
+        <p class="sous-secteur">International Affairs</p>
+        <p class="sous-secteur">International Trade and Development</p>
+        <p class="sous-secteur">Newspapers</p>
+        <p class="sous-secteur">Non-Profit Organization Management</p>
+        <p class="sous-secteur">Philanthopy</p>
+        <p class="sous-secteur">Political Organization</p>
+        <p class="sous-secteur">Public Policy</p>
+        <p class="sous-secteur">Think Tanks</p>
+      </div>
+
+      <div class="col-md-4">
+        <h3 class="secteur-titre">Lifestyle & Luxury Good Summit</h3>
+        <p class="sous-secteur">Apparel & Fashion</p>
+        <p class="sous-secteur">Cosmetics</p>
+        <p class="sous-secteur">Luxury goods & Jewelry</p>
+        <p class="sous-secteur">Retail</p>
+        <p class="sous-secteur">Sports</p>
+        <p class="sous-secteur">Textiles</p>
+      </div>
+    </div>
+
+    <div class="row liste-secteur">
+      <div class="col-md-4">
+        <h3 class="secteur-titre">Consumer Good Summit</h3>
+        <p class="sous-secteur">Consumer Goods</p>
+        <p class="sous-secteur">Consumer Services</p>
+        <p class="sous-secteur">Sporting Goods</p>
+      </div>
+
+      <div class="col-md-4">
+        <h3 class="secteur-titre">Media & Film Summit</h3>
+        <p class="sous-secteur">Broadcast Media</p>
+        <p class="sous-secteur">Media Production</p>
+        <p class="sous-secteur">Motion Pictures/Film</p>
+        <p class="sous-secteur">Online media</p>
+      </div>
+
+      <div class="col-md-4">
+        <h3 class="secteur-titre">Creative Industries & Design Summit</h3>
+        <p class="sous-secteur">Animation</p>
+        <p class="sous-secteur">Design</p>
+        <p class="sous-secteur">Graphic Design</p>
+      </div>
+    </div>
+
+    <div class="row liste-secteur">
+      <div class="col-md-4">
+        <h3 class="secteur-titre">Healthcare, Pharmaceuticals & Biotechnology Summit</h3>
+        <p class=" sous-secteur">Biotechnology</p>
+        <p class=" sous-secteur">Health, Wellness & Fitness</p>
+        <p class=" sous-secteur">Hospital & Healthcare</p>
+        <p class=" sous-secteur">Medical Devices</p>
+        <p class=" sous-secteur">Medical Practice</p>
+        <p class=" sous-secteur">Pharmaceuticals</p>
+      </div>
+
+      <div class="col-md-4">
+        <h3 class=" secteur-titre">Technology & Digital Revolution Summit</h3>
+        <p class=" sous-secteur">Computer & Network Security</p>
+        <p class=" sous-secteur">Computer Games</p>
+        <p class=" sous-secteur">Computer Hardware</p>
+        <p class=" sous-secteur">Computer Software</p>
+        <p class=" sous-secteur">Consumer Electronics</p>
+        <p class=" sous-secteur">Information Services</p>
+        <p class=" sous-secteur">Information Technology and Services</p>
+        <p class=" sous-secteur">Internet</p>
+        <p class=" sous-secteur">Telecommunications</p>
+        <p class=" sous-secteur">Wireless</p>
+      </div>
+
+      <div class="col-md-4">
+        <h3 class=" secteur-titre">Education and Learning Summit</h3>
+        <p class=" sous-secteur">E-Learning</p>
+        <p class=" sous-secteur">Higher Education</p>
+        <p class=" sous-secteur">Primary/Secondary Education</p>
+      </div>
+    </div>
+
+    <div class="row liste-secteur">
+      <div class="col-md-4">
+        <h3 class="secteur-titre">Enviroment, Energy & Utility Summit</h3>
+        <p class="sous-secteur">Enviromental Services</p>
+        <p class="sous-secteur">Oil & Energy</p>
+        <p class="sous-secteur">Packaging and Containers</p>
+        <p class="sous-secteur">Plastics</p>
+        <p class="sous-secteur">Renewables & Enviroment</p>
+        <p class="sous-secteur">Utilities</p>
+      </div>
+
+      <div class="col-md-4">
+        <h3 class="secteur-titre">Hospitality, Travel & Tourism Summit</h3>
+        <p class="sous-secteur">Entertainment</p>
+        <p class="sous-secteur">Event Services</p>
+        <p class="sous-secteur">Hospitality</p>
+        <p class="sous-secteur">Leisure, Travel & Tourism</p>
+        <p class="sous-secteur">Museums and Institutions</p>
+        <p class="sous-secteur">Performing Arts</p>
+        <p class="sous-secteur">Restaruants</p>
+      </div>
+
+      <div class="col-md-4">
+        <h3 class="secteur-titre">Financial Services & Insurance Summit</h3>
+        <p class="sous-secteur">Banking</p>
+        <p class="sous-secteur">Capitial Markets</p>
+        <p class="sous-secteur">Financial Services</p>
+        <p class="sous-secteur">Fund- Raising</p>
+        <p class="sous-secteur">Insurance</p>
+      </div>
+    </div>
+
+    <div class="row liste-secteur">
+      <div class="col-md-4">
+        <h3 class="secteur-titre">Industrial Automation Summit</h3>
+        <p class="sous-secteur">Electrical/Electronic Manufacturing</p>
+        <p class="sous-secteur">Industrial Automation</p>
+        <p class="sous-secteur">Mechanical or Industrial Engineering</p>
+        <p class="sous-secteur">Semiconductors</p>
+      </div>
+
+      <div class="col-md-4">
+        <h3 class="secteur-titre">Transport Infrastructure & logistics Summit</h3>
+        <p class="sous-secteur">Airlines/Aviation</p>
+        <p class="sous-secteur">Automotive</p>
+        <p class="sous-secteur">Aviation & Aerospace</p>
+        <p class="sous-secteur">Defense & Space</p>
+        <p class="sous-secteur">Logistics and Supply Chain</p>
+        <p class="sous-secteur">Maritime</p>
+        <p class="sous-secteur">Package/ Freight Delivery</p>
+        <p class="sous-secteur">Railroad Manufacture</p>
+        <p class="sous-secteur">Transportation/Trucking/Railroad</p>
+      </div>
+
+      <div class="col-md-4">
+        <h3 class="secteur-titre">Investment Summit</h3>
+        <p class="sous-secteur">Investment Banking</p>
+        <p class="sous-secteur">Investment Management</p>
+        <p class="sous-secteur">Venture Capitial & Private Equity</p>
+
+      </div>
+    </div>
+
+    <div class="row liste-secteur">
+      <div class="col-md-4">
+        <h3 class="secteur-titre">Sports Summit</h3>
+        <p class="sous-secteur"></p>
+      </div>
+
+      <div class="col-md-4">
+        <h3 class="secteur-titre">Women, Gender & Diversity Summit</h3>
+        <p class="sous-secteur"></p>
+      </div>
+
+      <div class="col-md-4">
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <div class="py-5 pb-5 bg-white align-center container-custom" style="display: flex; flex-wrap: wrap;">
+    <div class="mt-3 mt-lg-0" style="width: 30%;">
+      <h2 class="title-citie black " style="font-size: 4vw !important;">Cities Notes</h2>
+    </div>
+    <div class="mt-3 mt-lg-0" style="width:30%;">
+      <h4 class="black black-other" style="font-size: 4vw ; text-align: left !important;">Newsletter</h4>
+    </div>
+    <div class="" style="width: 25%;">
+      <form style="display: flex;flex-direction: row;">
+        <input type="email" name="email" placeholder=" Your Email" class="input-email">
+        <button class="bg-white border-0" style="border-bottom: 2px solid black!important;outline: none;">
+          <img src="asset/img/fleche-noir-droite.png" alt="" style="width: 1.8vw;height: auto;object-fit: contain;">
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+
+  <!-- F O O T E R -->
+
+  <div class="container footer-1 footer1">
+    <hr class="footer-line">
+    <div class="row">
+      <div class="sect-logo d-flex justify-content-center" style="width:30%;">
+        <img src="asset/img/logo.png">
+      </div>
+      <div class="text-center sect-social footer-div0" style="width:40%;">
+        <p class="fs-01" style="font-size: 1.2vw;">Connect with us</p>
+        <div class="footer-img">
+          <img src="asset/img/linkedin.png">
+          <img src="asset/img/instagram.png">
+          <img src="asset/img/twitter.png">
+          <img src="asset/img/facebook.png">
+          <img src="asset/img/tiktok.png">
+        </div>
+      </div>
+      <div class="text-left footer-div1" style="width:13%;">
+        <a href="index.html" class="fs-07" style="font-size: 1.2vw;">About</a><br class="br-footer">
+        <a href="speaker.html" class="fs-07" style="font-size: 1.2vw;">Speakers</a><br class="br-footer">
+        <a href="sectors.html" class="fs-07" style="font-size: 1.2vw;">Sectors</a><br class="br-footer">
+        <!-- <a href="sectors.html" class="fs-07" style="font-size: 1.2vw;">Agenda & Speaker</a><br class="br-footer"> -->
+        <a href="landscape.html" class="fs-07" style="font-size: 1.2vw;">Agenda</a>
+      </div>
+      <div class="text-left footer-div2" style="width:10%;">
+        <a href="sponsoring.html" class="fs-07 ml" style="font-size: 1.2vw;">Sponsoring</a><br class="br-footer">
+        <a href="book.html" class="fs-07 ml" style="font-size: 1.2vw;">Buy tickets</a><br class="br-footer">
+
+      </div>
+      <div class="text-left footer-div3" style="width:7%;">
+        <a href="podcast.html" class="fs-07" style="font-size: 1.2vw;">Podcast</a>
+        <a href="contact.html" class="fs-07" style="font-size: 1.2vw;">Contact</a>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <hr class="line col-1">
+      <p class="fs-01" style="font-size: 1.2vw;"> &copy;The Global Forum On Cities 2023 &copy;</p>
+    </div>
+  </div>
+
+  <div class="container footer-1 footer2" style="display: none;">
+    <div class="row">
+      <div class="mr-4 sect-logo" style="width:30%;">
+        <img src="asset/img/logo.png">
+      </div>
+      <div class="text-left footer-div1" style="width:13%;">
+        <a href="index.html" class="fs-01" style="font-size: 1.2vw;">About</a><br class="br-footer">
+        <a href="speaker.html" class="fs-01" style="font-size: 1.2vw;">Speakers</a><br class="br-footer">
+        <a href="sectors.html" class="fs-01" style="font-size: 1.2vw;">Sectors</a><br class="br-footer">
+        <!-- <a href="sectors.html" class="fs-01" style="font-size: 1.2vw;">Agenda & Speaker</a><br class="br-footer"> -->
+        <a href="landscape.html" class="fs-01" style="font-size: 1.2vw;">Agenda</a>
+      </div>
+      <div class="text-left footer-div2" style="width:10%;">
+        <a href="sponsoring.html" class="fs-01" style="font-size: 1.2vw;">Sponsoring</a><br class="br-footer">
+        <a href="book.html" class="fs-01" style="font-size: 1.2vw;">Buy tickets</a><br class="br-footer">
+        <a href="podcast.html" class="fs-01" style="font-size: 1.2vw;">Podcasts</a>
+      </div>
+      <div class="text-left footer-div3" style="width:7%;">
+        <a href="contact.html" class="fs-01" style="font-size: 1.2vw;">Contact</a>
+      </div>
+    </div>
+    <div class="mt-3 text-center sect-social footer-div0 mt-lg-0">
+      <p class="fs-01" style="font-size: 1.2vw;">Connect with us</p>
+      <div class="footer-img">
+        <img src="asset/img/linkedin.png">
+        <img src="asset/img/instagram.png">
+        <img src="asset/img/twitter.png">
+        <img src="asset/img/facebook.png">
+        <img src="asset/img/tiktok.png">
+      </div>
+    </div>
+
+    <div class="text-center">
+      <hr class="line col-1">
+      <p class="fs-01" style="font-size: 1.2vw;">&copy; The Global Forum On Cities 2023 &copy;</p>
+    </div>
+  </div>
+
+
+  <script src="asset/js/main.js"></script>
+  <script src="asset/js/social.js"></script>
+  <script src="asset/js/basket.js"></script>
+  <!-- <script>
+            $(function () {
+                const priceUnite = 400;
+                $(document).on('click', '.btn-plus', function () {
+                    let quantity = parseInt($('.quantity').text()) + 1;
+                    let price = priceUnite * quantity
+                    $('.quantity').text(quantity);
+                    $('.price').text(`$${price}`);
+                })
+                $(document).on('click', '.btn-minus', function () {
+                    let quantity = parseInt($('.quantity').text()) - 1;
+                    let priceValue = $('.price').text().replace('$', '');
+                    let price = parseInt(priceValue) - priceUnite;
+                    if (quantity > 0) {
+                        $('.quantity').text(quantity);
+                        $('.price').text(`$${price}`);
+                    }
+                    else $('.quantity').text(0);
+                })
+            })
+        </script> -->
+
+  <script>
+    $(function () {
+
+
+      const local = window.sessionStorage.getItem('books');
+      let books = local ? JSON.parse(local) : [];
+
+      let subTotal = 0;
+
+      books.map((book, i) => {
+        const divModal = `
+      <div class="content-2 conte">
+        <div class="" style="width:22%;">
+          <img src="asset/img/logo.png" style="width:5vw;"/>
+        </div>
+        <div class="" style="width:36%">
+            <span class="nom" style="text-align:
+                start!important;">Tickets London - ${book.namebook}</span>
+        </div>
+        <div class="prix" style="width:12%">${book.prixbook}€</div>
+        <div class="" style="width:12%">
+            <div class="" style="align-items:
+                center;height: 3vw;justify-content:
+                space-between;display: flex; flex-direction:
+                row;border: 1px solid white;width: 100%; padding:0 8%; align-items: center;">
+                <img src="asset/img/moins.png"alt=""
+                    class="img-tab btn-minus" style="width: 0.4rem" data-indexboo=${i} style="cursor:pointer" >
+                <p class="pt-3 quantity" style="font-size: 1vw;">${book.quantite}</p>
+                <img src="asset/img/plus.png" alt=""
+                    class="img-tab btn-plus" style="width: 0.4rem" data-indexbook=${i} style="cursor:pointer" >
+            </div>
+        </div>
+        <div class="price" style="width:15%;">${book.prixbook * book.quantite}€</div>
+      </div>`
+        subTotal = subTotal + (parseInt(book.prixbook * book.quantite))
+        total = parseInt($('.tva').text().replace('$', '')) + subTotal;
+
+        $('.content-modal').append(divModal);
+        if (i === books.length - 1) {
+          $('.subT').text(subTotal + "€")
+          $('.total').text(total + "€")
+        }
+      })
+
+      $(document).on('click', '.btn-plus', function () {
+        const btnActif = $(this)
+        const indexbook = btnActif.data('indexbook')
+        let quantite = btnActif.siblings('p')
+        let sub = 0;
+        let total = 0;
+        quantite.text(parseInt(quantite.text()) + 1)
+
+        books = books.map((book, i) => {
+          if (i == indexbook) {
+            book.quantite += 1
+            $(this).parent().parent().siblings('.price').text(book.quantite * book.prixbook + "€")
+          }
+          sub += parseInt(book.quantite * book.prixbook)
+          total = parseInt($('.tva').text().replace('$', '')) + sub
+          return book
+        })
+        $('.subT').text(sub + "€");
+        $('.total').text(total + "€");
+        window.sessionStorage.setItem('books', JSON.stringify(books));
+
+      });
+
+      $(document).on('click', '.btn-minus', function () {
+        const btnMoins = $(this)
+        const indexboo = btnMoins.data('indexboo')
+        let quantite = btnMoins.siblings('p')
+        let sub = 0;
+        if (parseInt(quantite.text()) - 1 > 0) {
+          quantite.text(parseInt(quantite.text()) - 1)
+        }
+
+        books = books.map((book, i) => {
+          if (i == indexboo) {
+            if (book.quantite - 1 > 0) {
+              book.quantite -= 1
+            }
+            $(this).parent().parent().siblings('.price').text(book.quantite * book.prixbook)
+          }
+          sub -= parseInt(book.quantite * book.prixbook)
+          total = parseInt($('.tva').text().replace('$', '')) - sub
+
+          return book
+        })
+        $('.subT').text(-sub + "€");
+        $('.total').text(total + "€");
+        window.sessionStorage.setItem('books', JSON.stringify(books));
+      });
+
+      $(".continue").click(function () {
+        var lien = "pass_London.html";
+        window.location.href = lien;
+      });
+
+      $(document).on('click', '.supp ', function () {
+        $('.conte').remove();
+        $('.subT').remove();
+        $('.total').remove();
+        books.splice(0, books.length);
+        window.sessionStorage.setItem('books', JSON.stringify(books));
+        window.location.href = "pass_London.html";
+      })
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+.sect-logo{position: relative;left: 30em}
+.titre{color: #B7EB0F !important;margin: 50px 0px;}
+.order{background: #B7EB0F;text-align: center;width: 300px;padding: 20px 0px;position: relative;top: 30px;}
+.boite{padding: 100px 0px;}
+.boite h4,p,h5,strong,h6{color: black !important;line-height: 10px;}
+.boite h4{color: #ed7473 !important;padding-bottom: 30px;}
+.boite p{text-align: left;}
+.borders{border-bottom: 1px solid #999;padding: 50px}
+.tbl{padding: 10px 50px;border-top: 1px solid #888;border-bottom: 1px solid #888;align-items: center;}
+.tbl .logo{filter: invert(1);width:  100px;margin-right: 20px;}
+.tbl .lg{font-size: 12px;}
+.date{padding: 50px 50px;align-items: center;border-bottom:1px solid #888;}
+.date strong{font-size: 14px;color: #333 !important;padding: 0px 10px;}
+.b-price{width: 350px;padding: 20px 10px;margin: 20px;border: 1px solid #555;border-radius: 20px;position: relative;left: 50em;}
+.es{padding: 20px;}
+.final{padding: 50px 0px;}
+
+@media screen and (max-width: 768px){
+	.b-price{left: 0px;}
+	.sect-logo{position: relative;left: 35%;margin-top: 50px;}
+}
+
+

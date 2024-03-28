@@ -1,0 +1,218 @@
+input {
+  color: #000 !important
+}
+.container-acti
+{
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.bxcont h3 {
+  font-size: 1.5vw;
+  font-weight: 400;
+  text-align: left !important;
+}
+.input-check
+{
+  width: 48% !important;
+  margin-left: 2%;
+}
+
+.bxcont h5 {
+  background: black !important;
+  color: #fff !important;
+  padding: 10px 0px 0px 0px
+}
+
+.bxcont label {
+  color: #555 !important;
+  font-size: 12px;
+}
+
+.bxcont p {
+  color: black !important;
+  padding: 10px 0px
+}
+
+.bxcont input{
+  color: black;
+  font-size: 1vw !important;
+  padding: 5% 2%;
+}
+.bxcont select
+{
+  font-size: 1vw !important;
+}
+.bxcont input::placeholder
+{
+  font-size: 1vw !important;
+}
+
+.bxcont strong {
+  font-size: 1.3vw;
+  color: red !important
+}
+
+/* .bxcont button {
+  padding: 15px 20px;
+  margin: 10px;
+  border: none;
+  color: #222 !important
+} */
+
+.titre-checkout {
+  font-size: 4.15em !important;
+}
+
+.box {
+  margin-bottom: 20px;
+  color: white !important
+}
+
+.box p {
+  color: white !important;
+  font-size: 1vw;
+}
+
+.box h5 {
+  color: white !important;
+  font-size: 22px;
+}
+
+.borders {
+  border-bottom: 1px solid #555;
+}
+
+.coupon {
+  color: #fff !important;
+  border: 1px solid #555;
+}
+
+.titre {
+  padding: 5% 35%;
+}
+
+.titre h4 {
+  background: black !important;
+  padding: 4%;
+  font-weight: 400;
+  font-size: 1.8vw;
+}
+
+.img {
+  align-items: center;
+}
+
+.img img {
+  width: 100%;
+  margin: 2%;
+}
+
+.payment {
+  padding: 2% 30%;
+}
+
+.payment input {
+  border-top: 1px solid #888;
+  margin-top: 5%;
+  color: #000 !important;
+}
+
+.bg-green {
+  background: #b7eb0f !important;
+}
+
+.btn {
+  width: 150px;
+  padding: 3% 8% !important;
+  border-radius: 1px !important;
+  font-size: 14px !important;
+  margin: 50px !important;
+}
+
+.coupon-input {
+  color: #fff !important
+}
+
+label {
+  font-size: 1.3vw !important;
+  position: relative !important;
+  left: 0px !important;
+  top: 0px !important;
+}
+
+.form .form-control {
+  width: 100% !important;
+}
+
+.text-rigth {
+  text-align: left;
+}
+
+::placeholder {
+  color: #9d9d9d !important;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .form-control {
+    width: 100%;
+  }
+
+
+}
+
+.form-control {
+  border-radius: 0 !important;
+  border: 1px solid rgb(172, 154, 154) !important;
+}
+
+
+#check {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 1px;
+  position: relative;
+  top: 5%;
+
+}
+
+#check:checked::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0px;
+  width: 4px;
+  height: 9px;
+  border: solid rgb(0, 0, 0);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+
+.btnSpace {
+  height: 5vw;
+  color: black !important;
+  background-color: white;
+  font-size: 1vw;
+  z-index: 998;
+  outline: none !important;
+  border: none;
+}
+
+#content-4 {
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 15%!important;
+  padding-right: 15%!important;
+}
+
+@media (max-width:600px) {
+  .titre-checkout {
+    font-size: 3em !important;
+  }
+
+}
+

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8">
+  <title>Reçu</title>
+  <style>
+    * {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color: #000000;
+    }
+
+    p,
+    h3,
+    h6,
+    a {
+      color: #000000 !important;
+    }
+
+    tr {
+      border-bottom: none;
+      border-left: none;
+      border-right: none;
+    }
+
+    .Cart td {
+      border: 1px solid #000000;
+      padding: 10px;
+      border-left: none;
+      border-right: none;
+    }
+
+    .Cart {
+      border-left: none;
+      border-right: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="width: 100%; max-width: 600px; margin: 0 auto;">
+    <div style="background-color: #000000; padding: 20px 0;">
+      <div style="margin: 0 auto; width: 100%; max-width: 10%;">
+        <a href="{url}" style="margin: 0 auto;">
+          <img src="https://www.globalforumcities.com/asset/img/logo.png" style="height: 80px; width: 80px;">
+        </a>
+      </div>
+      <h1 style="color: #B7EB0F; text-align: center; font-size: 1.5rem;">Thank you for your Order
+      </h1>
+    </div>
+
+    <div
+      style="background-color: #B7EB0F; min-height: 30px; width: 100%; padding: 5px 0; text-align: right; margin-left: auto; ">
+      <p style="margin-right: 10px;">Order #{payment_id}/{day}</p>
+    </div>
+    <table style="width: 100%; margin-bottom: 50px;">
+      <tr>
+        <td colspan="2" style="text-align: center;">
+          <h4> Billing</h4>
+          <p>{name}</p>
+          <p>{tel}</p>
+          <p><a href="mailto:{address}">{address}</a></p>
+          <p>{county}</p>
+        </td>
+        <td colspan="2" style="text-align: center;">
+          <h4> Ticket Owner</h4>
+          <p>{name}</p>
+          <p>{tel}</p>
+          <p><a href="mailto:{address}">{address}</a></p>
+          <p>{county}</p>
+        </td>
+        <td style="text-align: center;">
+          <img src="https://globalforumcities.com/asset/img/qr_code.png" alt="qrcode" style="height:80px ;">
+        </td>
+      </tr>
+    </table>
+
+    <hr>
+
+    <h1 style="text-align: center; color: #000000;">The Global Forum On Cities</h1>
+    <p style="text-align: center; color: #000000;">
+      <a href="https://www.globalforumcities.com">www.GlobalForumCities.com</a>
+    </p>
+
+
+    <div style="width: 90%; margin: 0 auto;">
+      <table class="Cart" style="width: 100%; margin-top: 50px; border-collapse: collapse;" border="1">
+        <thead>
+          <tr>
+            <td colspan="2">Product</td>
+            <td>Quantity</td>
+            <td>Price</td>
+          </tr>
+        </thead>
+        <tbody>
+          {items}
+        </tbody>
+      </table>
+      <!-- <h3 style="text-align: center;">{day} {hours}</h3>
+      <p style="text-align: center;">{city} City Hall Kamai Chunchie Way {city} E16 1ZE</p> -->
+      <!-- <hr> -->
+
+      <div
+        style=" margin-left: auto; width: fit-content; border: 1px solid #000000; padding: 15px; border-radius: 5px; margin-top: 10px;">
+        <p>Subtotal: {subtotal}</p>
+        <p>Payment method: Visa</p>
+        <p>Total: {total}</p>
+      </div>
+      <h6 style="text-align: center;">Thank you for joining The Global Forum On Cities <a
+          href="https://www.globalforumcities.com">globalforumcities.com</a></h6>
+    </div>
+
+  </div>
+</body>
+
+</html>

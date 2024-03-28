@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>GlobalForumCities</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="asset/css/style.css">
+  <link rel="stylesheet" href="asset/css/global.css">
+  <link rel="stylesheet" href="asset/css/index.css">
+  <link rel="stylesheet" href="asset/css/cart.css">
+  <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+  <link rel="stylesheet" href="asset/css/all.css">
+  <link rel="stylesheet" href="asset/css/speaker2.css">
+  <style type="text/css">
+    .sect-sector {
+      height: 250px;
+    }
+
+    .px350 {
+      height: 350px;
+    }
+
+    .name-speaker1 {
+      font-size: 1.2vw !important;
+      height: 3vw !important;
+      text-align: left;
+    }
+
+    @media screen and (max-width: 768px) {
+      .name-speaker1 {
+        font-size: 9.5px !important;
+      }
+
+      .height-p-speaker1 {
+        height: 45px;
+        line-height: 17px !important;
+      }
+    }
+  </style>
+
+  <!-- Owl Stylesheets -->
+  <link rel="stylesheet" href="asset/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="asset/css/owl.theme.default.min.css">
+
+
+
+
+  <script src="asset/js/jquery.slim.min.js"></script>
+  <script src="asset/js/popper.min.js"></script>
+  <script src="asset/js/bootstrap.bundle.min.js"></script>
+  <script src="asset/js/jquery3-6-0.min.js"></script>
+  <!-- javascript -->
+  <script src="asset/js/jquery.min.js"></script>
+  <script src="asset/js/owl.carousel.js"></script>
+</head>
+
+<body>
+
+  <div class="panier-div-global">
+    <div class="text-center position-fixed panier-div justify-content-end" id="myDIV" style="display: none;">
+      <img src="asset/img/panier1.png" onclick="afficherPanier()" data-toggle="modal" data-target="#exampleModal"
+        class="mr-5" style="width: 6rem; cursor: pointer;" alt="">
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="text-white modal-title bold" id="exampleModalLabel">Basket's details</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- <span id="panier"></span>  -->
+            <div id="cart-1" class="item-cart cart-modal-div" style="width: 100%; color: white!important;font-size:1vw;text-align:
+                center;">
+              <div class="mb-3 content-modal">
+                <div class="content-1">
+                  <div class="" style="width:12%;">Title</div>
+                  <div class="" style="width:36%"></div>
+                  <div class="" style="width:12%">Price</div>
+                  <div class="ml-lg-2 " style="width:12%">Quantity</div>
+                  <div class="ml-lg-4 " style="width:25%">SubTotal(Excluding VAT)</div>
+                </div>
+                <!-- <div class="content-2 conte">
+                          contenue ajouté dinamiquement par js 
+                    </div> -->
+
+              </div>
+
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="checkout.html" class="btn btn-sm btn-secondary">PROCEED TO CHECKOUT</a>
+            <button type="button" class="btn btn-sm btn-danger" onclick="effacerPanier()" data-dismiss="modal"
+              data-dismiss="modal">Delete Basket</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- H E A D E R -->
+
+  <div class="container-custom header-1">
+    <div class="align-center" style="display: flex; flex-wrap: nowrap;">
+      <div class="sect-menu " style="width: 42%;">
+        <img src="asset/img/menu-web.png" id="click-menu" class="menu-bugger">
+      </div>
+      <div class="sect-logo " style="width: 42%;">
+        <img src="asset/img/logo.png">
+      </div>
+      <div class="text-center sect-bouton" style="width: 16%;">
+        <a href="book.html"><button class="col-12 btn-custom btn-1" style="margin-bottom: 8%; border: none;"><span
+              class="text-button text-dark">BUY TICKETS</span></button></a> <br>
+        <a href="sponsoring.html"><button class="col-12 btn-custom btn-2" style="border: none;"><span
+              class="text-button1 text-dark">SPONSOR</span></button></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- M E N U-->
+
+  <div class="container-custom menu hide-menu"
+    style="height: 100%; overflow-x: hidden!important;overflow-y: scroll!important;">
+    <div class="align-center" style="display: flex; flex-wrap: nowrap;">
+      <div class="sect-menu" style="width: 42%;">
+        <img src="asset/img/fermer.png" class="hide-menu">
+      </div>
+      <div class="sect-logo hide-menu" style="width: 42%;">
+        <img src="asset/img/logo.png">
+      </div>
+      <div class="text-center sect-bouton" style="width: 16%;">
+        <a href="book.html"><button class="col-12 btn-custom btn-1" style="margin-bottom: 8%; border: none;"><span
+              class="text-button text-dark">BUY TICKETS</span></button></a> <br>
+        <a href="sponsoring.html"><button class="col-12 btn-custom btn-2" style="border: none;"><span
+              class="text-button1 text-dark">SPONSOR</span></button></a>
+      </div>
+    </div>
+
+    <div class="justify-center mt-5 text-center text-menu">
+      <a href="index.html" class="hide-menu">
+        <h4>About</h4>
+      </a><br>
+      <a href="speaker.html" class="hide-menu">
+        <h4>Speakers</h4>
+      </a><br>
+      <a href="sectors.html" class="hide-menu">
+        <h4>Sectors</h4>
+      </a><br>
+      <a href="landscape.html" class="hide-menu">
+        <h4>Agenda</h4>
+      </a><br>
+      <!--  <a href="agenda.html" class="hide-menu">
+       <h4>Agenda & Speaker</h4>
+      </a><br>-->
+      <a href="sponsoring.html" class="hide-menu">
+        <h4>Sponsoring</h4>
+      </a><br>
+      <a href="podcast.html" class="hide-menu">
+        <h4>Podcast</h4>
+      </a><br>
+      <a href="book.html" class="hide-menu">
+        <h4>Buy Tickets</h4>
+      </a><br>
+      <!-- <a href="speaker.html" class="hide-menu"><h4>Podcasts</h4></a><br> -->
+      <a href="contact.html" class="hide-menu">
+        <h4>Contact</h4>
+      </a><br>
+    </div>
+  </div>
+
+  <!-- S O C I A L -->
+
+  <div id="social" class="mt-3 container-custom social-fixe vp-hidden v-show">
+    <div class="text-right align-center">
+      <img src="asset/img/linkedin.png"><br>
+      <img src="asset/img/instagram.png"><br>
+      <img src="asset/img/twitter.png"><br>
+      <img src="asset/img/facebook.png"><br>
+      <img src="asset/img/tiktok.png">
+    </div>
+  </div>
+
+
+  <!-- B O D Y -->
+  <div class="my-5 mt-5 container-head mbp-5">
+    <div class="justify-center row">
+      <div class="mb-5 col-md-5 col-12 home-sect-1">
+        <img src="asset/img/img-home.png" class="mobile-header-img">
+      </div>
+      <div class="col-md-7 col-12">
+        <div class="ml-1 about-title myTxt-5 plp-0 ml-lg-0">
+          <div class="ml-1 ml-lg-4">
+            <p class="titre-global ml-lg-3">THE GLOBAL
+              BUSINESS <br>
+              AND POLICY CONFERENCE <br>
+              ON CITIES
+            </p>
+            <p class="titre-global1" style="display: none;">THE GLOBAL
+              BUSINESS
+              AND POLICY CONFERENCE
+              ON CITIES
+            </p>
+            <h5 class="soutitre-global mt-lg-5 ml-lg-3">Gathering private and public sector <br> organisations,
+              start-ups and <br> investors building future cities.</h5>
+            <h5 class="soutitre-global1" style="display: none;">Gathering private and public sector organisations,
+              start-ups and investors building future cities.</h5>
+            <div class="mt-3 pr-lg-5 mr-lg-5 content-btn row mt-lg-0">
+              <div class="col-6">
+                <a href="#" class="mb-2 btn-general btn-custom-5 about-button" style="min-width: 98px!important;">
+                  <div class="fs-00">
+                    BOOK NOW <img src="asset/img/fleche-noir.png">
+                  </div>
+                </a>
+              </div>
+              <div class="col-6">
+                <a href="#" class="btn-general btn-custom-5 about-button">
+                  <div class="text-btn-img fs-00">
+                    VIEW THE FORUM <br> SCHEDULE
+                    <img src="asset/img/fleche-noir-droite.png" alt="Icone" class="mx-3 icon-image ">
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-custom bg-vert banner-mobile">
+
+    <div class="text-center owl-carousel owl-theme mtp-lg-5 mtp-1">
+      <div class="item">
+        <h1 class=" bold black h1-gros">LONDON, NOVEMBER 27-28, 2023</h1>
+      </div>
+      <div class="item">
+        <h1 class="bold black h1-gros">SINGAPORE, DECEMBER 29-30, 2023</h1>
+      </div>
+      <div class="item">
+        <h1 class="bold black h1-gros">PARIS OCTOBER 27-28, 2023</h1>
+      </div>
+      <div class="item">
+        <h1 class="bold black h1-gros">NEW YORK SEPTEMBER 23-24, 2024</h1>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="mt-0 text-center bg-white container-custom sect-logo-1">
+    <div class="text-left col-12 ">
+      <h6 class="text-left ml-lg-5 join-us black">
+        Join us as a speaker, attend or sponsor:
+      </h6>
+    </div>
+    <div class="text-center align-center" style="display: flex; flex-wrap: nowrap;">
+      <img class="" src="asset/img/logo-1.png">
+      <img class="" src="asset/img/logo-2.png">
+      <img src="asset/img/logo-5.png">
+      <img src="asset/img/logo-4.png">
+      <img class="d-none-p" src="asset/img/logo-3.png">
+    </div>
+  </div>
+
+
+
+  <div class="sect-video">
+    <img src="asset/img/img-about.png" width="100%">
+
+    <!--
+    <video controls>
+      <source src=”http://techslides.com/demos/sample-videos/small.ogv” type=video/ogg> <source src="/build/videos/arcnet.io(7-sec).mp4" type=video/mp4>
+    </video>
+     <img src="asset/img/img-home.png" width="100%"> -->
+    <!-- <iframe width="100%" height="480" src="https://www.youtube.com/embed/9TGlc0Fufgk"
+      title="Musique Douce: Relaxante, Calme - Nature Relaxation" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe> -->
+  </div>
+
+
+  <div class="mt-5 container-custom sect-speaker">
+    <div class="mt-3 text-center col-12">
+      <h1 class="bold fs-02" style="font-weight: 400!important;">Speakers</h1>
+    </div>
+  </div>
+
+  <div class="align-center sect-speaker">
+    <div class="px-2 my-4 item-5">
+      <img class="" src="asset/img/s-1.png">
+      <h5 class="mt-4 name-speaker1 fs-01">RIKESH <br> SHAH </h5>
+      <p class="mt-4 height-p-speaker1 fs-00 mt-lg-0">
+        Head of Commercial Innovation
+      </p>
+      <h6 class="vert lineHeight002 one one">TRANSPORT FOR LONDON</h6>
+
+    </div>
+
+    <div class="px-2 my-4 item-5">
+      <img class="" src="asset/img/Ecatarina-ok.png">
+      <h5 class="mt-4 name-speaker1 fs-01">ECATARINA <br> HARLING</h5>
+      <p class="mt-4 height-p-speaker1 lineHeight002 two fs-00 mt-lg-0">
+        Associate Director
+      </p>
+      <h6 class="vert lineHeightTwo one">TRANSPORT FOR LONDON</h6>
+
+    </div>
+
+    <div class="px-2 my-4 item-5">
+      <img class="" src="asset/img/Emmanuel-ok.png">
+      <h5 class="mt-4 name-speaker1 fs-01 two1">EMMANUEL <br> DOSSOU-YOVO </h5>
+      <p class="mt-4 height-p-speaker1 lineHeight03 oneMoins fs-00 mt-lg-0">
+        Founder & Managing Director
+      </p>
+      <h6 class="vert lineHeight0002 one1">THINGS GROWTH</h6>
+
+    </div>
+
+    <div class="px-2 my-4 item-5">
+      <img class="" src="asset/img/Jonathon-Spanos-ok.png">
+      <h5 class="mt-4 name-speaker1 fs-01">JONATHON <br> SPANOS </h5>
+      <p class="mt-4 height-p-speaker1 fs-00 mt-lg-0">
+        Head of Commercial Innovation
+      </p>
+      <h6 class="vert lineHeight002 one one">VIRGIN STARTUP</h6>
+
+    </div>
+
+    <div class="px-2 my-4 item-5">
+      <img class="" src="asset/img/Rikesh-ok.png">
+      <h5 class="mt-4 name-speaker1 fs-01">EDD <br> ATCHESON</h5>
+      <p class="mt-4 height-p-speaker1 fs-00 mt-lg-0">
+        Principal of experience Innovation
+      </p>
+      <h6 class="vert lineHeight002 one one">ADOBE</h6>
+
+    </div>
+
+    <div class="px-2 my-4 item-5">
+      <img class="" src="asset/img/Rikesh-ok-1.png">
+      <h5 class="mt-4 name-speaker1 fs-01">MARC <br> POTTON </h5>
+      <p class="mt-4 height-p-speaker1 fs-00 mt-lg-0">
+        Innovation Development Manager
+      </p>
+      <h6 class="vert lineHeight002 one one">BT</h6>
+
+    </div>
+
+    <div class="px-2 my-4 item-5">
+      <img class="" src="asset/img/Ecatarina-ok-1.png">
+      <h5 class="mt-4 name-speaker1 fs-01">MARC <br> MASSAR</h5>
+      <p class="mt-4 height-p-speaker1 fs-00 mt-lg-0">
+        Head of Product <br> Strategy
+      </p>
+      <h6 class="vert lineHeight002 one one">WORLDPAY</h6>
+
+    </div>
+
+    <div class="px-2 my-4 item-5">
+      <img class="" src="asset/img/Emmanuel-ok-1.png">
+      <h5 class="mt-4 name-speaker1 fs-01 two1">JEAN-CHARLES <br> SEGHERS </h5>
+      <p class="mt-4 height-p-speaker1 lineHeight03 two1 oneMoins1 fs-00 mt-lg-0">
+        Head of Climate & Pathways
+      </p>
+      <h6 class="vert lineHeight03 one">THE CLIMATE GROUPE</h6>
+
+    </div>
+
+    <div class="px-2 my-4 item-5">
+      <img class="" src="asset/img/Jonathon-Spanos-ok-1.png">
+      <h5 class="mt-4 name-speaker1 fs-01">PEDRO RENTE LOURENÇO </h5>
+      <p class="mt-4 height-p-speaker1 lineHeight fs-00 mt-lg-0">
+        Co-Founder
+      </p>
+      <h6 class="vert lineHeight002 one">SPIKE.AI</h6>
+
+    </div>
+
+    <div class="px-2 my-4 item-5">
+      <img class="" src="asset/img/Rikesh-ok-2.png">
+      <h5 class="mt-4 name-speaker1 fs-01">JOEL <br> HUANG</h5>
+      <p class="mt-4 height-p-speaker1 lineHeight1 fs-00 mt-lg-0">
+        Associate <br> Director
+      </p>
+      <h6 class="vert lineHeight002 one">PUBLICIS SAPIENT</h6>
+
+    </div>
+
+
+    <div class="px-2 my-4 item-5">
+      <img class="" src="asset/img/Rikesh-ok-3.png">
+      <h5 class="mt-4 name-speaker1 fs-01">ASHISH <br> SAXENA</h5>
+      <p class="mt-4 height-p-speaker1 fs-00 mt-lg-0">
+        Head of Digital Transformation
+      </p>
+      <h6 class="vert lineHeight002 one one">COGNIZANT</h6>
+
+    </div>
+
+    <div class="px-2 my-4 item-5">
+      <img class="" src="asset/img/Ecatarina-ok-2.png">
+      <h5 class="mt-4 name-speaker1 fs-01 two">NOEMI DE HEVIA MENDEZ</h5>
+      <p class="mt-4 height-p-speaker1 lineHeight03 oneMoins fs-00 mt-lg-0">
+        Lead Telecoms <br> Consultant
+      </p>
+      <h6 class="vert lineHeight0002 one">CGI</h6>
+
+    </div>
+
+    <div class="px-2 my-4 item-5">
+      <img class="" src="asset/img/Emmanuel-ok-2.png">
+      <h5 class="mt-4 name-speaker1 fs-01">JEFF <br> PEEL</h5>
+      <p class="mt-4 height-p-speaker1 fs-00 mt-lg-0">
+        Founder & Managing Director
+      </p>
+      <h6 class="vert lineHeight002 one one">QUADRIGA CONSULTING</h6>
+
+    </div>
+
+    <div class="px-2 my-4 item-5">
+
+      <img class="" src="asset/img/Jonathon-Spanos-ok-2.png">
+      <h5 class="mt-4 name-speaker1 fs-01">GAVIN <br>JONES</h5>
+      <p class="mt-4 height-p-speaker1 fs-00 mt-lg-0">
+        Founder & Managing Director
+      </p>
+      <h6 class="vert lineHeight002 one one">GAVIN JONES CONSULTING</h6>
+
+    </div>
+
+    <div class="px-2 my-4 item-5">
+      <img class="" src="asset/img/Rikesh-ok-4.png">
+      <h5 class="mt-4 name-speaker1 fs-01">STAMATOULA MATSOUKIS</h5>
+      <p class="mt-4 height-p-speaker1 fs-00 mt-lg-0">
+        Director & <br> Founder
+      </p>
+      <h6 class="vert lineHeight002 one">EUCLIDES RISK SOLUTIONS</h6>
+
+    </div>
+
+    <div class="px-2 my-4 item-5">
+      <img class="" src="asset/img/Rikesh-ok-6.png">
+      <h5 class="mt-4 name-speaker1 fs-01">TAUNI <br> LANIER</h5>
+      <p class="mt-4 height-p-speaker1 fs-00 mt-lg-0">
+        Managing <br> Director
+      </p>
+      <h6 class="vert lineHeight002 one">ECOCAPITAL</h6>
+
+    </div>
+
+    <div class="px-2 my-4 item-5">
+      <img class="" src="asset/img/Ecatarina-ok-3.png">
+      <h5 class="mt-4 name-speaker1 fs-01">MARK <br> FIELD</h5>
+      <p class="mt-4 height-p-speaker1 fs-00 two1 mt-lg-0">
+        Founder
+      </p>
+      <h6 class="vert lineHeight4 one">GROW INSPIRES</h6>
+
+    </div>
+
+    <div class="px-2 my-4 item-5">
+      <img class="" src="asset/img/Emmanuel-ok-3.png">
+      <h5 class="mt-4 name-speaker1 fs-01">GAVIN <br> JACKSON</h5>
+      <p class="mt-4 height-p-speaker1 fs-00 two1 oneMoins1 mt-lg-0">
+        Co-Founder & <br> Director
+      </p>
+      <h6 class="vert lineHeight3">4-22 FOUNDATION</h6>
+
+    </div>
+
+    <div class="px-2 my-4 item-5">
+      <img class="" src="asset/img/Jonathon-Spanos-ok-3.png">
+      <h5 class="mt-4 name-speaker1 fs-01">NICK <br> MURRAY</h5>
+      <p class="mt-4 height-p-speaker1 fs-00 oneMoins1 two2 mt-lg-0">
+        Marketing & Partnership Lead
+      </p>
+      <h6 class="vert lineHeight3">MI</h6>
+
+    </div>
+
+    <div class="px-2 my-4 item-5">
+      <img class="" src="asset/img/Rikesh-ok-5.png">
+      <h5 class="mt-4 name-speaker1 fs-01">HUGH <br> CHATFIELD</h5>
+      <p class="mt-4 height-p-speaker1 fs-00 oneMoins1 two1 mt-lg-0">
+        Head of <br> Growth
+      </p>
+      <h6 class="vert lineHeight3">GENERATION</h6>
+
+    </div>
+
+    <div class="px-2 my-4 item-5">
+      <img class="" src="asset/img/Rikesh-ok-7.png">
+      <h5 class="mt-4 name-speaker1 fs-01">MRK <br> VINGOE</h5>
+      <p class="mt-4 height-p-speaker1 fs-00 two3 oneMoins1 mt-lg-0">
+        CEO
+      </p>
+      <h6 class="vert lineHeight05">THE ENGINEERING</h6>
+
+    </div>
+
+    <div class="px-2 my-4 item-5">
+      <img class="" src="asset/img/Ecatarina-ok-4.png">
+      <h5 class="mt-4 name-speaker1 fs-01">NIGEL <br> COLIN</h5>
+      <p class="mt-4 height-p-speaker1 fs-00 oneMoins1 two3 mt-lg-0">
+        Team Leader
+      </p>
+      <h6 class="vert lineHeight5">THE GRADUATE PROJECT</h6>
+
+    </div>
+
+    <div class="px-2 my-4 item-5">
+      <img class="" src="asset/img/Emmanuel-ok-4.png">
+      <h5 class="mt-4 name-speaker1 fs-01 ">JOHN <br> WALKER</h5>
+      <p class="mt-4 height-p-speaker1 fs-00 oneMoins1 two3 mt-lg-0">
+        Chief Executive
+      </p>
+      <h6 class="vert lineHeight3 one">CRATE</h6>
+
+    </div>
+
+    <div class="px-2 my-4 item-5">
+      <img class="" src="asset/img/Jonathon-Spanos-ok-4.png">
+      <h5 class="mt-4 name-speaker1 fs-01">TALLY <br> HATZAKIS</h5>
+      <p class="mt-4 height-p-speaker1 fs-00 oneMoins1 two3 mt-lg-0">
+        Trilateral Research
+      </p>
+      <h6 class="vert lineHeight3 one1">TRILATERAL RESEARCH</h6>
+
+    </div>
+
+    <div class="px-2 my-4 item-5 other">
+      <img class="" src="asset/img/Rikesh-ok-5.png">
+      <h5 class="mt-4 name-speaker1 fs-01">HUGH <br> CHATFIELD</h5>
+      <p class="mt-4 height-p-speaker1 fs-00 oneMoins1 two3 mt-lg-0">
+        Head of Growth
+      </p>
+      <h6 class="vert lineHeight002 one one">GENERATION</h6>
+
+    </div>
+
+  </div>
+
+
+  <div class="row align-center">
+    <div class="text-center col-12">
+      <button class="mr-3 btn-custom-1 fs-01">MORE SPEAKERS<img src="asset/img/fleche-noir.png"> </button>
+    </div>
+  </div>
+
+  <div class="my-5 container-custom row vert-card-1">
+    <div class="col-lg-8 col-12">
+      <div class="pt-2 ml-2 ml-lg-1 text-center-p">
+        <h5 class=" titre-join-us-at fs-02 bold">JOIN US AT: <br> THE GLOBAL FORUM ON CITIES
+          <h5 class=" titre-join-us-at1 fs-02 bold" style="display: none;">JOIN US AT: THE GLOBAL FORUM ON CITIES
+          </h5>
+          <p class="mt-4 texte-join-us-at fs-02">
+            The Global Forum On Cities is the opportunity for
+            business leaders and policy makers with a vested interest
+            in cities to meet 4 times throughout the year in London,
+            Paris,New York and Singapore.
+
+          </p>
+          <p class=" texte-join-us-at text-center-p fs-02 mt-lg-5 pt-lg-4">Reflect, work, connect with
+            peers and built
+            relationships
+            with 500+ cities, 3,000+ corporations, 7,000+ attendees,
+            500+ speakers, 20 Sectors (and 20 sector specific
+            summits within the Forum), 100+ global and large
+            corporations CEOs and government ministers, 20+
+            Economists, 1,000+ Researchers and Scientists, 600+
+            Investors, 600, Startups, 400 Exhibitors and 300+ Media participating.
+          </p>
+          <br>
+          <div class="content-btn">
+            <a href="#" class="mtp-0 mbp-5 btn-general about-button btn-custom-1" style="min-width: 100px!important;">
+              <div class="fs-00">
+                FIND OUT MORE<img src="asset/img/fleche-noir.png">
+              </div>
+            </a>
+          </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-12">
+      <div class="" id="myGlobal">
+        <div class="btn-statistic">
+          <a href="#" class=" margin-right col-6 btn-blue bold btn-vert-card">BUY TICKETS</a>
+          <a href="#" id="super-btn" class="col-6 btn-blue bold btn-vert-card">SPONSOR</a>
+        </div>
+        <div class="text-center col-12 bg-vert">
+          <div class="pt-4">
+            <h1 class="chiffre-statistique-1 black bold fs-06">500+</h1>
+            <p class="black font-italic bold fs-04" style="font-size: 1.5rem ;">Speakers</p>
+            <hr class="line-black col-2">
+          </div>
+
+          <div>
+            <h1 class="chiffre-statistique-1 black bold fs-06">7,000+</h1>
+            <p class="black font-italic bold fs-04" style="font-size: 1.5rem ;">Attendees</p>
+            <hr class="line-black col-2">
+          </div>
+
+          <div>
+            <h1 class="chiffre-statistique-1 black bold fs-06">20</h1>
+            <p class="black font-italic bold fs-04" style="font-size: 1.5rem ;">Sectors</p>
+            <hr class="line-black col-2">
+          </div>
+
+          <div>
+            <h1 class="chiffre-statistique-1 black bold fs-06">300+</h1>
+            <p class="pb-5 mb-5 pb-lg-0 black font-italic bold fs-04" style="font-weight: 400;font-size: 1.5rem ;">Media
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="my-5 container-custom vert-card-2"  style="display: none;">
+    <div class="col-lg-6 col-12">
+      <div class="" id="myGlobal">
+          <div class="btn-statistic">
+            <a href="#" class=" margin-right col-6 btn-blue bold btn-vert-card">BUY TICKETS</a>
+            <a href="#" id="super-btn" class="col-6 btn-blue bold btn-vert-card">SPONSOR</a>
+          </div>
+        <div class="text-center col-12 bg-vert">
+          <div class="pt-4">
+            <h1 class="chiffre-statistique-1 black bold fs-06">500+</h1>
+            <p class="black font-italic bold fs-04">Speakers</p>
+            <hr class="line-black col-2">
+          </div>
+
+         <div>
+          <h1 class="chiffre-statistique-1 black bold fs-06">7,000+</h1>
+          <p class="black font-italic bold fs-04">Attendees</p>
+          <hr class="line-black col-2">
+         </div>
+
+         <div>
+          <h1 class="chiffre-statistique-1 black bold fs-06" >20</h1>
+          <p class="black font-italic bold fs-04">Sectors</p>
+          <hr class="line-black col-2"> 
+         </div>
+
+         <div>
+          <h1 class="chiffre-statistique-1 black bold fs-06">300+</h1>
+          <p class="pb-5 mb-5 pb-lg-0 black font-italic bold fs-04" style="font-weight: 400;">Media</p>
+         </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="pt-2 ml-2 ml-lg-1 col-lg-6 col-12 text-center-p">
+      <h5 class=" titre-join-us-at fs-02">JOIN US AT : <br> THE GLOBAL FORUM ON CITIES
+        <h5 class=" titre-join-us-at1 fs-02" style="display: none;">JOIN US AT : THE GLOBAL FORUM ON CITIES
+      </h5>
+      <p class="mt-4 texte-join-us-at fs-02">
+        The Global Forum On Cities is the opportunity for
+        business leaders and policy makers with a vested interest
+        in cities to meet 4 times throughout the year in London,
+        Paris,New York and Singapore.
+
+      </p>
+      <p class=" texte-join-us-at text-center-p fs-02">Reflect, work, connect with
+        peers and built
+        relationships
+        with 500+ cities, 3,000+ corporations, 7,000+ attendees,
+        500+ speakers, 20 Sectors (and 20 sector specific
+        summits within the Forum), 100+ global and large
+        corporations CEOs and government ministers, 20+
+        Economists, 1,000+ Researchers and Scientists, 600+
+        Investors, 600, Startups, 400 Exhibitors and 300+ Media participating.
+      </p>
+      <br>
+      <div class="content-btn">
+        <a href="#" class="mtp-0 mbp-5 btn-general btn-more btn-custom-5" style="min-width: 100px!important;">
+          <div class="fs-00">
+            FIND OUT MORE<img src="asset/img/fleche-noir.png">
+          </div>
+        </a>
+      </div>
+    </div>
+  </div> -->
+
+
+
+
+
+
+
+
+
+  <div class="text-center bg-white container-custom">
+    <h1 class="mx-2 my-5 text-left ml-lg-1 bold black fs-03" style="font-size: 3.2vw ;">THANK YOU FOR JOINING US AT THE
+      GLOBAL FORUM ON
+      CITIES</h1>
+    <h3 class="pb-1 ml-2 text-left ml-lg-1 pb-lg-4 bold black fs-01 text1" style="font-size: 2.2vw ;margin-top: 5%;">
+      The Global Forum on Cities is the most <span class="vert"> influential </span>series of summits about cities in
+      the world — gathering world leading experts in <span class="vert"> business, government and policy, research and
+        academia, </span> discussing opportunities and challenges facing twenty first century <span class="vert">
+        cities.</span><br>
+
+      This global ecosystem is where the world's cities, governments, corporations, <span class="vert"> largest brands
+      </span> and most <span class="vert"> innovative </span> organisations <span class="vert"> create </span>
+      opportunities, <span class="vert"> meet </span> new partners, and feel <span class="vert"> inspired </span> to
+      make or improve products, services, solutions, policies, build<span class="vert"> technologies, </span>brands, and
+      <span class="vert"> markets. </span>
+    </h3>
+
+    <div class="content-btn">
+      <a href="#" class="mt-4 mb-5 ml-3 marg-left btn-custom-2 ml-lg-0 btn-general mt-lg-0 about-button">
+        <div class="fs-01">
+          REGISTER NOW<img src="asset/img/fleche-white.png">
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="pb-5 bg-white container-custom-2">
+
+    <h1 class="my-4 text-left black" style="margin-left: 17%; font-size: 4.5vw !important;">Join us in:</h1>
+    <div class="pb-5 bg-white" id="destkopjoin">
+
+
+      <div class="align-center" style="display: flex; flex-wrap: wrap;">
+        <div class="col-5 sect-join-1 city-section" style="background-image: url(asset/img/bg-sect-join-1.png);">
+          <p>8:00AM</p>
+          <h2 style="color: white!important;">London</h2>
+          <h4 class="mb-5">NOVEMBER 27-28, 2024</h4>
+          <button class="mt-5 btn-custom-solo"><img src="asset/img/fleche-noir.png" class="m-0"></button>
+        </div>
+
+        <div class="col-5 sect-join-1 city-section" style="background-image: url(asset/img/bg-sect-join-2.png);">
+          <p>8:00AM</p>
+          <h2 style="color: white!important;">Paris</h2>
+          <h4 class="mb-5">MARCH 25-26, 2024</h4>
+          <button class="mt-5 btn-custom-solo"><img src="asset/img/fleche-noir.png" class="m-0"></button>
+        </div>
+
+
+
+        <div class="col-5 sect-join-1 city-section" style="background-image: url(asset/img/bg-sect-join-4.png);">
+          <p>8:00AM</p>
+          <h2 style="color: white!important;">Singapore</h2>
+          <h4 class="mb-5">JUNE 24-25, 2024</h4>
+          <button class="mt-5 btn-custom-solo"><img src="asset/img/fleche-noir.png" class="m-0"></button>
+        </div>
+
+        <div class="col-5 sect-join-1 city-section" style="background-image: url(asset/img/bg-sect-join-3.png);">
+          <p>8:00AM</p>
+          <h2 style="color: white!important;">New York</h2>
+          <h4 class="mb-5">SEPTEMBER 23-24, 2024</h4>
+          <button class="mt-5 btn-custom-solo"><img src="asset/img/fleche-noir.png" class="m-0"></button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="pb-5 bg-white" id="mobilejoin">
+
+
+      <div class="align-center" style="display: flex; flex-wrap: wrap;">
+        <div class="col-5 sect-join-1 city-section" style="background-image: url(asset/img/bg-sect-join-1.png);">
+          <p>London</p>
+          <h2 style="color: white!important;">NOVEMBER 27-28, 2024</h2>
+          <h4 class="mb-5">8:00AM</h4>
+          <button class="mt-5 btn-custom-solo"><img src="asset/img/fleche-noir.png" class="m-0"></button>
+        </div>
+
+        <div class="col-5 sect-join-1 city-section" style="background-image: url(asset/img/bg-sect-join-2.png);">
+          <p>Paris</p>
+          <h2 style="color: white!important;">MARCH 25-26, 2024</h2>
+          <h4 class="mb-5">8:00AM</h4>
+          <button class="mt-5 btn-custom-solo"><img src="asset/img/fleche-noir.png" class="m-0"></button>
+        </div>
+
+
+
+        <div class="col-5 sect-join-1 city-section" style="background-image: url(asset/img/bg-sect-join-4.png);">
+          <p>Singapore</p>
+          <h2 style="color: white!important;">JUNE 24-25, 2024</h2>
+          <h4 class="mb-5">8:00AM</h4>
+          <button class="mt-5 btn-custom-solo"><img src="asset/img/fleche-noir.png" class="m-0"></button>
+        </div>
+
+        <div class="col-5 sect-join-1 city-section" style="background-image: url(asset/img/bg-sect-join-3.png);">
+          <p>New York</p>
+          <h2 style="color: white!important;">SEPTEMBER 23-24, 2024</h2>
+          <h4 class="mb-5">8:00AM</h4>
+          <button class="mt-5 btn-custom-solo"><img src="asset/img/fleche-noir.png" class="m-0"></button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+  <div class="pb-2 mt-5 text-center pb-lg-5 container-custom-2" style="padding-top: 5%;">
+    <br>
+    <h1 class="mb-3 mb-lg-5 mobile-texte-sus" style="font-size: 4.5vw !important">Sustainable Cities</h1>
+    <img src="asset/img/Sustainable-Goals.png" class="img-sustainable" width="60%">
+    <br>
+  </div>
+
+  <!-- ACTI-->
+  <div class="text-center container-custom-2" style="margin-top: 5%;">
+    <h1 class="mb-2 mb-lg-5 mobile-texte-sus vert-tittle-sector" style="font-size: 4.5vw !important">Sectors</h1>
+  </div>
+  <div class="mb-5 container-acti">
+    <div class="pt-3 text-center item-acti1 ">
+      <img src="asset/img/picto-black/train.png">
+      <p class="mt-3 mb-4 black">
+        Transport, Infrastructure & Logistics Summit
+      </p>
+    </div>
+    <div class="pt-3 text-center item-acti1 ">
+      <img src="asset/img/picto-black/energie-eolienne.png">
+      <p class="mt-3 mb-4 black">
+        Environment, Energy & Utility Summit
+      </p>
+    </div>
+    <div class="pt-3 text-center item-acti1 ">
+      <img src="asset/img/picto-black/gouvernance.png">
+      <p class="mt-3 mb-4 black">
+        Government & Public Policy & Social Impact Summit
+      </p>
+    </div>
+    <div class="pt-3 text-center item-acti1 ">
+      <img src="asset/img/picto-black/innovation.png">
+      <p class="mt-3 mb-4 black">
+        Technology & Digital Revolution Summit
+      </p>
+    </div>
+    <div class="pt-3 text-center item-acti1 ">
+      <img src="asset/img/picto-black/banking.png">
+      <p class="mt-3 mb-4 black">
+        Financial Services & Insurance Summit
+      </p>
+    </div>
+    <div class="pt-3 text-center item-acti1 ">
+      <img src="asset/img/picto-black/electrocardiogram.png">
+      <p class="mt-3 mb-4 black">
+        Healthcare, Pharmaceuticals & Biotechnology Summit
+      </p>
+    </div>
+    <div class="pt-3 text-center item-acti1 ">
+      <img src="asset/img/picto-black/construction.png">
+      <p class="mt-3 mb-4 black">
+        Construction & Real Estate Summit
+      </p>
+    </div>
+    <div class="pt-3 text-center item-acti1 ">
+      <img src="asset/img/picto-black/industrial-automation.png">
+      <p class="mt-3 mb-4 black">
+        Industrial Automation Summit
+      </p>
+    </div>
+    <div class="pt-3 text-center item-acti1 ">
+      <img src="asset/img/picto-black/profits.png">
+      <p class="mt-3 mb-4 black">
+        Investment Summit
+      </p>
+    </div>
+    <div class="pt-3 text-center item-acti1 ">
+      <img src="asset/img/picto-black/consulting.png">
+      <p class="mt-3 mb-4 black">
+        Consulting and Services Summit
+      </p>
+    </div>
+    <div class="pt-3 text-center item-acti1 ">
+      <img src="asset/img/picto-black/balance.png">
+      <p class="mt-3 mb-4 black">
+        Legal Summit
+      </p>
+    </div>
+    <div class="pt-3 text-center item-acti1 ">
+      <img src="asset/img/picto-black/food-summit.png">
+      <p class="mt-3 mb-4 black">
+        Food Summit
+      </p>
+    </div>
+    <div class="pt-3 text-center item-acti1 ">
+      <img src="asset/img/picto-black/man-walking-with-shopping-cart.png">
+      <p class="mt-3 mb-4 black">
+        Consumer Good Summit
+      </p>
+    </div>
+    <div class="pt-3 text-center item-acti1 ">
+      <img src="asset/img/picto-black/quality.png">
+      <p class="mt-3 mb-4 black">
+        Lifestyle & Luxury Good Summit
+      </p>
+    </div>
+    <div class="pt-3 text-center item-acti1 ">
+      <img src="asset/img/picto-black/book.png">
+      <p class="mt-3 mb-4 black">
+        Education and Learning Summit
+      </p>
+    </div>
+    <div class="pt-3 text-center item-acti1 ">
+      <img src="asset/img/picto-black/mona-lisa.png">
+      <p class="mt-3 mb-4 black">
+        Creative Industries & Design Summit
+      </p>
+    </div>
+    <div class="pt-3 text-center item-acti1 ">
+      <img src="asset/img/picto-black/film.png">
+      <p class="mt-3 mb-4 black">
+        Media & Film Summit
+      </p>
+    </div>
+    <div class="pt-3 text-center item-acti1 ">
+      <img src="asset/img/picto-black/logo-des-jeux-olympiques.png">
+      <p class="mt-3 mb-4 black">
+        Sports Summit
+      </p>
+    </div>
+    <div class="pt-3 text-center item-acti1">
+      <img src="asset/img/picto-black/diversity.png">
+      <p class="mt-3 mb-4 black">
+        Women, Gender & Diversity Summit
+      </p>
+    </div>
+    <div class="pt-3 text-center item-acti1">
+      <img src="asset/img/picto-black/passport.png">
+      <p class="mt-3 mb-4 black">
+        Hospitality, Travel & Tourism Summit
+      </p>
+    </div>
+    <div class="pt-3 text-center item-acti1">
+      <img src="asset/img/24.png">
+      <p class="mt-3 mb-4 black">
+        Emerging & Future Cities Summit
+      </p>
+    </div>
+    <div class="pt-3 text-center item-acti00">
+
+    </div>
+    <div class="pt-3 text-center item-acti00">
+
+    </div>
+    <div class="pt-3 text-center item-acti00">
+
+    </div>
+    <div class="pt-3 text-center item-acti00">
+
+    </div>
+
+    <div class="pt-3 text-center item-acti0"></div>
+
+
+
+  </div>
+
+
+
+
+  <div class="py-5 pb-5 bg-white align-center container-custom" style="display: flex; flex-wrap: wrap;">
+    <div class="mt-3 mt-lg-0" style="width: 30%;">
+      <h2 class="title-citie black " style="font-size: 4vw !important;">Cities Notes</h2>
+    </div>
+    <div class="mt-3 mt-lg-0" style="width:30%;">
+      <h4 class="black black-other" style="font-size: 4vw ; text-align: left !important;">Newsletter</h4>
+    </div>
+    <div class="" style="width: 25%;">
+      <form style="display: flex;flex-direction: row;">
+        <input type="email" name="email" placeholder=" Your Email" class="input-email">
+        <button class="bg-white border-0" style="border-bottom: 2px solid black!important;outline: none;">
+          <img src="asset/img/fleche-noir-droite.png" alt="" style="width: 1.8vw;height: auto;object-fit: contain;">
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="mt-lg-5 pt-lg-5 mobile-container-title-logo row align-center">
+    <div class="mt-5 text-center mobile-content-title-logo col-12">
+      <h1 style="font-size: 4.5vw !important; margin-bottom: 5%;">Top Companies Attending</h1>
+    </div>
+  </div>
+
+  <!-- LOGO 
+  <div class="mb-5 container-logo align-center">
+    <div class="item-logo ">
+      <img src="asset/img/logo/transport-for-l.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/europeanBank.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/thingsGrow.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/virigin blan.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/ADOBE.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/BT.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/WORLD-PAY.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/CLIMATE-GROUP.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/spike.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/PUBLICIS-SAPIENT.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/COGNIZANT.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/cgi.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/DYSON.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/ecocap.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/EIC.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/eit digital.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/bbc.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/energy-uk-logo.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/DBEIS_Departmental_Logo.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/ROBOTICS.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/QUADRIGa-grey.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/2560px-Deutsche_Bank.svg.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/Reach-Robotics.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/Trilateral-Research-Logo-2019to USE.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/siemens-grey.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/Wayve-Long-format-Logo_GT.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/CUTES-GREY.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/General-Mills-logo.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/societe-generale-logo.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/bertelsmann-logo-1600x900px-transp_teaser_2_3_lt_768_retina.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/DG+Cities+Logo+(Small).png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/Air_France.png" />
+    </div>
+
+  </div>
+  -->
+  <!-- !-- LOGO FOND BLANC -->
+  <div class="bg-white container-logo align-center">
+    <div class="item-logo">
+      <img src="asset/img/logonoir/transport-for-l.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/europeanBank.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/thingsGrow.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/virigin blan.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/Adobe.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/BT.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/WORLD-PAY.jpg" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/CLIMATE-GROUP.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/spike.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/PUBLICIS-SAPIENT.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/Cognizant.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/CGI.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/Dyson.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/ecocap.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/eic.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/eit digital.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/bbc.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/energy-uk-logo.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/DBEIS_Departmental_Logo.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/ROBOTICS.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/QUADRIGa-grey.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/2560px-Deutsche_Bank.svg.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/Reach-Robotics.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/Trilateral-Research-Logo-2019to USE.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/siemens-grey.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/Wayve-Long-format-Logo_GT.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/CUTES-GREY.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/General-Mills-logo.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/societe-generale-logo.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/bertelsmann-logo-1600x900px-transp_teaser_2_3_lt_768_retina.png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logonoir/DG+Cities+Logo+(Small).png" />
+    </div>
+    <div class="item-logo">
+      <img src="asset/img/logo/Air_France.png" />
+    </div>
+  </div>
+
+
+
+  <!-- F O O T E R -->
+
+  <div class="container footer-1 footer1">
+    <hr class="footer-line">
+    <div class="row">
+      <div class="sect-logo d-flex justify-content-center" style="width:30%;">
+        <img src="asset/img/logo.png">
+      </div>
+      <div class="text-center sect-social footer-div0" style="width:40%;">
+        <p class="fs-01" style="font-size: 1.2vw;">Connect with us</p>
+        <div class="footer-img">
+          <img src="asset/img/linkedin.png">
+          <img src="asset/img/instagram.png">
+          <img src="asset/img/twitter.png">
+          <img src="asset/img/facebook.png">
+          <img src="asset/img/tiktok.png">
+        </div>
+      </div>
+      <div class="text-left footer-div1" style="width:13%;">
+        <a href="index.html" class="fs-07" style="font-size: 1.2vw;">About</a><br class="br-footer">
+        <a href="speaker.html" class="fs-07" style="font-size: 1.2vw;">Speakers</a><br class="br-footer">
+        <a href="sectors.html" class="fs-07" style="font-size: 1.2vw;">Sector</a><br class="br-footer">
+        <a href="sectors.html" class="fs-07" style="font-size: 1.2vw;">Agenda & Speaker</a><br class="br-footer">
+        <a href="landscape.html" class="fs-07" style="font-size: 1.2vw;">Agenda Listview</a>
+      </div>
+      <div class="text-left footer-div2" style="width:10%;">
+        <a href="sponsoring.html" class="fs-07" style="font-size: 1.2vw;">Sponsoring</a><br class="br-footer">
+        <a href="book.html" class="fs-07" style="font-size: 1.2vw;">Buy tickets</a><br class="br-footer">
+
+      </div>
+      <div class="text-left footer-div3" style="width:7%;">
+        <a href="podcast.html" class="fs-07" style="font-size: 1.2vw;">Podcasts</a>
+        <a href="contact.html" class="fs-07" style="font-size: 1.2vw;">Contact</a>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <hr class="line col-1">
+      <p class="fs-01" style="font-size: 1.2vw;"> &copy;The Global Forum On Cities 2023 &copy;</p>
+    </div>
+  </div>
+
+  <div class="container footer-1 footer2" style="display: none;">
+    <div class="row">
+      <div class="mr-4 sect-logo" style="width:30%;">
+        <img src="asset/img/logo.png">
+      </div>
+      <div class="text-left footer-div1" style="width:13%;">
+        <a href="index.html" class="fs-01" style="font-size: 1.2vw;">About</a><br class="br-footer">
+        <a href="speaker.html" class="fs-01" style="font-size: 1.2vw;">Speakers</a><br class="br-footer">
+        <a href="sectors.html" class="fs-01" style="font-size: 1.2vw;">Sector</a><br class="br-footer">
+        <a href="sectors.html" class="fs-01" style="font-size: 1.2vw;">Agenda & Speaker</a><br class="br-footer">
+        <a href="landscape.html" class="fs-01" style="font-size: 1.2vw;">Agenda Listview</a>
+      </div>
+      <div class="text-left footer-div2" style="width:10%;">
+        <a href="sponsoring.html" class="fs-01" style="font-size: 1.2vw;">Sponsoring</a><br class="br-footer">
+        <a href="book.html" class="fs-01" style="font-size: 1.2vw;">Buy tickets</a><br class="br-footer">
+        <a href="podcast.html" class="fs-01" style="font-size: 1.2vw;">Podcasts</a>
+      </div>
+      <div class="text-left footer-div3" style="width:7%;">
+        <a href="contact.html" class="fs-01" style="font-size: 1.2vw;">Contact</a>
+      </div>
+    </div>
+    <div class="mt-3 text-center sect-social footer-div0 mt-lg-0">
+      <p class="fs-01" style="font-size: 1.2vw;">Connect with us</p>
+      <div class="footer-img">
+        <img src="asset/img/linkedin.png">
+        <img src="asset/img/instagram.png">
+        <img src="asset/img/twitter.png">
+        <img src="asset/img/facebook.png">
+        <img src="asset/img/tiktok.png">
+      </div>
+    </div>
+
+    <div class="text-center">
+      <hr class="line col-1">
+      <p class="fs-01" style="font-size: 1.2vw;">&copy; The Global Forum On Cities 2023 &copy;</p>
+    </div>
+  </div>
+
+
+
+  <script>
+    /* $(document).ready(function () {
+       var owl = $('.owl-carousel');
+       owl.owlCarousel({
+         items: 1,
+         loop: true,
+         margin: 10,
+         autoplay: false,
+         autoplayTimeout: 3000
+       })
+     })*/
+    $(document).ready(function () {
+      var owl = $('.owl-carousel');
+      owl.owlCarousel({
+        items: 1,
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 5000
+      })
+    })
+
+  </script>
+
+  <script src="asset/js/main.js"></script>
+  <script src="asset/js/social.js"></script>
+  <script src="asset/js/basket.js"></script>
+  <!--   <script>
+      $(function () {
+          const priceUnite = 400;
+          $(document).on('click', '.btn-plus', function () {
+              let quantity = parseInt($('.quantity').text()) + 1;
+              let price = priceUnite * quantity
+              $('.quantity').text(quantity);
+              $('.price').text(`$${price}`);
+          })
+          $(document).on('click', '.btn-minus', function () {
+              let quantity = parseInt($('.quantity').text()) - 1;
+              let priceValue = $('.price').text().replace('$', '');
+              let price = parseInt(priceValue) - priceUnite;
+              if (quantity > 0) {
+                  $('.quantity').text(quantity);
+                  $('.price').text(`$${price}`);
+              }
+              else $('.quantity').text(0);
+          })
+      })
+  </script> -->
+
+  <script>
+    $(function () {
+
+
+      const local = window.sessionStorage.getItem('books');
+      let books = local ? JSON.parse(local) : [];
+
+      let subTotal = 0;
+
+      books.map((book, i) => {
+        const divModal = `
+<div class="content-2 conte">
+  <div class="" style="width:22%;">
+    <img src="asset/img/logo.png" style="width:5vw;"/>
+  </div>
+  <div class="" style="width:36%">
+      <span class="nom" style="text-align:
+          start!important;">Tickets London - ${book.namebook}</span>
+  </div>
+  <div class="prix" style="width:12%">${book.prixbook}SGD</div>
+  <div class="" style="width:12%">
+      <div class="" style="align-items:
+          center;height: 3vw;justify-content:
+          space-between;display: flex; flex-direction:
+          row;border: 1px solid white;width: 100%; padding:0 8%; align-items: center;">
+          <img src="asset/img/moins.png"alt=""
+              class="img-tab btn-minus" style="width: 0.4rem" data-indexboo=${i} style="cursor:pointer" >
+          <p class="pt-3 quantity" style="font-size: 1vw;">${book.quantite}</p>
+          <img src="asset/img/plus.png" alt=""
+              class="img-tab btn-plus" style="width: 0.4rem" data-indexbook=${i} style="cursor:pointer" >
+      </div>
+  </div>
+  <div class="price" style="width:15%;">${book.prixbook * book.quantite}SGD</div>
+</div>`
+        subTotal = subTotal + (parseInt(book.prixbook * book.quantite))
+        total = parseInt($('.tva').text().replace('$', '')) + subTotal;
+
+        $('.content-modal').append(divModal);
+        if (i === books.length - 1) {
+          $('.subT').text(subTotal + "SGD")
+          $('.total').text(total + "SGD")
+        }
+      })
+
+      $(document).on('click', '.btn-plus', function () {
+        const btnActif = $(this)
+        const indexbook = btnActif.data('indexbook')
+        let quantite = btnActif.siblings('p')
+        let sub = 0;
+        let total = 0;
+        quantite.text(parseInt(quantite.text()) + 1)
+
+        books = books.map((book, i) => {
+          if (i == indexbook) {
+            book.quantite += 1
+            $(this).parent().parent().siblings('.price').text(book.quantite * book.prixbook + "SGD")
+          }
+          sub += parseInt(book.quantite * book.prixbook)
+          total = parseInt($('.tva').text().replace('$', '')) + sub
+          return book
+        })
+        $('.subT').text(sub + "SGD");
+        $('.total').text(total + "SGD");
+        window.sessionStorage.setItem('books', JSON.stringify(books));
+
+      });
+
+      $(document).on('click', '.btn-minus', function () {
+        const btnMoins = $(this)
+        const indexboo = btnMoins.data('indexboo')
+        let quantite = btnMoins.siblings('p')
+        let sub = 0;
+        if (parseInt(quantite.text()) - 1 > 0) {
+          quantite.text(parseInt(quantite.text()) - 1)
+        }
+
+        books = books.map((book, i) => {
+          if (i == indexboo) {
+            if (book.quantite - 1 > 0) {
+              book.quantite -= 1
+            }
+            $(this).parent().parent().siblings('.price').text(book.quantite * book.prixbook)
+          }
+          sub -= parseInt(book.quantite * book.prixbook)
+          total = parseInt($('.tva').text().replace('$', '')) - sub
+
+          return book
+        })
+        $('.subT').text(-sub + "SGD");
+        $('.total').text(total + "SGD");
+        window.sessionStorage.setItem('books', JSON.stringify(books));
+      });
+
+      $(".continue").click(function () {
+        var lien = "pass_London.html";
+        window.location.href = lien;
+      });
+
+      $(document).on('click', '.supp ', function () {
+        $('.conte').remove();
+        $('.subT').remove();
+        $('.total').remove();
+        books.splice(0, books.length);
+        window.sessionStorage.setItem('books', JSON.stringify(books));
+        window.location.href = "pass_London.html";
+      })
+    });
+
+    $(document).ready(function () {
+      // Check if the browser window width is less than or equal to 767px
+      if ($(window).width() <= 767) {
+        // Display the section on mobile devices
+        $('#mobilejoin').show();
+        $('#destkopjoin').hide();
+      } else {
+        // Hide the section on desktop
+        $('#mobilejoin').hide();
+        $('#destkopjoin').show();
+      }
+    });
+  </script>
+</body>
+
+</html>

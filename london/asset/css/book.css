@@ -1,0 +1,447 @@
+@font-face {
+    font-family: 'fkdisplay';
+    src: url('../police/fkdisplay.woff2') format('woff2'),
+         url('../police/fkdisplay.woff') format('woff');
+
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+
+@font-face {
+  font-family: "monStyle";
+  src: url("../font/Montserrat-VariableFont_wght.ttf") format('truetype');
+}
+
+/*h1, h2, h3, h4, h5, h6, p, a, button, span, input, div, label
+{
+  font-family: 'fkdisplay' !important;
+}*/
+
+
+/* Lazy Load Styles */
+.card-image {
+	display: block;
+	min-height: 20rem; /* layout hack */
+	background: #fff center center no-repeat;
+	background-size: cover;
+	/* filter: blur(3px);  */
+}
+
+.card-image > img {
+	display: block;
+    width: 397px;
+    height: 371px;
+    opacity: 0.06;
+
+}
+
+.card-image.is-loaded {
+	filter: none; /* remove the blur on fullres image */
+	transition: filter 1s;
+}
+
+
+
+
+/* Layout Styles */
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+  padding: 0!important;
+	/* font-size: 16px; */
+    background-color: #000000;
+	/* font-family: monStyle; */
+}
+
+.card-list {
+	display: block;
+	justify-content: center;
+	padding: 0;
+  width: 100%;
+	font-size: 0;
+	text-align: center;
+	list-style: none;
+}
+
+.card {
+	display: inline-block;
+    width: 397px;
+    height: 533px;
+    border: none;
+    border-radius: 0!important;
+	max-width: 18em;
+	margin: 1rem;
+	font-size: 1rem;
+	text-decoration: none;
+	overflow: hidden;
+	box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
+	
+}
+
+
+.card-description {
+	display: block;
+	padding-top: 3em;
+  padding-right: 4em;
+  padding-bottom: 3em;
+  padding-left: 4em;
+	color: #010101;
+	text-decoration: none;
+}
+
+.card-description > h2 {
+	margin: 0 0 0.5em;
+}
+
+.card-description > p {
+	margin: 0;
+}   
+
+
+.head{
+  width: 100%;
+}
+
+.head h1{ 
+  font-size: 2.5em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.head-center h1{
+  font-size: 2.8em;
+  margin-top: 80px;
+  word-spacing: 5px;
+}
+
+h1{
+  text-align: center;
+  color: #fff;
+  
+  line-height: 1em;
+  font-weight: 400;
+}
+
+.button-inner{
+  background-color: #000000;
+  color: #fff;
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 12px;
+  
+  -webkit-transition: background-color .2s;
+  transition: background-color .2s;
+
+}
+
+.text-block-34{
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.button-inner img{
+  width: 20px;
+  height: auto;
+  color: #fff;
+  margin-left: 10px;
+}
+
+
+
+/* list-logo */
+.logo{
+  margin-left: 15%;
+  margin-top: 40px;
+  max-width:77%;
+}
+
+.logocard-list{
+  display: block;
+	margin: 1rem auto;
+	padding: 0;
+	font-size: 0;
+	list-style: none;
+  
+}
+
+.logocard {
+	display: inline-block;
+  width: auto;
+  height: auto;
+  border: none;
+  border-radius: 0!important;
+	max-width: 17rem;
+	margin: 1rem;
+	font-size: 1rem;
+	text-decoration: none;
+  text-align: center;
+	overflow: hidden;
+	box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
+	
+}
+
+.logocard img{
+  display: flex;
+  width: 200px;
+  height: 100px;
+  object-fit: contain;
+}
+
+/* join */
+
+.head-center h3 {
+  font-size: 15px;
+  text-align: center;
+  color: #fff;
+  line-height: 80px;
+  font-weight: 200;
+  word-spacing: 3px;
+}
+
+
+
+/* form starting stylings ------------------------------- */
+.group {
+  display: flex;
+  position: relative;
+  margin-bottom: 45px;
+  margin-top: 20px;
+}
+.group input {
+  font-size: 18px;
+  padding:10px 10px 5px 5px;
+  display: block;
+  width:60%;
+  border: none;
+  border-bottom: 2px solid #000000;
+}
+input:focus {
+  outline: none;
+}
+
+/* LABEL ======================================= */
+label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left:5px;
+  top:10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+
+/* active state */
+input:focus ~ label,
+input:valid ~ label {
+  top: -10px;
+  font-size: 14px;
+  color: #000000;
+}
+
+/* BOTTOM BARS ================================= */
+.bar {
+  position: relative;
+  display: block;
+  width: 300px;
+}
+.bar:before,
+.bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #000000;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.bar:before {
+  left: 50%;
+}
+.bar:after {
+  right: 50%;
+}
+
+/* active state */
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
+  width: 50%;
+}
+
+.input-group {
+  display: flex;
+}
+
+.input-group-append {
+  margin-left: -1px;
+}
+
+.monBtn{
+  border: none;
+  border-bottom: 2px solid #000000;
+  border-radius: 0;
+  background-color: white;
+  padding-top: 10px;
+  padding-right: 0px;
+}
+
+
+.monBtn i{
+  color: #000000;
+  
+}
+
+.monBtn:focus {
+  outline: none;
+}
+
+
+
+
+
+/* joinnnnnnnnnnnnn */
+
+.join{
+  margin-top: 100px;
+  background-color: #fff;
+}
+.mycontainer h1,h2{
+  color: #000000!important;
+  /* text-align: center; */
+}
+
+.mycontainer {
+  display: flex;
+  align-items: center; /* pour aligner les éléments verticalement au centre */
+  list-style-type: none; /* pour enlever les puces de listes */
+  margin: 0; /* pour enlever les marges de listes */
+  padding: 0; /* pour enlever les paddings de listes */
+  height: 200px;
+}
+
+.mycontainer li h1{
+  font-size: 3.3em;
+  line-height: 1em;
+  font-weight: 400;
+}
+
+.mycontainer li h2{
+
+  width: 400px;
+  overflow: hidden;
+  word-wrap: break-word;
+  font-size: 1.5em;
+  line-height: 1.3em;
+  font-weight: 400;
+}
+
+.image-book img
+{
+  width: 100%;
+  height: 25vw;
+  object-fit: cover;
+  filter: brightness(0.8);
+}
+.bouton-book
+{
+  padding: 10% 0 12% 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.bouton-book button
+{
+  outline: none;
+  background-color: black!important;
+  color: white!important;
+  padding: 2% 6%!important;
+  height:4vw !important ;
+  width: 15vw;
+}
+
+.btn-custom-book
+{
+  padding: 15px 20px;
+  margin: 34px;
+  color: white !important;
+  background-color: black;
+  font-size: 14px;
+  z-index: 998;
+}
+.mycontainer li {
+  flex: 1; /* pour que tous les éléments occupent également de l'espace */
+  padding: 0;
+}
+
+@media (max-width: 1129px) { /* pour les écrans de taille inférieure à 768px */
+  .mycontainer {
+    padding-top: 20px;
+    flex-direction: column; /* pour changer l'orientation des éléments en colonne */
+    height: 300px;
+  }
+  .mycontainer h1,h2 {
+    text-align: center; 
+  }
+  .group input {
+      width: 90%;  
+  }
+  .mycontainer label {
+    font-size: 25px;
+  }
+
+
+}
+
+.content-book{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item-book{
+  margin-top: 5%;
+  width: 25%;
+}
+
+.btn-custom-book img{
+  width: 20px;
+
+}
+
+
+
+
+.company-1{
+  font-size: 3em;
+  text-align: center;
+}
+
+
+@media (max-width: 521px) {
+  .company-1{
+    font-size: 2em!important;
+  }
+  .bouton-book button
+  {
+    width: 12vw;
+  }
+
+}
+@media (max-width:1250px) {
+  .company-1{
+    font-size: 2.6em;
+  }
+}

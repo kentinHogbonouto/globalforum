@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>GlobalForumCities</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="asset/css/podcast.css" />
+    <link rel="stylesheet" href="asset/css/style.css" />
+    <link rel="stylesheet" href="asset/css/global.css" />
+    <link rel="stylesheet" href="asset/css/index.css" />
+    <link rel="stylesheet" href="asset/css/cart.css" />
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="asset/css/all.css" />
+    <link rel="stylesheet" href="asset/css/speaker2.css" />
+    <link rel="stylesheet" href="asset/css/book.css" />
+
+    <!-- ALPINEJS DATA -->
+    <script src="asset/js/data.js"></script>
+    <!-- ALPINEJS -->
+    <script src="asset/js/alpinejs.cdn.min.js"></script>
+
+    <style type="text/css">
+      .sect-sector {
+        height: 250px;
+      }
+
+      .px350 {
+        height: 350px;
+      }
+
+      .name-speaker1 {
+        font-size: 1.2vw !important;
+        height: 3vw !important;
+        text-align: left;
+      }
+
+      @media screen and (max-width: 768px) {
+        .name-speaker1 {
+          font-size: 9.5px !important;
+        }
+
+        .height-p-speaker1 {
+          height: 45px;
+          line-height: 17px !important;
+        }
+      }
+
+      p.black.text-center.bsv.fs-04 {
+        font-size: 1.2vw;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+
+      .CustumeTitle {
+        width: 73%;
+      }
+
+      @media (max-width: 700px) {
+        .CustumeTitle {
+          width: 100%;
+        }
+      }
+
+      #mobilejoin div {
+        display: block !important;
+      }
+
+      #mobilejoin .sect-join-1 {
+        padding-bottom: 4% !important;
+        margin-bottom: 20px;
+        padding-left: 4%;
+      }
+
+      #mobilejoin .sect-join-1 button {
+        position: initial !important;
+        top: 50%;
+        padding: 3% 8%;
+        margin: 0;
+      }
+
+      #mobilejoin .sect-join-1 button img {
+        width: 6vw;
+      }
+
+      @media (max-width: 900px) {
+        .Section-title {
+          font-size: 4em !important;
+        }
+      }
+
+      @media (min-width: 900px) {
+        .Join-us {
+          text-align: left;
+        }
+      }
+
+      .Buttom-space {
+        margin-bottom: 4rem !important;
+      }
+    </style>
+
+    <!-- Owl Stylesheets -->
+    <link rel="stylesheet" href="asset/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="asset/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="asset/css/customindex.css" />
+
+    <script src="asset/js/jquery.slim.min.js"></script>
+    <script src="asset/js/popper.min.js"></script>
+    <script src="asset/js/bootstrap.bundle.min.js"></script>
+    <script src="asset/js/jquery3-6-0.min.js"></script>
+    <!-- javascript -->
+    <script src="asset/js/jquery.min.js"></script>
+    <script src="asset/js/owl.carousel.js"></script>
+  </head>
+
+  <body>
+    <div class="panier-div-global">
+      <div
+        class="text-center position-fixed panier-div justify-content-end"
+        id="myDIV"
+        style="display: none"
+      >
+        <img
+          src="asset/img/panier1.png"
+          onclick='window.location.href = "cartLondon.html";'
+          data-toggle="modal"
+          data-target="#exampleModal"
+          class="mr-5"
+          style="width: 6rem; cursor: pointer"
+          alt=""
+        />
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade bd-example-modal-lg"
+        id="exampleModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="text-white modal-title bold" id="exampleModalLabel">
+                Basket's details
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <!-- <span id="panier"></span>  -->
+              <div
+                id="cart-1"
+                class="item-cart cart-modal-div"
+                style="
+                  width: 100%;
+                  color: white !important;
+                  font-size: 1vw;
+                  text-align: center;
+                "
+              >
+                <div class="mb-3 content-modal">
+                  <div class="content-1">
+                    <div class="" style="width: 12%">Title</div>
+                    <div class="" style="width: 36%"></div>
+                    <div class="" style="width: 12%">Price</div>
+                    <div class="ml-lg-2" style="width: 12%">Quantity</div>
+                    <div class="ml-lg-4" style="width: 25%">
+                      SubTotal(Excluding VAT)
+                    </div>
+                  </div>
+                  <!-- <div class="content-2 conte">
+                          contenue ajouté dinamiquement par js 
+                    </div> -->
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a href="checkout.html" class="btn btn-sm btn-secondary"
+                >PROCEED TO CHECKOUT</a
+              >
+              <button
+                type="button"
+                class="btn btn-sm btn-danger"
+                onclick="effacerPanier()"
+                data-dismiss="modal"
+                data-dismiss="modal"
+              >
+                Delete Basket
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- H E A D E R -->
+
+    <div class="container-custom header-1">
+      <div class="align-center" style="display: flex; flex-wrap: nowrap">
+        <div class="sect-menu" style="width: 42%">
+          <img
+            src="asset/img/menu-web.png"
+            id="click-menu"
+            class="menu-bugger"
+          />
+        </div>
+        <div class="sect-logo" style="width: 42%">
+          <a href="index.html"><img src="asset/img/logo.png" /></a>
+        </div>
+        <div class="text-center sect-bouton" style="width: 16%">
+          <a href="book.html"
+            ><button
+              class="col-12 btn-custom btn-1"
+              style="margin-bottom: 8%; border: none"
+            >
+              <span class="text-button text-dark">BUY TICKETS</span>
+            </button></a
+          >
+          <br />
+          <a href="sponsoring.html"
+            ><button class="col-12 btn-custom btn-2" style="border: none">
+              <span class="text-button1 text-dark">SPONSOR</span>
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- M E N U-->
+
+    <div
+      class="container-custom menu hide-menu"
+      style="
+        height: 100%;
+        overflow-x: hidden !important;
+        overflow-y: scroll !important;
+      "
+    >
+      <div class="align-center" style="display: flex; flex-wrap: nowrap">
+        <div class="sect-menu" style="width: 42%">
+          <img src="asset/img/fermer.png" class="hide-menu" />
+        </div>
+        <div class="sect-logo hide-menu" style="width: 42%">
+          <a href="index.html"><img src="asset/img/logo.png" /></a>
+        </div>
+        <div class="text-center sect-bouton" style="width: 16%">
+          <a href="book.html"
+            ><button
+              class="col-12 btn-custom btn-1"
+              style="margin-bottom: 8%; border: none"
+            >
+              <span class="text-button text-dark">BUY TICKETS</span>
+            </button></a
+          >
+          <br />
+          <a href="sponsoring.html"
+            ><button class="col-12 btn-custom btn-2" style="border: none">
+              <span class="text-button1 text-dark">SPONSOR</span>
+            </button></a
+          >
+        </div>
+      </div>
+
+      <div class="justify-center mt-5 text-center text-menu">
+        <a href="index.html" class="hide-menu"> <h4>About</h4> </a><br />
+        <a href="speaker.html" class="hide-menu"> <h4>Speakers</h4> </a><br />
+        <a href="sectors.html" class="hide-menu"> <h4>Sectors</h4> </a><br />
+        <a href="landscape.html" class="hide-menu"> <h4>Agenda</h4> </a><br />
+
+        <a href="sponsoring.html" class="hide-menu"> <h4>Sponsoring</h4> </a
+        ><br />
+        <a href="podcast.html" class="hide-menu"> <h4>Podcast</h4> </a><br />
+        <a href="book.html" class="hide-menu"> <h4>Buy Tickets</h4> </a><br />
+        <!-- <a href="speaker.html" class="hide-menu"><h4>Podcasts</h4></a><br> -->
+        <a href="contact.html" class="hide-menu"> <h4>Contact</h4> </a><br />
+      </div>
+    </div>
+
+    <!-- S O C I A L -->
+
+    <div id="social" class="mt-3 container-custom social-fixe vp-hidden v-show">
+      <div class="text-right align-center">
+        <img src="asset/img/linkedin.png" /><br />
+        <img src="asset/img/instagram.png" /><br />
+        <img src="asset/img/twitter.png" /><br />
+        <img src="asset/img/facebook.png" /><br />
+        <img src="asset/img/tiktok.png" />
+      </div>
+    </div>
+
+    <!-- B O D Y -->
+    <div class="my-5 mt-5 container-head mbp-5">
+      <div class="justify-center row">
+        <div class="mb-5 col-md-5 col-12 home-sect-1">
+          <img src="asset/img/img-home.png" class="mobile-header-img" />
+        </div>
+        <div class="col-md-7 col-12">
+          <div class="ml-1 about-title myTxt-5 plp-0 ml-lg-0">
+            <div class="ml-1 ml-lg-4">
+              <p class="titre-global ml-lg-3">
+                THE GLOBAL BUSINESS <br />
+                AND POLICY CONFERENCE <br />
+                ON CITIES
+              </p>
+              <p class="titre-global1" style="display: none">
+                THE GLOBAL BUSINESS AND POLICY CONFERENCE ON CITIES
+              </p>
+              <h5 class="soutitre-global mt-lg-5 ml-lg-3">
+                Gathering private and public sector <br />
+                organisations, startups and <br />
+                investors building future cities.
+              </h5>
+              <h5 class="soutitre-global1" style="display: none">
+                Gathering private and public sector organisations, startups and
+                investors building future cities.
+              </h5>
+              <div class="mt-3 pr-lg-5 mr-lg-5 content-btn row mt-lg-0">
+                <div class="col-6">
+                  <a
+                    href="#"
+                    class="mb-2 btn-general btn-custom-5 about-button"
+                    style="min-width: 98px !important"
+                  >
+                    <div class="fs-00">
+                      BOOK NOW <img src="asset/img/fleche-noir.png" />
+                    </div>
+                  </a>
+                </div>
+                <div class="col-6">
+                  <a href="#" class="btn-general btn-custom-5 about-button">
+                    <div class="text-btn-img fs-00">
+                      VIEW THE FORUM <br />
+                      SCHEDULE
+                      <img
+                        src="asset/img/fleche-noir-droite.png"
+                        alt="Icone"
+                        class="mx-3 icon-image"
+                      />
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-custom bg-vert banner-mobile">
+      <div class="text-center owl-carousel owl-theme mtp-lg-5 mtp-1">
+        <div class="item">
+          <h1 class="bold black h1-gros">London, November 4-5, 2024</h1>
+        </div>
+        <div class="item">
+          <h1 class="bold black h1-gros">Paris, November 18-19, 2024</h1>
+        </div>
+        <div class="item">
+          <h1 class="bold black h1-gros">Singapore, December 2-3, 2024</h1>
+        </div>
+        <div class="item">
+          <h1 class="bold black h1-gros">New York, December 16-17, 2024</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid bg-white" style="border: 1px solid black">
+      <div class="row">
+        <div class="col-lg-12 py-4">
+          <span
+            class="d-flex flex-column align-items-center justify-content-center"
+          >
+            <h1 class="text-black text-center global-forum-title mt-4">
+              The Global Forum On Cities Annual Summits
+            </h1>
+            <span class="d-flex flex-column align-items-center">
+              <h6 class="text-black fs-1 text-center mt-4 header-title">📍 London</h6>
+              <span class="text-black text-center mt-4 font-weight-card header-description"
+                >November 4-5, 2024</span
+              >
+            </span>
+            <span class="d-flex flex-column align-items-center">
+              <h6 class="text-black fs-1 text-center mt-4 header-title">📍 Paris</h6>
+              <span class="text-black text-center mt-4 font-weight-card header-description"
+                >November 18-19, 2024</span
+              >
+            </span>
+            <span class="d-flex flex-column align-items-center">
+              <h6 class="text-black fs-1 text-center mt-4 header-title">📍 Singapore</h6>
+              <span class="text-black text-center mt-4 font-weight-card header-description"
+                >December 2-3, 2024</span
+              >
+            </span>
+            <span class="d-flex flex-column align-items-center">
+              <h6 class="text-black fs-1 text-center mt-4 header-title">📍 New York</h6>
+              <span class="text-black text-center mt-4 font-weight-card header-description"
+                >December 16-17, 2024</span
+              >
+            </span>
+          </span>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-4">
+        <div
+          class="col-2 card-margin card-height d-flex align-items-center justify-content-center margin-left-card"
+        >
+          <span
+            class="d-flex flex-column justify-content-center align-items-center"
+          >
+            <!-- <span id="days" class="text-black fs-6 card-content-title">453</span> -->
+            <span id="days" class="text-black fs-6 card-content-title"></span>
+            <span class="text-black decompte-descript">DAYS</span>
+          </span>
+        </div>
+        <div
+          class="col-2 card-margin card-height d-flex align-items-center justify-content-center margin-left-card margin-left-card-mobile"
+        >
+          <span
+            class="d-flex flex-column justify-content-center align-items-center"
+          >
+            <!-- <span class="text-black card-content-title">17</span> -->
+            <span id="hours" class="text-black card-content-title"></span>
+            <span class="text-black decompte-descript">HOURS</span>
+          </span>
+        </div>
+        <div
+          class="col-2 card-margin card-height d-flex align-items-center justify-content-center margin-left-card margin-left-card-mobile"
+        >
+          <span
+            class="d-flex flex-column justify-content-center align-items-center"
+          >
+            <!-- <span class="text-black card-content-title">46</span> -->
+            <span id="minutes" class="text-black card-content-title"></span>
+            <span class="text-black decompte-descript">MINUTES</span>
+          </span>
+        </div>
+        <div
+          class="col-2 card-margin card-height d-flex align-items-center justify-content-center margin-left-card margin-left-card-mobile"
+        >
+          <span
+            class="d-flex flex-column justify-content-center align-items-center"
+          >
+            <!-- <span class="text-black card-content-title">9</span> -->
+            <span id="seconds" class="text-black card-content-title"></span>
+            <span class="text-black decompte-descript">SECONDES</span>
+          </span>
+        </div>
+      </div>
+      <div
+        class="row flex-column align-items-center justify-content-center mb-4"
+      >
+        <a
+          href="./ticket.html"
+          class="btn btn-custom-card mt-4 shadow-none btn-padding-card"
+        >
+          ➜ Book Tickets
+        </a>
+        <span class="text-black inperson-margin">In-Person / Virtual</span>
+      </div>
+    </div>
+
+    <div class="mt-0 text-center bg-white container-custom sect-logo-1">
+      <div>
+        <h6 class="Join-us pb-md-0 join-us black">
+          Join us as a speaker, attend or sponsor
+        </h6>
+      </div>
+      <div
+        class="text-center align-center"
+        style="display: flex; flex-wrap: nowrap"
+      >
+        <img class="" src="asset/img/logo-1.png" />
+        <img class="" src="asset/img/logo-2.png" />
+        <img src="asset/img/logo-5.png" />
+        <img src="asset/img/logo-4.png" />
+        <img class="d-none-p" src="asset/img/logo-3.png" />
+      </div>
+    </div>
+
+    <div class="sect-video">
+      <img src="asset/img/img-about.png" width="100%" />
+
+      <!--
+    <video controls>
+      <source src=”http://techslides.com/demos/sample-videos/small.ogv” type=video/ogg> <source src="/build/videos/arcnet.io(7-sec).mp4" type=video/mp4>
+    </video>
+     <img src="asset/img/img-home.png" width="100%"> -->
+      <!-- <iframe width="100%" height="480" src="https://www.youtube.com/embed/9TGlc0Fufgk"
+      title="Musique Douce: Relaxante, Calme - Nature Relaxation" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe> -->
+    </div>
+
+    <div class="container-fluid bg-white py-5 border-card-home">
+      <div class="row value-row-margin">
+        <div class="col-lg-3 value-responsive-width">
+          <h2 class="text-black value-responsive-title">ABOUT</h2>
+        </div>
+        <div class="col-lg-3 value-responsive-width">
+          <h2 class="text-black value-responsive-title">SPEAKERS</h2>
+        </div>
+        <div class="col-lg-3 value-responsive-width">
+          <h2 class="text-black value-responsive-title">SECTORS</h2>
+        </div>
+        <div class="col-lg-3 value-responsive-width">
+          <h2 class="text-black value-responsive-title">MAIN AGENDA</h2>
+        </div>
+      </div>
+      <div class="row flex-row value-row-margin">
+        <div class="col-lg-3 value-responsive-width">
+          <h2 class="text-black value-responsive-title">SPONSORING</h2>
+        </div>
+        <div class="col-lg-3 value-responsive-width">
+          <h2 class="text-black value-responsive-title">PODCAST</h2>
+        </div>
+        <div class="col-lg-3 value-responsive-width">
+          <h2 class="text-black value-responsive-title">ALL EVENTS</h2>
+        </div>
+        <div class="col-lg-3 value-responsive-width">
+          <h2 class="text-black value-responsive-title">BUY TICKETS</h2>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="container-fluid bg-white py-5 border-card-home">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="text-center text-black">About</h1>
+          <p class="text-center text-black p-card-home">
+            The Global Forum On Cities Annual Conference is the world’s largest
+            summit and platform for leaders at the intersection of cities,
+            business, climate, and sustainability.
+          </p>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <div class="container-fluid bg-white py-5 border-card-home">
+      <div class="row mt-5 mb-5">
+        <div class="col-lg-3">
+          <span class="d-flex flex-column align-items-center">
+            <span class="text-black">
+              4
+            </span>
+            <span class="text-black">
+              Annual Global Conferences
+            </span>
+          </span>
+        </div>
+        <div class="col-lg-3">
+          <span class="d-flex flex-column align-items-center">
+            <span class="text-black">
+              500+ 
+            </span>
+            <span class="text-black">
+              Speakers
+            </span>
+          </span>
+        </div>
+        <div class="col-lg-3">
+          <span class="d-flex flex-column align-items-center">
+            <span class="text-black">
+              20 
+            </span>
+            <span class="text-black">
+              Sectors
+            </span>
+          </span>
+        </div>
+        <div class="col-lg-3">
+          <span class="d-flex flex-column align-items-center">
+            <span class="text-black">
+              300+  
+            </span>
+            <span class="text-black">
+              Media
+            </span>
+          </span>
+        </div>
+      </div>
+      <div class="row mt-5 mb-5">
+        <div class="col-lg-3">
+          <span class="d-flex flex-column align-items-center">
+            <span class="text-black">
+              100+
+            </span>
+            <span class="text-black">
+              Companies
+            </span>
+          </span>
+        </div>
+        <div class="col-lg-3">
+          <span class="d-flex flex-column align-items-center">
+            <span class="text-black">
+              20 
+            </span>
+            <span class="text-black">
+              Other Events
+            </span>
+          </span>
+        </div>
+        <div class="col-lg-3">
+          <span class="d-flex flex-column align-items-center">
+            <span class="text-black">
+              7000+  
+            </span>
+            <span class="text-black">
+              Attendees
+            </span>
+          </span>
+        </div>
+        <div class="col-lg-3">
+          <span class="d-flex flex-column align-items-center">
+            <span class="text-black">
+              1  
+            </span>
+            <span class="text-black">
+              Podcast
+            </span>
+          </span>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="my-5 container-custom row vert-card-1">
+      <div class="col-lg-8 col-12 p-0">
+        <div class="pt-2 ml-2 ml-lg-1 text-center-p">
+          <div class="p-0 CustumeTitle">
+            <h5 class="text-center fs-02 mb-2 bold">JOIN US AT</h5>
+            <h5 class="titre-join-us-at fs-02 bold text-center">
+              THE GLOBAL FORUM ON CITIES
+            </h5>
+          </div>
+          <!-- <h5 class=" titre-join-us-at1 fs-02 bold" style="display: none;">JOIN US AT THE GLOBAL FORUM ON CITIES -->
+          <p class="mt-4 texte-join-us-at fs-02">
+            The Global Forum On Cities is the opportunity for business leaders
+            and policy makers with a vested interest in cities to meet 4 times
+            throughout the year in London, Paris, New York and Singapore.
+          </p>
+          <p class="texte-join-us-at text-center-p fs-02 mt-lg-5 pt-lg-4">
+            Connect and built relationships with peers from 500+ cities, 3,000+
+            corporations, 7,000+ attendees, 500+ speakers, 20 sectors (and 20
+            sectors specific summits within the Forum), 100+ global and large
+            corporations CEOs and government ministers, 20+ Economists, 1,000+
+            Researchers and Scientists, 600+ Investors, 600 startups, 400
+            Exhibitors and 300+ Media participating.
+          </p>
+          <br />
+          <!--<div class="content-btn align-center text-center">
+          <a href="#" class="mtp-0 mbp-5 ml-2 mr-0 me-0 text-center btn-general about-button btn-custom-1" style="min-width: 100px!important;">
+            <div class="fs-00">
+              FIND OUT MORE<img src="asset/img/fleche-noir.png">
+            </div>
+          </a>
+        </div>-->
+          <div class="row align-center mt-4 mb-5">
+            <div class="text-center col-12">
+              <button class="mr-3 btn-custom-1 fs-01 fom">
+                FIND OUT MORE<img src="asset/img/fleche-noir.png" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-12">
+        <div class="" id="myGlobal">
+          <div class="btn-statistic">
+            <a href="#" class="margin-right col-6 btn-blue bold btn-vert-card"
+              >BUY TICKETS</a
+            >
+            <a href="#" id="super-btn" class="col-6 btn-blue bold btn-vert-card"
+              >SPONSOR</a
+            >
+          </div>
+          <div class="text-center col-12 bg-vert py-3">
+            <div class="">
+              <h1 class="chiffre-statistique-1 black sponsor-heading">4</h1>
+              <p class="black text-center bsv sponsor-title">
+                Annual Global Summits
+              </p>
+              <hr id="hr-margin" class="line-black col-2" />
+            </div>
+            <div class="">
+              <h1 class="chiffre-statistique-1 black sponsor-heading">20</h1>
+              <p class="black text-center bsv sponsor-title">
+                Other Industry Events
+              </p>
+              <hr id="hr-margin" class="line-black col-2" />
+            </div>
+            <div class="">
+              <h1 class="chiffre-statistique-1 black sponsor-heading">1</h1>
+              <p class="black text-center bsv sponsor-title">Podcast</p>
+              <hr id="hr-margin" class="line-black col-2" />
+            </div>
+            <div class="">
+              <h1 class="chiffre-statistique-1 black sponsor-heading">500+</h1>
+              <p class="black text-center bsv sponsor-title">Speakers</p>
+              <hr id="hr-margin" class="line-black col-2" />
+            </div>
+
+            <div>
+              <h1 class="chiffre-statistique-1 black sponsor-heading">
+                7,000+
+              </h1>
+              <p class="black bsv text-center sponsor-title">Attendees</p>
+              <hr id="hr-margin" class="line-black col-2" />
+            </div>
+
+            <div>
+              <h1 class="chiffre-statistique-1 black sponsor-heading">20</h1>
+              <p class="black bsv text-center sponsor-title">Sectors</p>
+              <hr id="hr-margin" class="line-black col-2" />
+            </div>
+
+            <div>
+              <h1 class="chiffre-statistique-1 black sponsor-heading">300+</h1>
+              <p class="black bsv text-center sponsor-title">Media</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center bg-white container-custom">
+      <h1
+        class="mx-2 my-5 text-left ml-lg-1 bold black fs-03"
+        style="font-size: 3.2vw"
+      >
+        THANK YOU FOR JOINING US AT THE GLOBAL FORUM ON CITIES
+      </h1>
+      <h3
+        class="pb-1 ml-2 text-left ml-lg-1 pb-lg-4 bold black text1 font-size"
+        style="margin-top: 5%"
+      >
+        The Global Forum on Cities is the most influential series of summits
+        about cities in the world — gathering world leading experts in business,
+        government and policy, research and academia, discussing opportunities
+        and challenges facing twenty first century cities. <br /><br /><br /> This global ecosystem
+        is where the world's cities, governments, corporations, largest brands
+        and most innovative organisations create opportunities, meet new
+        partners, and feel inspired to make or improve products, services,
+        solutions, policies, build technologies, brands, and markets.
+      </h3>
+
+      <div class="row align-center mt-4 mb-4">
+        <a href="./book.html" class="mr-3 btn-custom-1 fs-01 btn-custom-2">
+          <div class="fs-01">
+            REGISTER NOW<img src="asset/img/fleche-white.png" />
+          </div>
+        </a>
+      </div>
+
+      <!--<div class="row align-center">
+      <div class="text-center col-12">
+        <button class="mr-3 btn-custom-1 fs-01 fom">FIND OUT MORE<img src="asset/img/fleche-noir.png"> </button>
+      </div>
+    </div>-->
+    </div>
+
+    <div class="mt-5 container-custom sect-speaker">
+      <div class="mt-3 text-center col-12">
+        <h1
+          class="Buttom-space bold fs-02 Section-title"
+          style="font-weight: 400 !important"
+        >
+          Speakers
+        </h1>
+      </div>
+    </div>
+
+    <article class="" x-data="speaker">
+      <div class="container-custom my-0">
+        <!--  -->
+        <div class="d-flex">
+          <div class="dropdown- my-0" x-data="{visible: false}">
+            <div class="dropdown-content mt-1 pt-0" x-cloak x-show="visible">
+              <div>
+                <div class="d-flex justify-content-between">
+                  <p
+                    class="text-black text-uppercase py-2 mb-0 font-size-14"
+                    type="button"
+                  >
+                    Sectors
+                  </p>
+                  <i
+                    class="uil font-size-22 uil-angle-up"
+                    style="cursor: pointer"
+                  ></i>
+                </div>
+                <template
+                  x-for="(sector, index) in sector_filters"
+                  :key="index"
+                >
+                  <div class="mt-2" x-data="{visible: false}">
+                    <div class="d-flex justify-content-between flex-row">
+                      <div class="d">
+                        <div class="checkbox-wrapper-33">
+                          <label
+                            :for="'sector'+index"
+                            class="checkbox pt-0 ml-2 font-size-14"
+                          >
+                            <input
+                              class="checkbox__trigger visuallyhidden"
+                              checked
+                              @click="toggle_filter(sector.name)"
+                              :id="'sector'+index"
+                              type="checkbox"
+                            />
+                            <span class="checkbox__symbol">
+                              <svg
+                                aria-hidden="true"
+                                class="icon-checkbox"
+                                width="28px"
+                                height="28px"
+                                viewBox="0 0 28 28"
+                                version="1"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path d="M4 14l8 7L24 7"></path>
+                              </svg>
+                            </span>
+                            <p
+                              class="checkbox__textwrapper text-black"
+                              style="width: 200px"
+                              x-text="sector.name"
+                            ></p>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </template>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sect-speaker">
+        <template x-for="(speaker, index) in speakers" :key="index">
+          <div
+            class="px-2 my-4 item-5"
+            x-bind:class="sector_in_filter(speaker.sector) ? '' : 'd-none'"
+          >
+            <img class="" :src="speaker.photo" />
+            <h5 class="mt-4 name-speaker1 fs-00">
+              <span
+                class="name-speaker1-span"
+                x-text="speaker.firstname"
+              ></span>
+              <br />
+              <span class="name-speaker1-span" x-text="speaker.lastname"></span>
+            </h5>
+            <p
+              class="mt-4 height-p-speaker fs-00 mt-lg-0"
+              x-text="speaker.poste"
+            ></p>
+            <h6 class="vert lineHeight002 one" x-text="speaker.enterprise"></h6>
+            <div class="specker-sector">
+              <p
+                x-text="speaker.sector"
+                style="width: fit-content; padding: 3px 10px"
+              ></p>
+            </div>
+          </div>
+        </template>
+      </div>
+    </article>
+
+    <div class="row align-center">
+      <div class="text-center col-12">
+        <a href="./speaker.html">
+          <button class="mr-3 btn-custom-1 fs-01">
+            MORE SPEAKERS<img src="asset/img/fleche-noir.png" />
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <div class="container-fluid bg-white py-3">
+      <div class="row border-card-home-xl py-5">
+        <div class="col-lg-12 mb-3">
+          <h3 class="text-black text-center">Why Attend</h3>
+        </div>
+        <div class="row justify-content-center">
+          <div
+            class="col-lg-2 card-margin-home border-card-home d-flex flex-column align-items-center justify-content-center px-3 py-3 card-home-margin"
+          >
+            <img class="img-card-home" src="./asset/img/pngwing.png" alt="" />
+            <h3 class="text-black text-center card-home-title">
+              Shape the future of cities.
+            </h3>
+          </div>
+          <div
+            class="col-lg-2 card-margin-home border-card-home d-flex flex-column align-items-center justify-content-center margin-left-card px-3 py-3"
+          >
+            <img class="img-card-home" src="./asset/img/goal-icon.png" alt="" />
+            <h3 class="text-black text-center card-home-title">
+              Nail strategic partners.
+            </h3>
+          </div>
+          <div
+            class="col-lg-2 card-margin-home border-card-home d-flex flex-column align-items-center justify-content-center margin-left-card px-3 py-3 card-home-margin"
+          >
+            <img
+              class="img-card-home"
+              src="./asset/img/handshack-icon.png"
+              alt=""
+            />
+            <h3 class="text-black text-center card-home-title">
+              Speak to your audience.
+            </h3>
+          </div>
+          <div
+            class="col-lg-2 card-margin-home border-card-home d-flex flex-column align-items-center justify-content-center margin-left-card px-3 py-3"
+          >
+            <img
+              class="img-card-home"
+              src="./asset/img/statistics-icon.png"
+              alt=""
+            />
+            <h3 class="text-black text-center card-home-title">
+              Maximise your potential.
+            </h3>
+          </div>
+        </div>
+        <div class="col-lg-12 mt-3">
+          <h3 class="text-black text-center">
+            See you in: <br/> London <br/> Paris <br/> Singapore <br/> New York
+          </h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid bg-white py-3">
+      <div class="row py-5 border-card-home">
+        <div class="col-lg-12 d-flex flex-column align-items-center">
+          <h3 class="text-black text-center">Agenda</h3>
+          <a
+            href="./landscape.html"
+            class="btn btn-custom-card mt-4 shadow-none btn-padding-card"
+          >
+            ➜ View the Forum schedule
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-custom-home bg-white py-5">
+      <h1 class="titre-speakers Book-Title text-black">
+        View all Events and Programmes
+      </h1>
+    </div>
+
+    <div class="content-book">
+      <div class="px-2 item-book">
+        <a
+          class="image-book"
+          href="http://london.globalforumcities.com/pass_London.html"
+          target="_blank"
+        >
+          <img src="asset/img/topic-london-ge.png" />
+        </a>
+        <div class="text-center bg-white bouton-book">
+          <a
+            href="http://london.globalforumcities.com/pass_London.html"
+            target="_blank"
+          >
+            <button class="btn-custom-1 bold">
+              BOOK FOR LONDON<img
+                class="Book-img"
+                src="asset/img/fleche-white.png"
+              />
+            </button>
+          </a>
+        </div>
+      </div>
+      <div class="px-2 item-book">
+        <a
+          class="image-book"
+          href="http://paris.globalforumcities.com/pass_Paris.html"
+          target="_blank"
+        >
+          <img src="asset/img/eiffel-tower-in.png" />
+        </a>
+        <div class="text-center bg-white bouton-book">
+          <span>
+            <a
+              href="http://paris.globalforumcities.com/pass_Paris.html"
+              target="_blank"
+            >
+              <button class="btn-custom-1 bold">
+                BOOK FOR PARIS<img
+                  class="Book-img"
+                  src="asset/img/fleche-white.png"
+                />
+              </button>
+            </a>
+          </span>
+        </div>
+      </div>
+      <div class="px-2 item-book">
+        <a
+          href="http://singapore.globalforumcities.com/pass_Singapore.html"
+          class="image-book"
+          target="_blank"
+        >
+          <img src="asset/img/singapore-in-pi.png" />
+        </a>
+        <div class="text-center bg-white bouton-book">
+          <a
+            href="http://singapore.globalforumcities.com/pass_Singapore.html"
+            target="_blank"
+          >
+            <button class="btn-custom-1 bold">
+              BOOK FOR SINGAPORE<img
+                class="Book-img"
+                src="asset/img/fleche-white.png"
+              />
+            </button>
+          </a>
+        </div>
+      </div>
+      <div class="px-2 item-book">
+        <a
+          href="http://newyork.globalforumcities.com/pass_New_york.html"
+          class="image-book"
+          target="_blank"
+        >
+          <img src="asset/img/new-york.jpeg" />
+        </a>
+        <div class="text-center bg-white bouton-book">
+          <a
+            href="http://newyork.globalforumcities.com/pass_New_york.html"
+            target="_blank"
+          >
+            <button class="btn-custom-1 bold">
+              BOOK FOR NEW YORK<img
+                class="Book-img"
+                src="asset/img/fleche-white.png"
+              />
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="pb-5 bg-white container-custom-2">
+
+    <h1 class="my-4 text-left black Section-title Buttom-space" style="margin-left: 17%;">Join us in
+    </h1>
+    <div class="pb-5 bg-white" id="destkopjoin">
+
+
+      <div class="align-center" style="display: flex; flex-wrap: wrap;">
+        <div class="col-5 sect-join-1 city-section"
+          style="background-image: url(asset/img/bg-sect-join-1.png);">
+          <h2 style="color: white!important;">London, </h2>
+          <h6 class="mb-1">NOVEMBER 27-28,2023</h6>
+          <p class="mb-5">8:00AM</p>
+          <button class="mt-5 btn-custom-solo"><img src="asset/img/fleche-noir.png"
+              class="m-0"></button>
+        </div>
+
+        <div class="col-5 sect-join-1 city-section"
+          style="background-image: url(asset/img/bg-sect-join-2.png);">
+          <h2 style="color: white!important;">Paris, </h2>
+          <h6 class="mb-1">MARCH 25-26, 2024</h6>
+          <p class="mb-5">8:00AM</p>
+          <button class="mt-5 btn-custom-solo"><img src="asset/img/fleche-noir.png"
+              class="m-0"></button>
+        </div>
+
+
+
+        <div class="col-5 sect-join-1 city-section"
+          style="background-image: url(asset/img/bg-sect-join-4.png);">
+          <h2 style="color: white!important;">Singapore, </h2>
+          <h6 class="mb-1">JUNE 24-25, 2024</h6>
+          <p class="mb-5">8:00AM</p>
+          <button class="mt-5 btn-custom-solo"><img src="asset/img/fleche-noir.png"
+              class="m-0"></button>
+        </div>
+
+        <div class="col-5 sect-join-1 city-section"
+          style="background-image: url(asset/img/bg-sect-join-3.png);">
+          <h2 style="color: white!important;">New York, </h2>
+          <h6 class="mb-1">SEPTEMBER 23-24, 2024</h6>
+          <p class="mb-5">8:00AM</p>
+          <button class="mt-5 btn-custom-solo"><img src="asset/img/fleche-noir.png"
+              class="m-0"></button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="pb-5 bg-white" id="mobilejoin">
+
+
+      <div class="align-center" style="display: flex; flex-wrap: wrap;">
+        <div class="sect-join-1 city-section"
+          style="background-image: url(asset/img/bg-sect-join-1.png);">
+          <h1 style="font-size: 18px !important">London, </h1>
+          <h4 style="font-size: 12px !important">NOVEMBER 27-28,2023</h4>
+          <h4 class="mb-5">8:00AM</h4>
+          <button class="btn-custom-solo"><img src="asset/img/fleche-noir.png" class="m-0"></button>
+        </div>
+
+        <div class="sect-join-1 city-section"
+          style="background-image: url(asset/img/bg-sect-join-2.png);">
+          <h1 style="font-size: 18px !important">Paris, </h1>
+          <h4 style="font-size: 12px !important">MARCH 25-26, 2024</h4>
+          <h4 class="mb-5">8:00AM</h4>
+          <button class="btn-custom-solo"><img src="asset/img/fleche-noir.png" class="m-0"></button>
+        </div>
+        <div class="sect-join-1 city-section"
+          style="background-image: url(asset/img/bg-sect-join-4.png);">
+          <h1 style="font-size: 18px !important">Singapore, </h1>
+          <h4 style="font-size: 12px !important">JUNE 24-25, 2024</h4>
+          <h4 class="mb-5">8:00AM</h4>
+          <button class="btn-custom-solo"><img src="asset/img/fleche-noir.png" class="m-0"></button>
+        </div>
+        <div class="sect-join-1 city-section"
+          style="background-image: url(asset/img/bg-sect-join-3.png);">
+          <h1 style="font-size: 18px !important">New York, </h1>
+          <h4 style="font-size: 12px !important">SEPTEMBER 23-24, 2024</h4>
+          <h4 class="mb-5">8:00AM</h4>
+          <button class="btn-custom-solo"><img src="asset/img/fleche-noir.png" class="m-0"></button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+    <div
+      class="pb-2 mt-5 text-center pb-lg-5 container-custom-2"
+      style="padding-top: 5%"
+    >
+      <br />
+      <h1 class="mb-3 mb-lg-5 mobile-texte-sus Section-title Buttom-space">
+        Podcast
+      </h1>
+      <img
+        src="asset/img/THE GLOBAL FORUM ON CITIES.jpeg"
+        class="podcast-img"
+        style="height: 100%; width: 30%; margin: 0px auto"
+      />
+      <div class="container-custom">
+        <div class="logos">
+          <div class="col-md-9 col-md-offset-3">
+            <p class="titre-logo-global2">
+              Subscribe to The Global Forum on Cities Podcast series
+            </p>
+          </div>
+          <div class="underline col-md-12"></div>
+
+          <div class="row align-center mt-5 mt-lg-0">
+            <div class="content-btn col-12">
+              <button
+                class="mr-3 btn-custom-1 sbal fs-01"
+                onclick="document.location.href='podcast.html'"
+              >
+                SUBSCRIBE AND LISTEN<img src="asset/img/fleche-noir.png" />
+              </button>
+            </div>
+          </div>
+
+          <div class="img-logo">
+            <div class="col-2">
+              <img src="asset/img/Google_Podcasts_icon.svg" />
+            </div>
+            <div class="col-2"><img src="asset/img/Podcasts_(iOS).svg" /></div>
+            <div class="col-2">
+              <img src="asset/img/480px-Antu_spotify.svg.png" />
+            </div>
+            <div class="col-2"><img src="asset/img/image.png" /></div>
+            <div class="col-2"><img src="asset/img/image(1).png" /></div>
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <h1 class="Buttom-space mobile-texte-sus Section-title">
+        Sustainable Cities
+      </h1>
+      <img
+        src="asset/img/Sustainable-Goals.png"
+        class="img-sustainable Buttom-space"
+        width="60%"
+      />
+      <br />
+    </div>
+
+    <!-- ACTI-->
+    <div class="text-center container-custom-2" style="margin-top: 5%">
+      <h1
+        class="mb-2 mb-lg-5 mobile-texte-sus vert-tittle-sector Section-title Buttom-space"
+      >
+        Sectors
+      </h1>
+    </div>
+    <div class="mb-5 container-acti">
+      <div class="pt-3 text-center item-acti1">
+        <img src="asset/img/picto-black/train.png" />
+        <p class="mt-3 mb-4 black">
+          Transport, Infrastructure & Logistics Summit
+        </p>
+      </div>
+      <div class="pt-3 text-center item-acti1">
+        <img src="asset/img/picto-black/energie-eolienne.png" />
+        <p class="mt-3 mb-4 black">Environment, Energy & Utility Summit</p>
+      </div>
+      <div class="pt-3 text-center item-acti1">
+        <img src="asset/img/picto-black/gouvernance.png" />
+        <p class="mt-3 mb-4 black">
+          Government & Public Policy & Social Impact Summit
+        </p>
+      </div>
+      <div class="pt-3 text-center item-acti1">
+        <img src="asset/img/picto-black/innovation.png" />
+        <p class="mt-3 mb-4 black">Technology & Digital Revolution Summit</p>
+      </div>
+      <div class="pt-3 text-center item-acti1">
+        <img src="asset/img/picto-black/banking.png" />
+        <p class="mt-3 mb-4 black">Financial Services & Insurance Summit</p>
+      </div>
+      <div class="pt-3 text-center item-acti1">
+        <img src="asset/img/picto-black/electrocardiogram.png" />
+        <p class="mt-3 mb-4 black">
+          Healthcare, Pharmaceuticals & Biotechnology Summit
+        </p>
+      </div>
+      <div class="pt-3 text-center item-acti1">
+        <img src="asset/img/picto-black/construction.png" />
+        <p class="mt-3 mb-4 black">Construction & Real Estate Summit</p>
+      </div>
+      <div class="pt-3 text-center item-acti1">
+        <img src="asset/img/picto-black/industrial-automation.png" />
+        <p class="mt-3 mb-4 black">Industrial Automation Summit</p>
+      </div>
+      <div class="pt-3 text-center item-acti1">
+        <img src="asset/img/picto-black/profits.png" />
+        <p class="mt-3 mb-4 black">Investment Summit</p>
+      </div>
+      <div class="pt-3 text-center item-acti1">
+        <img src="asset/img/picto-black/consulting.png" />
+        <p class="mt-3 mb-4 black">Consulting and Services Summit</p>
+      </div>
+      <div class="pt-3 text-center item-acti1">
+        <img src="asset/img/picto-black/balance.png" />
+        <p class="mt-3 mb-4 black">Legal Summit</p>
+      </div>
+      <div class="pt-3 text-center item-acti1">
+        <img src="asset/img/picto-black/food-summit.png" />
+        <p class="mt-3 mb-4 black">Food Summit</p>
+      </div>
+      <div class="pt-3 text-center item-acti1">
+        <img src="asset/img/picto-black/man-walking-with-shopping-cart.png" />
+        <p class="mt-3 mb-4 black">Consumer Good Summit</p>
+      </div>
+      <div class="pt-3 text-center item-acti1">
+        <img src="asset/img/picto-black/quality.png" />
+        <p class="mt-3 mb-4 black">Lifestyle & Luxury Good Summit</p>
+      </div>
+      <div class="pt-3 text-center item-acti1">
+        <img src="asset/img/picto-black/book.png" />
+        <p class="mt-3 mb-4 black">Education and Learning Summit</p>
+      </div>
+      <div class="pt-3 text-center item-acti1">
+        <img src="asset/img/picto-black/mona-lisa.png" />
+        <p class="mt-3 mb-4 black">Creative Industries & Design Summit</p>
+      </div>
+      <div class="pt-3 text-center item-acti1">
+        <img src="asset/img/picto-black/film.png" />
+        <p class="mt-3 mb-4 black">Media & Film Summit</p>
+      </div>
+      <div class="pt-3 text-center item-acti1">
+        <img src="asset/img/picto-black/logo-des-jeux-olympiques.png" />
+        <p class="mt-3 mb-4 black">Sports Summit</p>
+      </div>
+      <div class="pt-3 text-center item-acti1">
+        <img src="asset/img/picto-black/diversity.png" />
+        <p class="mt-3 mb-4 black">Women, Gender & Diversity Summit</p>
+      </div>
+      <div class="pt-3 text-center item-acti1">
+        <img src="asset/img/picto-black/passport.png" />
+        <p class="mt-3 mb-4 black">Hospitality, Travel & Tourism Summit</p>
+      </div>
+      <div class="pt-3 d-block d-md-none text-center item-acti1 last-element">
+        <img src="asset/img/picto-black/24.png" />
+        <p class="mt-3 mb-4 black">Emerging & Future Cities Summit</p>
+      </div>
+    </div>
+    <div
+      class="py-5 pb-5 bg-white align-center container-custom"
+      style="display: flex; flex-wrap: wrap"
+    >
+      <div class="mt-3 mt-lg-0" style="width: 30%">
+        <h2 class="title-citie black" style="font-size: 4vw !important">
+          Cities Notes
+        </h2>
+      </div>
+      <div class="mt-3 mt-lg-0" style="width: 30%">
+        <h4
+          class="black black-other"
+          style="font-size: 4vw; text-align: left !important"
+        >
+          Newsletter
+        </h4>
+      </div>
+      <div class="" style="width: 25%">
+        <form style="display: flex; flex-direction: row">
+          <input
+            type="email"
+            name="email"
+            placeholder=" Your Email"
+            class="input-email"
+          />
+          <button
+            class="bg-white border-0"
+            style="border-bottom: 2px solid black !important; outline: none"
+          >
+            <img
+              src="asset/img/fleche-noir-droite.png"
+              alt=""
+              style="width: 1.8vw; height: auto; object-fit: contain"
+            />
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="mt-lg-5 pt-lg-5 mobile-container-title-logo row align-center">
+      <div class="mt-5 text-center mobile-content-title-logo col-12">
+        <h1 class="Section-title Buttom-space" style="margin-bottom: 5%">
+          Top Companies Attending
+        </h1>
+      </div>
+    </div>
+    <div class="bg-white container-logo align-center">
+      <div class="item-logo">
+        <img src="asset/img/logonoir/transport-for-l.png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/europeanBank.png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/thingsGrow.png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/virigin blan.png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/Adobe.png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/BT.png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/WORLD-PAY.jpg" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/CLIMATE-GROUP.png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/spike.png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/PUBLICIS-SAPIENT.png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/Cognizant.png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/CGI.png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/Dyson.png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/ecocap.png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/eic.png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/eit digital.png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/bbc.png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/energy-uk-logo.png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/DBEIS_Departmental_Logo.png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/ROBOTICS.png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/QUADRIGa-grey.png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/2560px-Deutsche_Bank.svg.png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/Reach-Robotics.png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/Trilateral-Research-Logo-2019to USE.png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/siemens-grey.png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/Wayve-Long-format-Logo_GT.png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/CUTES-GREY.png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/General-Mills-logo.png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/societe-generale-logo.png" />
+      </div>
+      <div class="item-logo">
+        <img
+          src="asset/img/logonoir/bertelsmann-logo-1600x900px-transp_teaser_2_3_lt_768_retina.png"
+        />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logonoir/DG+Cities+Logo+(Small).png" />
+      </div>
+      <div class="item-logo">
+        <img src="asset/img/logo/Air_France.png" />
+      </div>
+    </div>
+
+    <!-- F O O T E R -->
+
+    <div class="container footer-1 footer1">
+      <hr class="footer-line" />
+      <div class="row">
+        <div class="sect-logo d-flex justify-content-center" style="width: 30%">
+          <img src="asset/img/logo.png" />
+        </div>
+        <div class="text-center sect-social footer-div0" style="width: 40%">
+          <p class="fs-01" style="font-size: 1.2vw; text-align: center">
+            Connect with us
+          </p>
+          <div class="footer-img">
+            <img src="asset/img/linkedin.png" />
+            <img src="asset/img/instagram.png" />
+            <img src="asset/img/twitter.png" />
+            <img src="asset/img/facebook.png" />
+            <img src="asset/img/tiktok.png" />
+          </div>
+        </div>
+        <div class="text-left footer-div1" style="width: 13%">
+          <a href="index.html" class="fs-07" style="font-size: 1.2vw">About</a
+          ><br class="br-footer" />
+          <a href="speaker.html" class="fs-07" style="font-size: 1.2vw"
+            >Speakers</a
+          ><br class="br-footer" />
+          <a href="sectors.html" class="fs-07" style="font-size: 1.2vw"
+            >Sectors</a
+          ><br class="br-footer" />
+          <!-- <a href="sectors.html" class="fs-07" style="font-size: 1.2vw;">Agenda & Speaker</a><br class="br-footer"> -->
+          <a href="landscape.html" class="fs-07" style="font-size: 1.2vw"
+            >Agenda</a
+          >
+        </div>
+        <div class="text-left footer-div2" style="width: 10%">
+          <a href="sponsoring.html" class="fs-07 ml" style="font-size: 1.2vw"
+            >Sponsoring</a
+          ><br class="br-footer" />
+          <a href="book.html" class="fs-07 ml" style="font-size: 1.2vw"
+            >Buy tickets</a
+          ><br class="br-footer" />
+        </div>
+        <div class="text-left footer-div3" style="width: 7%">
+          <a href="podcast.html" class="fs-07" style="font-size: 1.2vw"
+            >Podcast</a
+          >
+          <a href="contact.html" class="fs-07" style="font-size: 1.2vw"
+            >Contact</a
+          >
+        </div>
+      </div>
+
+      <div class="text-center">
+        <hr class="line col-1" />
+        <p class="fs-01" style="font-size: 1.2vw; text-align: center">
+          &copy;The Global Forum On Cities 2023 &copy;
+        </p>
+      </div>
+    </div>
+
+    <div class="container footer-1 footer2" style="display: none">
+      <div class="row">
+        <div class="mr-4 sect-logo" style="width: 30%">
+          <img src="asset/img/logo.png" />
+        </div>
+        <div class="text-left footer-div1" style="width: 13%">
+          <a href="index.html" class="fs-01" style="font-size: 1.2vw">About</a
+          ><br class="br-footer" />
+          <a href="speaker.html" class="fs-01" style="font-size: 1.2vw"
+            >Speakers</a
+          ><br class="br-footer" />
+          <a href="sectors.html" class="fs-01" style="font-size: 1.2vw"
+            >Sectors</a
+          ><br class="br-footer" />
+          <!-- <a href="sectors.html" class="fs-01" style="font-size: 1.2vw;">Agenda & Speaker</a><br class="br-footer"> -->
+          <a href="landscape.html" class="fs-01" style="font-size: 1.2vw"
+            >Agenda
+          </a>
+        </div>
+        <div class="text-left footer-div2" style="width: 10%">
+          <a href="sponsoring.html" class="fs-01 ml" style="font-size: 1.2vw"
+            >Sponsoring</a
+          ><br class="br-footer" />
+          <a href="book.html" class="fs-01 ml" style="font-size: 1.2vw"
+            >Buy tickets</a
+          ><br class="br-footer" />
+          <a href="podcast.html" class="fs-01" style="font-size: 1.2vw"
+            >Podcast</a
+          >
+        </div>
+        <div class="text-left footer-div3" style="width: 7%">
+          <a href="contact.html" class="fs-01" style="font-size: 1.2vw"
+            >Contact</a
+          >
+        </div>
+      </div>
+      <div class="mt-3 text-center sect-social footer-div0 mt-lg-0">
+        <p class="fs-01" style="font-size: 1.2vw; text-align: center">
+          Connect with us
+        </p>
+        <div class="footer-img">
+          <img src="asset/img/linkedin.png" />
+          <img src="asset/img/instagram.png" />
+          <img src="asset/img/twitter.png" />
+          <img src="asset/img/facebook.png" />
+          <img src="asset/img/tiktok.png" />
+        </div>
+      </div>
+
+      <div class="text-center">
+        <hr class="line col-1" />
+        <p class="fs-01" style="font-size: 1.2vw; text-align: center">
+          &copy; The Global Forum On Cities 2023 &copy;
+        </p>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        var owl = $(".owl-carousel");
+        owl.owlCarousel({
+          items: 1,
+          loop: true,
+          margin: 10,
+          autoplay: true,
+          autoplayTimeout: 5000,
+        });
+      });
+
+      $(document).ready(function () {
+        // Check if the browser window width is less than or equal to 767px
+        if ($(window).width() <= 767) {
+          // Display the section on mobile devices
+          $("#mobilejoin").show();
+          $("#destkopjoin").hide();
+        } else {
+          // Hide the section on desktop
+          $("#mobilejoin").hide();
+          $("#destkopjoin").show();
+        }
+      });
+    </script>
+
+    <script src="asset/js/main.js"></script>
+    <script src="asset/js/social.js"></script>
+    <script src="asset/js/basket.js"></script>
+  </body>
+</html>

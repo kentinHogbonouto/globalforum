@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Pass-london</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="asset/css/pass.css">
+  <link rel="stylesheet" href="asset/css/book.css">
+  <link rel="stylesheet" href="asset/css/style.css">
+  <link rel="stylesheet" href="asset/css/global.css">
+  <link rel="stylesheet" href="asset/css/index.css">
+  <link rel="stylesheet" href="./asset/css/cart.css">
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="asset/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="asset/css/font-awesome.css">
+
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"> -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
+  <script src="./asset/js/jquery.min.js"></script>
+  <style type="text/css">
+    .white-color {
+      color: white;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="panier-div-global" style="display: block !important;">
+    <div class="text-center position-fixed panier-div justify-content-end" id="myDIV"
+      style="display: block !important;">
+      <span class="cart-counter-style" id="compteur">0</span>
+      <a href="cartLondon.html">
+        <img src="asset/img/panier1.png" class="mr-5" style="width: 6rem; cursor: pointer;" alt="">
+      </a>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="text-white modal-title bold" id="exampleModalLabel">Basket's details</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- <span id="panier"></span>  -->
+            <div id="cart-1" class="item-cart cart-modal-div" style="width: 100%; color: white!important;font-size:1vw;text-align:
+                center;">
+              <div class="mb-3 content-modal">
+                <div class="content-1">
+                  <div class="" style="width:12%;">Title</div>
+                  <div class="" style="width:36%"></div>
+                  <div class="" style="width:12%">Price</div>
+                  <div class="ml-lg-2 " style="width:12%">Quantity</div>
+                  <div class="ml-lg-4 " style="width:25%">SubTotal(Excluding VAT)</div>
+                </div>
+                <!-- <div class="content-2 conte">
+                          contenue ajouté dinamiquement par js 
+                    </div> -->
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="checkout.html" class="btn btn-sm btn-secondary">PROCEED TO CHECKOUT</a>
+          <button type="button" class="btn btn-sm btn-danger" onclick="effacerPanier()" data-dismiss="modal"
+            data-dismiss="modal">Delete Basket</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="panier-div-global">
+    <div class="text-center position-fixed panier-div justify-content-end" id="myDIV" style="display: none;">
+      <img src="asset/img/panier1.png" onclick="afficherPanier()" data-toggle="modal" data-target="#exampleModal"
+        class="mr-5" style="width: 6rem; cursor: pointer;" alt="">
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="text-white modal-title bold" id="exampleModalLabel">Basket's details</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- <span id="panier"></span>  -->
+            <div id="cart-1" class="item-cart cart-modal-div" style="width: 100%; color: white!important;font-size:1vw;text-align:
+                center;">
+              <div class="mb-3 content-modal">
+                <div class="content-1">
+                  <div class="" style="width:12%;">Title</div>
+                  <div class="" style="width:36%"></div>
+                  <div class="" style="width:12%">Price</div>
+                  <div class="ml-lg-2 " style="width:12%">Quantity</div>
+                  <div class="ml-lg-4 " style="width:25%">SubTotal(Excluding VAT)</div>
+                </div>
+                <!-- <div class="content-2 conte">
+                          contenue ajouté dinamiquement par js 
+                    </div> -->
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="checkout.html" class="btn btn-sm btn-secondary">PROCEED TO CHECKOUT</a>
+          <button type="button" class="btn btn-sm btn-danger" onclick="effacerPanier()" data-dismiss="modal"
+            data-dismiss="modal">Delete Basket</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- H E A D E R -->
+
+  <div class="container-custom header-1">
+
+    <div class="align-center" style="display: flex; flex-wrap: nowrap;">
+      <div class="sect-menu " style="width: 42%;">
+        <img src="asset/img/menu-web.png" id="click-menu" class="menu-bugger">
+      </div>
+
+      <div class="sect-logo " style="width: 42%;">
+        <img src="asset/img/logo.png">
+      </div>
+      <div class="text-center sect-bouton" style="width: 16%;">
+        <a href="book.html"><button class="col-12 btn-custom btn-1" style="margin-bottom: 8%; border: none;"><span
+              class="text-button text-dark">BUY TICKETS</span></button></a> <br>
+        <a href="sponsoring.html"><button class="col-12 btn-custom btn-2" style="border: none;"><span
+              class="text-button1 text-dark">SPONSOR</span></button></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- M E N U-->
+
+  <div class="container-custom menu hide-menu"
+    style="height: 100%; overflow-x: hidden!important;overflow-y: scroll!important;">
+    <div class="align-center" style="display: flex; flex-wrap: nowrap;">
+      <div class="sect-menu" style="width: 42%;">
+        <img src="asset/img/fermer.png" class="hide-menu">
+      </div>
+      <div class="sect-logo hide-menu" style="width: 42%;">
+        <img src="asset/img/logo.png">
+      </div>
+
+      <div class="text-center sect-bouton" style="width: 16%;">
+        <a href="book.html"><button class="col-12 btn-custom btn-1" style="margin-bottom: 8%; border: none;"><span
+              class="text-button text-dark">BUY TICKETS</span></button></a> <br>
+        <a href="sponsoring.html"><button class="col-12 btn-custom btn-2" style="border: none;"><span
+              class="text-button1 text-dark">SPONSOR</span></button></a>
+      </div>
+    </div>
+
+    <div class="justify-center mt-5 text-center text-menu">
+      <a href="index.html" class="hide-menu">
+        <h4>About</h4>
+      </a><br>
+      <a href="speaker.html" class="hide-menu">
+        <h4>Speakers</h4>
+      </a><br>
+      <a href="sectors.html" class="hide-menu">
+        <h4>Sectors</h4>
+      </a><br>
+      <a href="landscape.html" class="hide-menu">
+        <h4>Agenda</h4>
+      </a><br>
+      <!--  <a href="agenda.html" class="hide-menu">
+       <h4>Agenda & Speaker</h4>
+      </a><br>-->
+      <a href="sponsoring.html" class="hide-menu">
+        <h4>Sponsoring</h4>
+      </a><br>
+      <a href="podcast.html" class="hide-menu">
+        <h4>Podcast</h4>
+      </a><br>
+      <a href="book.html" class="hide-menu">
+        <h4>Buy Tickets</h4>
+      </a><br>
+      <!-- <a href="speaker.html" class="hide-menu"><h4>Podcasts</h4></a><br> -->
+      <a href="contact.html" class="hide-menu">
+        <h4>Contact</h4>
+      </a><br>
+    </div>
+  </div>
+
+  <!-- S O C I A L -->
+
+  <div id="social" class="mt-3 container-custom social-fixe vp-hidden v-show">
+    <div class="text-right align-center">
+      <img src="asset/img/linkedin.png"><br>
+      <img src="asset/img/instagram.png"><br>
+      <img src="asset/img/twitter.png"><br>
+      <img src="asset/img/facebook.png"><br>
+      <img src="asset/img/tiktok.png">
+    </div>
+  </div>
+
+
+
+  <!-- B O D Y -->
+
+  <div class="mt-5 container-custom-2">
+    <h1 class="mt-2 text-center mt-lg-5 pb-lg-5 mb-lg-5 title-index" style="font-size: 3.5vw">Get your pass for London
+    </h1>
+  </div>
+
+  <div class="mx-4 container-acti-2">
+    <div class="mb-3 col-4">
+      <h5 class="white-color">Super Early Bird</h5>
+      <p class="str white-color">Ends June 31st</p>
+    </div>
+    <div class="mb-3 col-4">
+      <h5 class="white-color">Early Bird</h5>
+      <p class="str white-color">Ends August 31st</p>
+    </div>
+    <div class="mb-3 col-4">
+      <h5 class="white-color">Regular</h5>
+      <p class="str white-color">Ends August 31st</p>
+    </div>
+  </div>
+
+
+
+  <div class="py-5 bg-white container-tab">
+
+
+
+    <div class="mt-2 item-class mt-lg-0">
+      <div class="part1" style="color:white;background-color:#0880be ;">
+        ONLINE FULL PASS
+      </div>
+      <div class="part2">
+        <h3 class="fs-04" style="font-size: 2.7vw;color: #0880be!important;">SGD200</h3>
+      </div>
+      <div class="pb-3 text-center part3">Exl VAT</div>
+      <div class="text-center part4">
+        <!-- <a class="book-pass" href="#" data-namebook="ONLINE FULL PASS" data-prixbook="200"> -->
+        <button id="js-book-pass" data-namebook="ONLINE FULL PASS" data-prixbook="200" type="button"
+          class="btn-custom-2 fs-03" style="padding:6% 15%!important">Book
+          your pass</button>
+        <!-- </a> -->
+      </div>
+      <div class="py-lg-4 part5">
+        <p class="text-white"></p>
+      </div>
+      <div class="mt-lg-3 part6">
+        <p class="text-center fs-03" style="color:#0880be!important;font-size: 1vw;">2-DAY ONLINE ACCESS</p>
+      </div>
+      <div class="row part7">
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/check.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: black !important;">Online networking and meetings
+          </div>
+        </div>
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/check.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: black !important;">Live conferences & replays
+          </div>
+        </div>
+        <!-- <div class="part71 height-inner">
+          <p class="fs-02" style="color: black !important;">Online exhibition hall and immersive
+        </div> -->
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/check.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: black !important;">Enriched list of all exhibiting startups
+          </div>
+        </div>
+      </div>
+      <div class="height-75 d-lg-block d-none"></div>
+    </div>
+
+
+
+    <div class="mt-2 item-class mt-lg-0">
+      <div class="part1" style="background-color:#b7eb0f;">
+        STARTUP FULL PASS
+      </div>
+      <div class="part2">
+        <h3 class="fs-03" style="font-size: 2.7vw;color: #b7eb0f!important;">SGD400</h3>
+      </div>
+      <div class="pb-3 text-center part3">Exl VAT</div>
+      <div class="text-center part4">
+        <!-- <a href="#" class="book-pass" data-namebook="STARTUP FULL PASS" data-prixbook="400"> -->
+        <button data-namebook="STARTUP FULL PASS" data-prixbook="400" type="button" class="btn-custom-2 fs-03"
+          id="js-book-pass" style="padding:6% 15%!important">Book
+          your pass</button>
+        <!-- </a> -->
+
+
+      </div>
+      <div class="py-4 part5">
+        <p>A reduced price to help emerging tech companies. If you are a startup, this pass is for you!
+          Only for startups*</p>
+      </div>
+      <div class="mt-3 part6">
+        <p class="text-center day-text fs-03" style="color:#b7eb0f!important;font-size: 1vw;">2-DAY IN-PERSON ACESS</p>
+      </div>
+      <div class="row part7">
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/check.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: black !important;">Access to the in-person event
+          </div>
+        </div>
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/check.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: black !important;">Entry to all the conferences
+          </div>
+        </div>
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/check.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: black !important;">Entry to the exhibition hall
+          </div>
+        </div>
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/close1.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: red !important;">Scan badges with th mobile app
+          </div>
+        </div>
+      </div>
+      <div class="mt-3 part6">
+        <p class="text-center fs-03" style="color:red!important;font-size: 1vw">EXCLUSIVE</p>
+      </div>
+      <div class="row part7">
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/close1.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: red !important;">Exclusive access to the VC Lounge
+          </div>
+        </div>
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/close1.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: red !important;">Enriched list of all exhibiting startups
+          </div>
+        </div>
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/close1.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: red !important;">Invitation to the VC Night
+          </div>
+        </div>
+      </div>
+      <div class="mt-3 part6">
+        <p class="text-center fs-03" style="color:#b7eb0f!important;font-size: 1vw">2-DAY ONLINE ACESS</p>
+      </div>
+      <div class="row part7">
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/check.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: black !important;"> Online networking and meetings
+          </div>
+        </div>
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/check.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: black !important;">Live conferences & replays
+          </div>
+        </div>
+        <!-- <div class="part71 height-inner">
+          <p class="fs-02" style="color: black !important;">Online exhibition hall and immersive
+        </div> -->
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/close1.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: red !important;">Enriched list of all exhibiting startups
+          </div>
+          <!-- </div>
+        <div class="part72">
+          <img src="asset/img/close1.png" alt="">
+        </div> -->
+        </div>
+        <div class="height-75"></div>
+      </div>
+    </div>
+
+    <div class="mt-2 item-class mt-lg-0">
+      <div class="part1" style="background-color:#ec6b6a;">
+        ATTENDEE FULL PASS
+      </div>
+      <div class="part2">
+        <h3 class="fs-03" style="font-size: 2.7vw;color: #ec6b6a!important;">SGD700</h3>
+      </div>
+      <div class="pb-3 text-center part3">Exl VAT</div>
+      <div class="text-center part4">
+        <!-- <a href="#" class="book-pass" data-namebook="ATTENDEE FULL PASS" data-prixbook="700"> -->
+        <button data-namebook="ATTENDEE FULL PASS" data-prixbook="700" type="button" class="btn-custom-2 fs-03"
+          id="js-book-pass" style="padding:6% 15%!important">Book
+          your pass</button>
+        <!-- </a> -->
+      </div>
+      <div class="py-4 part5">
+        <p class="fs-02">The most popular pass! Get full access to 2 days of The Global Forum On Cities.</p>
+      </div>
+      <div class="mt-3 part6">
+        <p class="text-center day-text fs-03" style="color:#ec6b6a!important;font-size: 1vw;">2-DAY IN-PERSON ACESS</p>
+      </div>
+      <div class="row part7">
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/check.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: black !important;">Access to the in-person event
+          </div>
+        </div>
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/check.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: black !important;">Entry to all the conferences
+          </div>
+        </div>
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/check.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: black !important;">Entry to the exhibition hall
+          </div>
+        </div>
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/close1.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: red !important;">Scan badges with th mobile app
+          </div>
+        </div>
+      </div>
+      <div class="mt-3 part6">
+        <p class="text-center fs-03" style="color:red!important;font-size: 1vw;">EXCLUSIVE</p>
+      </div>
+      <div class="row part7">
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/close1.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: red !important;">Exclusive access to the VC Lounge
+          </div>
+        </div>
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/close1.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: red !important;">Enriched list of all exhibiting startups
+          </div>
+        </div>
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/close1.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: red !important;">Invitation to the VC Night
+          </div>
+        </div>
+      </div>
+      <div class="mt-3 part6">
+        <p class="pt-2 text-center fs-02" style="color:red!important;font-size: 1vw;">2-DAY ONLINE ACESS</p>
+      </div>
+      <div class="row part7">
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/check.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02"> Online networking and meetings
+          </div>
+        </div>
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/check.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: black !important;">Live conferences & replays
+          </div>
+        </div>
+        <!-- <div class="part71 height-inner">
+          <p class="fs-02" style="color: black !important;">Online exhibition hall and immersive
+        </div> -->
+        <!-- <div class="part72">
+          <img src="asset/img/check.png" alt="">
+        </div> -->
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/close1.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: red !important;">Enriched list of all exhibiting startups
+          </div>
+        </div>
+      </div>
+      <div class="height-75"></div>
+    </div>
+
+
+    <div class="mt-2 item-class mt-lg-0">
+      <div class="part1" style="color:white;background-color:black ;">
+        INVESTOR FULL PASS
+      </div>
+      <div class="part2">
+        <h3 class="fs-03" style="font-size: 2.7vw;color: black!important;">SGD800</h3>
+      </div>
+      <div class="pb-3 text-center part3">Exl VAT</div>
+      <div class="text-center part4">
+        <!-- <a href="#" class="book-pass" data-namebook="INVESTOR FULL PASS PREMIUM" data-prixbook="800" > -->
+        <button data-namebook="INVESTOR FULL PASS PREMIUM" data-prixbook="800" type="button" class="btn-custom-2 fs-03"
+          id="js-book-pass" style="padding:6% 15%!important">Book
+          your pass</button>
+        <!-- </a> -->
+      </div>
+      <div class="py-4 part5">
+        <p class="fs-02" style="color: black !important;">Enjoy exclusive access, save time and spot the current and
+          upcoming stars reshaping cities!
+        </p>
+      </div>
+      <div class="mt-3 part6">
+        <p class="text-center day-text fs-02" style="color:black!important;font-size: 1vw;">2-DAY IN-PERSON ACESS</p>
+      </div>
+      <div class="row part7">
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/check.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: black !important;">Access to the in-person event
+          </div>
+        </div>
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/check.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: black !important;">Entry to all the conferences
+          </div>
+        </div>
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/check.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: black !important;">Entry to the exhibition hall
+          </div>
+        </div>
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/check.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: black !important;">Scan badges with th mobile app
+          </div>
+        </div>
+      </div>
+      <div class="mt-3 part6">
+        <p class="text-center fs-03" style="color:black!important;font-size: 1vw;">EXCLUSIVE</p>
+      </div>
+      <div class="row part7">
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/check.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: black !important;">Exclusive access to the VC Lounge
+          </div>
+        </div>
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/check.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: black !important;">Enriched list of all exhibiting startups
+          </div>
+        </div>
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/check.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: black !important;">Invitation to the VC Night
+          </div>
+        </div>
+      </div>
+      <div class="mt-3 part6">
+        <p class="text-center fs-02" style="color:black!important;font-size: 1vw;">2-DAY ONLINE ACESS</p>
+      </div>
+      <div class="row part7">
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/check.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: black !important;"> Online networking and meetings
+          </div>
+        </div>
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/check.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: black !important;">Live conferences & replays
+          </div>
+        </div>
+        <!-- <div class="part71 height-inner">
+          <p class="fs-02" style="color: black !important;">Online exhibition hall and immersive
+          </div> -->
+        <!-- <div class="part72">
+            <img src="asset/img/check.png" alt="">
+          </div> -->
+        <div class="d-flex w-100 pl-3 align-items-center py-2">
+          <div class="part72 mr-3">
+            <img src="asset/img/check.png" alt="">
+          </div>
+          <div class="part71 height-inner pl-0">
+            <p class="fs-02" style="color: black !important;">Enriched list of all exhibiting startups
+          </div>
+        </div>
+      </div>
+      <div class="height-75"></div>
+    </div>
+
+  </div>
+  <!-- <div class="py-5 pb-5 bg-white align-center container-custom" style="display: flex; flex-wrap: wrap; margin-top: 5%;">
+      <div class="" style="width: 30%;">
+        <h2 class="title-citie black" style="font-size: 3.5vw !important;">Cities Notes</h2>
+      </div>
+      <div class="" style="width:30%;">
+        <h4 class="black" style="font-size: 1.7vw !important; text-align: left !important;">Subscribe to our quarterly <br> newsletter</h4>
+      </div>
+      <div class="" style="width: 25%;">
+        <form style="display: flex;flex-direction: row;">
+          <input type="email" name="email" placeholder=" Your Email" class="input-email">
+          <button class="bg-white border-0" style="border-bottom: 2px solid black!important;outline: none;">
+            <img src="asset/img/fleche-noir-droite.png" alt="" style="width: 1.8vw;height: auto;object-fit: contain;">
+          </button>
+        </form>
+      </div>
+  </div> -->
+
+  <div class="py-5 pb-5 bg-white align-center container-custom" style="display: flex; flex-wrap: wrap; margin-top: 5%;">
+    <div class="mt-3 mt-lg-0" style="width: 30%;">
+      <h2 class="title-citie black " style="font-size: 4vw !important;">Cities Notes</h2>
+    </div>
+    <div class="mt-3 mt-lg-0" style="width:30%;">
+      <h4 class="black black-other" style="font-size: 4vw ; text-align: left !important;">Newsletter</h4>
+    </div>
+    <div class="" style="width: 25%;">
+      <form style="display: flex;flex-direction: row;">
+        <input type="email" name="email" placeholder=" Your Email" class="input-email">
+        <button class="bg-white border-0" style="border-bottom: 2px solid black!important;outline: none;">
+          <img src="asset/img/fleche-noir-droite.png" alt="" style="width: 1.8vw;height: auto;object-fit: contain;">
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+
+  <div class="pt-5 mt-5 mobile-container-title-logo row align-center">
+    <div class="mt-5 text-center mobile-content-title-logo col-12">
+      <h1 style="font-size: 4.5vw !important; margin-bottom: 5%;">Top Companies Attending</h1>
+    </div>
+  </div>
+
+  <!-- LOGO -->
+  <div class="mb-5 container-logo align-center">
+    <div class="item-logo ">
+      <img src="asset/img/logo/transport-for-l.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/europeanBank.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/thingsGrow.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/virigin blan.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/ADOBE.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/BT.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/WORLD-PAY.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/CLIMATE-GROUP.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/spike.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/PUBLICIS-SAPIENT.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/COGNIZANT.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/cgi.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/DYSON.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/ecocap.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/EIC.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/eit digital.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/bbc.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/energy-uk-logo.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/DBEIS_Departmental_Logo.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/ROBOTICS.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/QUADRIGa-grey.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/2560px-Deutsche_Bank.svg.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/Reach-Robotics.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/Trilateral-Research-Logo-2019to USE.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/siemens-grey.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/Wayve-Long-format-Logo_GT.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/CUTES-GREY.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/General-Mills-logo.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/societe-generale-logo.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/bertelsmann-logo-1600x900px-transp_teaser_2_3_lt_768_retina.png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/DG+Cities+Logo+(Small).png" />
+    </div>
+    <div class="item-logo ">
+      <img src="asset/img/logo/Air_France.png" />
+    </div>
+
+  </div>
+
+
+
+
+  <!-- F O O T E R -->
+
+  <div class="container footer-1 footer1">
+    <hr class="footer-line">
+    <div class="row">
+      <div class="sect-logo d-flex justify-content-center" style="width:30%;">
+        <img src="asset/img/logo.png">
+      </div>
+      <div class="text-center sect-social footer-div0" style="width:40%;">
+        <p class="fs-01" style="font-size: 1.2vw;">Connect with us</p>
+        <div class="footer-img">
+          <img src="asset/img/linkedin.png">
+          <img src="asset/img/instagram.png">
+          <img src="asset/img/twitter.png">
+          <img src="asset/img/facebook.png">
+          <img src="asset/img/tiktok.png">
+        </div>
+      </div>
+      <div class="text-left footer-div1" style="width:13%;">
+        <a href="index.html" class="fs-07" style="font-size: 1.2vw;">About</a><br class="br-footer">
+        <a href="speaker.html" class="fs-07" style="font-size: 1.2vw;">Speakers</a><br class="br-footer">
+        <a href="sectors.html" class="fs-07" style="font-size: 1.2vw;">Sector</a><br class="br-footer">
+        <!-- <a href="sectors.html" class="fs-07" style="font-size: 1.2vw;">Agenda & Speaker</a><br class="br-footer"> -->
+        <a href="landscape.html" class="fs-07" style="font-size: 1.2vw;">Agenda</a>
+      </div>
+      <div class="text-left footer-div2" style="width:10%;">
+        <a href="sponsoring.html" class="fs-07" style="font-size: 1.2vw;">Sponsoring</a><br class="br-footer">
+        <a href="book.html" class="fs-07" style="font-size: 1.2vw;">Buy tickets</a><br class="br-footer">
+
+      </div>
+      <div class="text-left footer-div3" style="width:7%;">
+        <a href="podcast.html" class="fs-07" style="font-size: 1.2vw;">Podcasts</a>
+        <a href="contact.html" class="fs-07" style="font-size: 1.2vw;">Contact</a>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <hr class="line col-1">
+      <p class="fs-01" style="font-size: 1.2vw;"> &copy;The Global Forum On Cities 2023 &copy;</p>
+    </div>
+  </div>
+
+  <div class="container footer-1 footer2" style="display: none;">
+    <div class="row">
+      <div class="mr-4 sect-logo" style="width:30%;">
+        <img src="asset/img/logo.png">
+      </div>
+      <div class="text-left footer-div1" style="width:13%;">
+        <a href="index.html" class="fs-01" style="font-size: 1.2vw;">About</a><br class="br-footer">
+        <a href="speaker.html" class="fs-01" style="font-size: 1.2vw;">Speakers</a><br class="br-footer">
+        <a href="sectors.html" class="fs-01" style="font-size: 1.2vw;">Sector</a><br class="br-footer">
+        <!-- <a href="sectors.html" class="fs-01" style="font-size: 1.2vw;">Agenda & Speaker</a><br class="br-footer"> -->
+        <a href="landscape.html" class="fs-01" style="font-size: 1.2vw;">Agenda</a>
+      </div>
+      <div class="text-left footer-div2" style="width:10%;">
+        <a href="sponsoring.html" class="fs-01" style="font-size: 1.2vw;">Sponsoring</a><br class="br-footer">
+        <a href="book.html" class="fs-01" style="font-size: 1.2vw;">Buy tickets</a><br class="br-footer">
+        <a href="podcast.html" class="fs-01" style="font-size: 1.2vw;">Podcasts</a>
+      </div>
+      <div class="text-left footer-div3" style="width:7%;">
+        <a href="contact.html" class="fs-01" style="font-size: 1.2vw;">Contact</a>
+      </div>
+    </div>
+    <div class="mt-3 text-center sect-social footer-div0 mt-lg-0">
+      <p class="fs-01" style="font-size: 1.2vw;">Connect with us</p>
+      <div class="footer-img">
+        <img src="asset/img/linkedin.png">
+        <img src="asset/img/instagram.png">
+        <img src="asset/img/twitter.png">
+        <img src="asset/img/facebook.png">
+        <img src="asset/img/tiktok.png">
+      </div>
+    </div>
+
+    <div class="text-center">
+      <hr class="line col-1">
+      <p class="fs-01" style="font-size: 1.2vw;">&copy; The Global Forum On Cities 2023 &copy;</p>
+    </div>
+  </div>
+
+  <script src="asset/js/main.js"></script>
+  <script src="asset/js/social.js"></script>
+  <script src="asset/js/basket.js"></script>
+  <!-- <script>
+            $(function () {
+                const priceUnite = 400;
+                $(document).on('click', '.btn-plus', function () {
+                    let quantity = parseInt($('.quantity').text()) + 1;
+                    let price = priceUnite * quantity
+                    $('.quantity').text(quantity);
+                    $('.price').text(`$${price}`);
+                })
+                $(document).on('click', '.btn-minus', function () {
+                    let quantity = parseInt($('.quantity').text()) - 1;
+                    let priceValue = $('.price').text().replace('$', '');
+                    let price = parseInt(priceValue) - priceUnite;
+                    if (quantity > 0) {
+                        $('.quantity').text(quantity);
+                        $('.price').text(`$${price}`);
+                    }
+                    else $('.quantity').text(0);
+                })
+            })
+        </script> -->
+  <script>
+    $(function () {
+
+      $(document).on('click', '.book-pass', function (e) {
+        e.preventDefault();
+        const local = window.sessionStorage.getItem('books');
+        const books = local ? JSON.parse(local) : [];
+
+        let namebook = $(this).data('namebook');
+        let prixbook = $(this).data('prixbook');
+        let quantite = 1
+
+
+        const bookFound = books.find(book => book.namebook === namebook)
+        if (bookFound) {
+          bookFound.quantite += 1;
+          let subtotal = bookFound.prixbook * bookFound.quantite;
+        }
+        else {
+          let newbook = { namebook: namebook, prixbook: prixbook, quantite: quantite };
+          books.push(newbook);
+        }
+        window.sessionStorage.setItem('books', JSON.stringify(books));
+        window.location.href = "cartLondon.html";
+      })
+
+    })
+
+
+  </script>
+
+  <!-- <script>
+    $(function () {
+
+
+      const local = window.sessionStorage.getItem('books');
+      let books = local ? JSON.parse(local) : [];
+
+      let subTotal = 0;
+
+      books.map((book, i) => {
+        const divModal = `
+      <div class="content-2 conte">
+        <div class="" style="width:22%;">
+          <img src="asset/img/logo.png" style="width:5vw;"/>
+        </div>
+        <div class="" style="width:36%">
+            <span class="nom" style="text-align:
+                start!important;">Tickets London - ${book.namebook}</span>
+        </div>
+        <div class="prix" style="width:12%">${book.prixbook}SGD</div>
+        <div class="" style="width:12%">
+            <div class="" style="align-items:
+                center;height: 3vw;justify-content:
+                space-between;display: flex; flex-direction:
+                row;border: 1px solid white;width: 100%; padding:0 8%; align-items: center;">
+                <img src="asset/img/moins.png"alt=""
+                    class="img-tab btn-minus" style="width: 0.4rem" data-indexboo=${i} style="cursor:pointer" >
+                <p class="pt-3 quantity" style="font-size: 1vw;">${book.quantite}</p>
+                <img src="asset/img/plus.png" alt=""
+                    class="img-tab btn-plus" style="width: 0.4rem" data-indexbook=${i} style="cursor:pointer" >
+            </div>
+        </div>
+        <div class="price" style="width:15%;">${book.prixbook * book.quantite}SGD</div>
+      </div>`
+        subTotal = subTotal + (parseInt(book.prixbook * book.quantite))
+        total = parseInt($('.tva').text().replace('$', '')) + subTotal;
+
+        $('.content-modal').append(divModal);
+        if (i === books.length - 1) {
+          $('.subT').text(subTotal + "SGD")
+          $('.total').text(total + "SGD")
+        }
+      })
+
+      $(document).on('click', '.btn-plus', function () {
+        const btnActif = $(this)
+        const indexbook = btnActif.data('indexbook')
+        let quantite = btnActif.siblings('p')
+        let sub = 0;
+        let total = 0;
+        quantite.text(parseInt(quantite.text()) + 1)
+
+        books = books.map((book, i) => {
+          if (i == indexbook) {
+            book.quantite += 1
+            $(this).parent().parent().siblings('.price').text(book.quantite * book.prixbook + "SGD")
+          }
+          sub += parseInt(book.quantite * book.prixbook)
+          total = parseInt($('.tva').text().replace('$', '')) + sub
+          return book
+        })
+        $('.subT').text(sub + "SGD");
+        $('.total').text(total + "SGD");
+        window.sessionStorage.setItem('books', JSON.stringify(books));
+
+      });
+
+      $(document).on('click', '.btn-minus', function () {
+        const btnMoins = $(this)
+        const indexboo = btnMoins.data('indexboo')
+        let quantite = btnMoins.siblings('p')
+        let sub = 0;
+        if (parseInt(quantite.text()) - 1 > 0) {
+          quantite.text(parseInt(quantite.text()) - 1)
+        }
+
+        books = books.map((book, i) => {
+          if (i == indexboo) {
+            if (book.quantite - 1 > 0) {
+              book.quantite -= 1
+            }
+            $(this).parent().parent().siblings('.price').text(book.quantite * book.prixbook)
+          }
+          sub -= parseInt(book.quantite * book.prixbook)
+          total = parseInt($('.tva').text().replace('$', '')) - sub
+
+          return book
+        })
+        $('.subT').text(-sub + "SGD");
+        $('.total').text(total + "SGD");
+        window.sessionStorage.setItem('books', JSON.stringify(books));
+      });
+
+      $(".continue").click(function () {
+        var lien = "pass_London.html";
+        window.location.href = lien;
+      });
+
+      $(document).on('click', '.supp ', function () {
+        $('.conte').remove();
+        $('.subT').remove();
+        $('.total').remove();
+        books.splice(0, books.length);
+        window.sessionStorage.setItem('books', JSON.stringify(books));
+        window.location.href = "pass_London.html";
+      })
+    });
+  </script> -->
+</body>
+
+</html>

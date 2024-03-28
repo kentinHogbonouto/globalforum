@@ -1,0 +1,18 @@
+{
+    "name": "jivarosgbeto/london",
+    "autoload": {
+        "psr-4": {
+            "Jivarosgbeto\\London\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "jivaros",
+            "email": "jivarosgbeto@gmail.com"
+        }
+    ],
+    "require": {
+        "stripe/stripe-php": "^10.12",
+        "phpmailer/phpmailer": "^6.8"
+    }
+}

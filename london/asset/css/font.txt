@@ -1,0 +1,85 @@
+
+@font-face {
+  
+    font-family: 'open';
+    src: url('../police/open.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url('../police/OpenSans-Bold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans-BoldItalic';
+    src: url('../police/OpenSans-LightItalic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'OpenSans-ExtraBoldItalic';
+    src: url('../police/OpenSans-ExtraBoldItalic.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+    
+@font-face {
+    font-family: 'OpenSans-ExtraBold';
+    src: url('../police/.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}   
+  
+@font-face {
+    font-family: 'OpenSans-Italic';
+    src: url('../police/OpenSans-Italic.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}   
+  
+@font-face {
+    font-family: 'OpenSans-Light';
+    src: url('../police/OpenSans-Light.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}   
+    
+@font-face {
+    font-family: 'OpenSans-LightItalic';
+    src: url('../police/OpenSans-LightItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} 
+  
+
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url('../police/OpenSans-Regular.ttf') format('ttf'),
+    font-weight: normal;
+    font-style: normal;
+}   
+    
+@font-face {
+    font-family: 'OpenSans-Semibold';
+    src: url('../police/OpenSans-Semibold.ttf') format('ttf'),
+    font-weight: normal;
+    font-style: normal;
+}   
+    
+@font-face {
+    font-family: 'OpenSans-SemiboldItalic';
+    src: url('../police/OpenSans-SemiboldItalic.ttf') format('ttf'),
+    font-weight: normal;
+    font-style: normal;
+} 
+
+
+@font-face {
+    font-family: 'fkdisplay';
+    src: url('../police/fkdisplay.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} 

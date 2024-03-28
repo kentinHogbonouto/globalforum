@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Breakfast Briefings</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="asset/css/style.css" />
+    <link rel="stylesheet" href="asset/css/global.css" />
+    <!-- <link rel="stylesheet" href="asset/css/book.css"> -->
+    <link rel="stylesheet" href="asset/css/speaker2.css" />
+    <link rel="stylesheet" href="asset/css/agenda_modif.css" />
+    <link rel="stylesheet" href="asset/css/landscape.css" />
+    <link rel="stylesheet" href="asset/css/index.css" />
+    <link rel="stylesheet" href="asset/css/global.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script> -->
+    <script src="asset/js/jquery.slim.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script> -->
+    <script src="js/popper.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
+    <script src="asset/js/jquery.min.js"></script>
+    <!--==================== UNICONS ====================-->
+    <script src="asset/js/jquery3-6-0.min.js"></script>
+    <!-- javascript -->
+    <script src="asset/js/owl.carousel.js"></script>
+    <!-- ALPINEJS DATA -->
+    <script src="asset/js/data.js"></script>
+    <!-- ALPINEJS -->
+    <script src="asset/js/alpinejs.cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <!-- H E A D E R -->
+    <div class="container-custom header-1">
+      <div class="align-center" style="display: flex; flex-wrap: nowrap">
+        <div class="sect-menu" style="width: 42%">
+          <img
+            src="asset/img/menu-web.png"
+            class="menu-bugger"
+            id="click-menu"
+          />
+        </div>
+        <div class="sect-logo" style="width: 42%">
+          <a href="./index.html"><img src="asset/img/logo.png" /></a>
+        </div>
+        <div class="text-center sect-bouton" style="width: 16%">
+          <a href="book.html"
+            ><button
+              class="col-12 btn-custom btn-1"
+              style="margin-bottom: 8%; border: none"
+            >
+              <span class="text-button text-dark">BUY TICKETS</span>
+            </button></a
+          >
+          <br />
+          <a href="sponsoring.html"
+            ><button class="col-12 btn-custom btn-2" style="border: none">
+              <span class="text-button1 text-dark">SPONSOR</span>
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- M E N U-->
+    <div
+      class="container-custom menu hide-menu"
+      style="
+        height: 100%;
+        overflow-x: hidden !important;
+        overflow-y: scroll !important;
+      "
+    >
+      <div class="align-center" style="display: flex; flex-wrap: nowrap">
+        <div class="sect-menu" style="width: 42%">
+          <img src="asset/img/fermer.png" class="hide-menu" />
+        </div>
+        <div class="sect-logo hide-menu" style="width: 42%">
+          <img src="asset/img/logo.png" />
+        </div>
+        <div class="text-center sect-bouton" style="width: 16%">
+          <a href="book.html"
+            ><button
+              class="col-12 btn-custom btn-1"
+              style="margin-bottom: 8%; border: none"
+            >
+              <span class="text-button text-dark">BUY TICKETS</span>
+            </button></a
+          >
+          <br />
+          <a href="sponsoring.html"
+            ><button class="col-12 btn-custom btn-2" style="border: none">
+              <span class="text-button1 text-dark">SPONSOR</span>
+            </button></a
+          >
+        </div>
+      </div>
+      <div class="justify-center mt-5 text-center text-menu">
+        <a href="index.html" class="hide-menu">
+          <h4>About</h4>
+        </a>
+        <br />
+        <a href="speaker.html" class="hide-menu">
+          <h4>Speakers</h4>
+        </a>
+        <br />
+        <a href="sectors.html" class="hide-menu">
+          <h4>Sectors</h4>
+        </a>
+        <br />
+        <a href="landscape.html" class="hide-menu">
+          <h4>Agenda</h4>
+        </a>
+        <br />
+        <!--<a href="agenda.html" class="hide-menu">
+               <h4>Agenda & Speaker</h4>
+            </a>-->
+
+        <a href="sponsoring.html" class="hide-menu">
+          <h4>Sponsoring</h4>
+        </a>
+        <br />
+        <a href="podcast.html" class="hide-menu">
+          <h4>Podcast</h4>
+        </a>
+        <br />
+        <a href="book.html" class="hide-menu">
+          <h4>Buy Tickets</h4>
+        </a>
+        <br />
+        <!-- <a href="speaker.html" class="hide-menu"><h4>Podcast</h4></a><br> -->
+        <a href="contact.html" class="hide-menu">
+          <h4>Contact</h4>
+        </a>
+        <br />
+      </div>
+    </div>
+    <!-- S O C I A L -->
+    <div id="social" class="mt-3 container-custom social-fixe vp-hidden v-show">
+      <div class="text-right align-center">
+        <img src="asset/img/linkedin.png" /><br />
+        <img src="asset/img/instagram.png" /><br />
+        <img src="asset/img/twitter.png" /><br />
+        <img src="asset/img/facebook.png" /><br />
+        <img src="asset/img/tiktok.png" />
+      </div>
+    </div>
+    <!-- B O D Y -->
+    <!-- <div class="mt-5 container-custom-2">
+         <h1 class="mb-5 text-left titre-speakers mtp-0 mbp-0" style="text-align: left !important; font-size: 4vw !important;">Agenda</h1>
+         </div> -->
+    <div class="container-custom">
+      <div class="my-5 content-sponsor">
+        <div style="flex-basis: 50%">
+          <h1
+            id="speaker-title"
+            class="mb-5 ml-2 title-index breakfast-main-title"
+            style="text-align: left !important; font-size: 4vw"
+          >
+            Summits, Programmes, and Podcast					
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="contianer-fluid bg-white">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2 class="text-black py-4 pl-3">
+            Upcoming Events and Programmes Calendar 2023-2024			
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid bg-white px-0 py-3">
+      <div class="row bg-black py-4">
+        <h2 class="mt-1 annual-conferences-title text-white pl-3">Annual Summits</h2>
+      </div>
+      <div class="row bg-black pb-5 annual-conferences-align">
+            <div class="col-lg-3 mb-4 list-item-card"> 
+              <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link">London - November 4-5, 2024</a>
+            </div>
+            <div class="col-lg-3 mb-4 list-item-card">
+              <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link">Paris - November 18-19, 2024</a>
+            </div>
+            <div class="col-lg-3 mb-4 list-item-card">
+              <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link">Singapore - December 2-2, 2024</a>
+            </div>
+            <div class="col-lg-3 list-item-card">
+              <a href="#" class="btn bg-white text-black rounded-0 py-3 w-item-link">New York - December 2-2, 2024</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid bg-white px-3 py-3">
+      <div class="row bg-white border-card-home-xl py-4">
+        <div class="col-lg-12">
+          <h2 class="mt-1 mb-5 text-black">Podcast</h2>
+          <div class="w-full d-flex justify-content-between px-md-5">
+            <a href="#" class="text-black">Subscribe to The Global Forum on Cities Podcast series</a>
+            <a href="./contact.html" class="btn text-white bg-black rounded-0 py-3">➜ Subscribe and Listen</a>
+          </div>
+        </div>
+      </div>
+      <div class="row py-5 justify-content-center">
+        <div class="col-1">
+          <img src="asset/img/Google_Podcasts_icon.svg" alt="" width="40px" height="40px">
+        </div>
+        <div class="col-1">
+          <img src="asset/img/Podcasts_(iOS).svg" alt="" width="40px" height="40px">
+        </div>
+        <div class="col-1">
+          <img src="./asset/img/480px-Antu_spotify.svg.png" alt="" width="40px" height="40px">
+        </div>
+        <div class="col-1">
+          <img src="asset/img/image.png" alt="" width="40px" height="40px">
+        </div>
+        <div class="col-1">
+          <img src="./asset/img/image(1).png" alt="" width="40px" height="40px" alt=""> 
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid bg-black px-0 py-3">
+      <h2 class="mt-1 mb-5 text-white pl-3 py-5">Industry Global Forums</h2>
+      <div class="row bg-black">
+        <div class="col-lg-12">
+          <div class="container-fluid">
+            <div class="row bg-black annual-conferences-align pt-4 padding-bottom-x">
+              <div class="col-lg-3 mb-4 list-item-card card-width"> 
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link title-font">Transport Infrastructure & logistics</a>
+              </div>
+              <div class="col-lg-3 mb-4 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link title-font">Environment, Energy & Utility</a>
+              </div>
+              <div class="col-lg-3 mb-4 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link title-font">Government & Public Policy & Social Impact</a>
+              </div>
+              <div class="col-lg-3 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black rounded-0 py-3 w-item-link title-font">Technology & Digital Revolution</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row bg-black">
+        <div class="col-lg-12">
+          <div class="container-fluid">
+            <div class="row bg-black annual-conferences-align padding-bottom-x">
+              <div class="col-lg-3 mb-4 list-item-card card-width"> 
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link title-font"> Financial Services & Insurance</a>
+              </div>
+              <div class="col-lg-3 mb-4 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link title-font">Healthcare, Pharmaceuticals & Biotechnology</a>
+              </div>
+              <div class="col-lg-3 mb-4 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link title-font">Construction & Real Estate</a>
+              </div>
+              <div class="col-lg-3 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black rounded-0 py-3 w-item-link title-font">Industrial Automation</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row bg-black">
+        <div class="col-lg-12">
+          <div class="container-fluid">
+            <div class="row bg-black annual-conferences-align padding-bottom-x">
+              <div class="col-lg-3 mb-4 list-item-card card-width"> 
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link title-font">Investment</a>
+              </div>
+              <div class="col-lg-3 mb-4 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link title-font">Consulting and Services</a>
+              </div>
+              <div class="col-lg-3 mb-4 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link title-font">Legal</a>
+              </div>
+              <div class="col-lg-3 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black rounded-0 py-3 w-item-link title-font">Food</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row bg-black">
+        <div class="col-lg-12">
+          <div class="container-fluid">
+            <div class="row bg-black annual-conferences-align padding-bottom-x">
+              <div class="col-lg-3 mb-4 list-item-card card-width"> 
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link title-font">Consumer Good</a>
+              </div>
+              <div class="col-lg-3 mb-4 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link title-font">Lifestyle & Luxury Good</a>
+              </div>
+              <div class="col-lg-3 mb-4 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link title-font">Education and Learning</a>
+              </div>
+              <div class="col-lg-3 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black rounded-0 py-3 w-item-link title-font">Creative Industries & Design</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row bg-black">
+        <div class="col-lg-12">
+          <div class="container-fluid">
+            <div class="row bg-black annual-conferences-align padding-bottom-x">
+              <div class="col-lg-3 mb-4 list-item-card card-width"> 
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link title-font">Media & Film </a>
+              </div>
+              <div class="col-lg-3 mb-4 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link title-font">Sports</a>
+              </div>
+              <div class="col-lg-3 mb-4 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link title-font">Women, Gender & Diversity</a>
+              </div>
+              <div class="col-lg-3 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black rounded-0 py-3 w-item-link title-font">Hospitality, Travel & Tourism</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container-fluid bg-black px-0 py-3">
+      <h2 class="mt-1 mb-5 text-white pl-3 py-5">Breakfast Briefing Sessions</h2>
+      <div class="row bg-black">
+        <div class="col-lg-12">
+          <div class="container-fluid">
+            <div class="row bg-black annual-conferences-align pt-4 padding-bottom-x">
+              <div class="col-lg-3 mb-4 list-item-card card-width"> 
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link title-font">Transport Infrastructure & logistics</a>
+              </div>
+              <div class="col-lg-3 mb-4 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link title-font">Environment, Energy & Utility</a>
+              </div>
+              <div class="col-lg-3 mb-4 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link title-font">Government & Public Policy & Social Impact</a>
+              </div>
+              <div class="col-lg-3 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black rounded-0 py-3 w-item-link title-font">Technology & Digital Revolution</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row bg-black">
+        <div class="col-lg-12">
+          <div class="container-fluid">
+            <div class="row bg-black annual-conferences-align padding-bottom-x">
+              <div class="col-lg-3 mb-4 list-item-card card-width"> 
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link title-font">Financial Services & Insurance</a>
+              </div>
+              <div class="col-lg-3 mb-4 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link title-font">Healthcare, Pharmaceuticals & Biotechnology</a>
+              </div>
+              <div class="col-lg-3 mb-4 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link title-font">Construction & Real Estate</a>
+              </div>
+              <div class="col-lg-3 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black rounded-0 py-3 w-item-link title-font">Industrial Automation</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row bg-black">
+        <div class="col-lg-12">
+          <div class="container-fluid">
+            <div class="row bg-black annual-conferences-align padding-bottom-x">
+              <div class="col-lg-3 mb-4 list-item-card card-width"> 
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link title-font">Investment</a>
+              </div>
+              <div class="col-lg-3 mb-4 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link title-font">Consulting and Services</a>
+              </div>
+              <div class="col-lg-3 mb-4 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link title-font">Legal</a>
+              </div>
+              <div class="col-lg-3 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black rounded-0 py-3 w-item-link" title-font>Food</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row bg-black">
+        <div class="col-lg-12">
+          <div class="container-fluid">
+            <div class="row bg-black annual-conferences-align padding-bottom-x">
+              <div class="col-lg-3 mb-4 list-item-card card-width"> 
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link title-font">Consumer Good</a>
+              </div>
+              <div class="col-lg-3 mb-4 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link title-font">Lifestyle & Luxury Good</a>
+              </div>
+              <div class="col-lg-3 mb-4 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link title-font">Education and Learning</a>
+              </div>
+              <div class="col-lg-3 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black rounded-0 py-3 w-item-link title-font">Creative Industries & Design</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row bg-black">
+        <div class="col-lg-12">
+          <div class="container-fluid">
+            <div class="row bg-black annual-conferences-align padding-bottom-x">
+              <div class="col-lg-3 mb-4 list-item-card card-width"> 
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link">Media & Film</a>
+              </div>
+              <div class="col-lg-3 mb-4 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link">Sports</a>
+              </div>
+              <div class="col-lg-3 mb-4 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black mr-3 rounded-0 py-3 w-item-link">Women, Gender & Diversity</a>
+              </div>
+              <div class="col-lg-3 list-item-card card-width">
+                <a href="#" class="btn bg-white text-black rounded-0 py-3 w-item-link">Hospitality, Travel & Tourism</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid bg-white px-md-5 py-3">
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button id="icon-container-three" class="accordion-button collapsed bg-white border-0 d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              <div class="icon-container mr-3 bg-white">
+                <div class="icon-three text-black">+</div>
+            </div>
+              <h2 class="text-black text-start accordion-title">For Annual Summits</h2>
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="row bg-white">
+              <div class="col-lg-12">
+                <div class="bg-black px-4">
+                  <ul class="pl-0"> 
+                    <li class="list-unstyled text-white mb-2">
+                      London - 
+                      <span class="color-list-item"> November 4-5, 2024</span>
+                    </li>
+                    <li class="list-unstyled text-white mb-2">
+                      Paris - 
+                      <span class="color-list-item">November 18-19, 2024</span>
+                    </li>
+                    <li class="list-unstyled text-white mb-2">Singapore - 
+                      <span class="color-list-item">December 2-3, 2024</span>
+                    </li>
+                    <li class="list-unstyled text-white mb-2">New York - 
+                      <span class="color-list-item">December 16-17, 2024</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header py-4" id="flush-headingOne">
+            <button id="icon-container-one" class="accordion-button collapsed bg-white border-0 d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              <div class="icon-container mr-3 bg-white">
+                <div class="icon-one text-black">+</div>
+              </div>
+              <h2 class="text-black text-start accordion-title">For Industry Global Forums</h2>
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="row bg-white">
+              <div class="col-lg-12">
+                <div class="bg-black py-4 px-4">
+                  <ul class="pl-0"> 
+                    <li class="list-unstyled text-white mb-2">
+                      Government, Public Policy & Social Impact; Women, Gender & Diversity; Education and Learning - 
+                      <span class="color-list-item">October 31, 2023</span>
+                    </li>
+                    <li class="list-unstyled text-white mb-2">
+                      Environment, Energy & Utility; Transport Infrastructure & logistics - 
+                      <span class="color-list-item">November 14, 2023</span>
+                    </li>
+                    <li class="list-unstyled text-white mb-2">Construction & Real Estate - 
+                      <span class="color-list-item">November 28, 2023</span>
+                    </li>
+                    <li class="list-unstyled text-white mb-2">Consulting and Services Legal - 
+                      <span class="color-list-item">December 12, 2023</span>
+                    </li>
+                    <li class="list-unstyled text-white mb-2">Financial Services & Insurance Investment - 
+                      <span class="color-list-item">January 9, 2024</span>
+                    </li>
+                    <li class="list-unstyled text-white mb-2">Technology Digital Revolution; Industrial Automation - 
+                      <span class="color-list-item">
+                        January 23, 2024
+                      </span>
+                    </li>
+                    <li class="list-unstyled text-white mb-2">Healthcare, Pharmaceuticals & Biotechnology - 
+                      <span class="color-list-item">February 6, 2024</span>
+                    </li>
+                    <li class="list-unstyled text-white mb-2">Lifestyle & Luxury Goods; Consumer Goods; Hospitality, Travel & Tourism - 
+                      <span class="color-list-item">February 20, 2024</span>
+                    </li>
+                    <li class="list-unstyled text-white mb-2">Food; Sports - 
+                      <span class="color-list-item">March 5, 2024</span>
+                    </li>
+                    <li class="list-unstyled text-white mb-2">Media & Film; Creative Industries & Design - 
+                      <span class="color-list-item">March 19, 2024</span>
+                    </li>
+                  </ul>
+                </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header py-4" id="flush-headingTwo">
+            <button id="icon-container-two" class="accordion-button collapsed bg-white border-0 d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              <div class="icon-container mr-3 bg-white">
+                <div class="icon-two text-black">+</div>
+              </div>
+              <h2 class="text-black text-start accordion-title">For Breakfast Briefings</h2>
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="row bg-white">
+              <div class="col-lg-12">
+                <div class="bg-black py-4 px-4">
+                  <ul class="pl-0"> 
+                    <li class="list-unstyled text-white mb-2">
+                      Government, Public Policy & Social Impact; Women, Gender & Diversity; Education and Learning - 
+                      <span class="color-list-item">October 31, 2023</span>
+                    </li>
+                    <li class="list-unstyled text-white mb-2">
+                      Environment, Energy & Utility; Transport Infrastructure & logistics - 
+                      <span class="color-list-item">November 14, 2023</span>
+                    </li>
+                    <li class="list-unstyled text-white mb-2">Construction & Real Estate - 
+                      <span class="color-list-item">November 28, 2023</span>
+                    </li>
+                    <li class="list-unstyled text-white mb-2">Consulting and Services Legal - 
+                      <span class="color-list-item">December 12, 2023</span>
+                    </li>
+                    <li class="list-unstyled text-white mb-2">Financial Services & Insurance Investment - 
+                      <span class="color-list-item">January 9, 2024</span>
+                    </li>
+                    <li class="list-unstyled text-white mb-2">Technology Digital Revolution; Industrial Automation - 
+                      <span class="color-list-item">
+                        January 23, 2024
+                      </span>
+                    </li>
+                    <li class="list-unstyled text-white mb-2">Healthcare, Pharmaceuticals & Biotechnology - 
+                      <span class="color-list-item">February 6, 2024</span>
+                    </li>
+                    <li class="list-unstyled text-white mb-2">Lifestyle & Luxury Goods; Consumer Goods; Hospitality, Travel & Tourism - 
+                      <span class="color-list-item">February 20, 2024</span>
+                    </li>
+                    <li class="list-unstyled text-white mb-2">Food; Sports - 
+                      <span class="color-list-item">March 5, 2024</span>
+                    </li>
+                    <li class="list-unstyled text-white mb-2">Media & Film; Creative Industries & Design - 
+                      <span class="color-list-item">March 19, 2024</span>
+                    </li>
+                  </ul>
+                </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="bg-white height-75"></div>
+    <!-- F O O T E R -->
+    <div class="container footer-1 footer1">
+      <hr class="footer-line" />
+      <div class="row">
+        <div class="sect-logo d-flex justify-content-center" style="width: 30%">
+          <img src="asset/img/logo.png" />
+        </div>
+        <div class="text-center sect-social footer-div0" style="width: 40%">
+          <p class="fs-01" style="font-size: 1.2vw">Connect with us</p>
+          <div class="footer-img">
+            <img src="asset/img/linkedin.png" />
+            <img src="asset/img/instagram.png" />
+            <img src="asset/img/twitter.png" />
+            <img src="asset/img/facebook.png" />
+            <img src="asset/img/tiktok.png" />
+          </div>
+        </div>
+        <div class="text-left footer-div1" style="width: 13%">
+          <a href="index.html" class="fs-07" style="font-size: 1.2vw">About</a
+          ><br class="br-footer" />
+          <a href="speaker.html" class="fs-07" style="font-size: 1.2vw"
+            >Speakers</a
+          ><br class="br-footer" />
+          <a href="sectors.html" class="fs-07" style="font-size: 1.2vw"
+            >Sectors</a
+          ><br class="br-footer" />
+          <!-- <a href="sectors.html" class="fs-07" style="font-size: 1.2vw;">Agenda & Speaker</a><br class="br-footer"> -->
+          <a href="landscape.html" class="fs-07" style="font-size: 1.2vw"
+            >Agenda</a
+          >
+        </div>
+        <div class="text-left footer-div2" style="width: 10%">
+          <a href="sponsoring.html" class="fs-07 ml" style="font-size: 1.2vw"
+            >Sponsoring</a
+          ><br class="br-footer" />
+          <a href="book.html" class="fs-07 ml" style="font-size: 1.2vw"
+            >Buy tickets</a
+          ><br class="br-footer" />
+        </div>
+        <div class="text-left footer-div3" style="width: 7%">
+          <a href="podcast.html" class="fs-07" style="font-size: 1.2vw"
+            >Podcast</a
+          >
+          <a href="contact.html" class="fs-07" style="font-size: 1.2vw"
+            >Contact</a
+          >
+        </div>
+      </div>
+
+      <div class="text-center">
+        <hr class="line col-1" />
+        <p class="fs-01" style="font-size: 1.2vw">
+          &copy;The Global Forum On Cities 2023 &copy;
+        </p>
+      </div>
+    </div>
+
+    <div class="container footer-1 footer2" style="display: none">
+      <div class="row">
+        <div class="mr-4 sect-logo" style="width: 30%">
+          <img src="asset/img/logo.png" />
+        </div>
+        <div class="text-left footer-div1" style="width: 13%">
+          <a href="index.html" class="fs-01" style="font-size: 1.2vw">About</a
+          ><br class="br-footer" />
+          <a href="speaker.html" class="fs-01" style="font-size: 1.2vw"
+            >Speakers</a
+          ><br class="br-footer" />
+          <a href="sectors.html" class="fs-01" style="font-size: 1.2vw"
+            >Sectors</a
+          ><br class="br-footer" />
+          <!-- <a href="sectors.html" class="fs-01" style="font-size: 1.2vw;">Agenda & Speaker</a><br class="br-footer"> -->
+          <a href="landscape.html" class="fs-01" style="font-size: 1.2vw"
+            >Agenda</a
+          >
+        </div>
+        <div class="text-left footer-div2" style="width: 10%">
+          <a href="sponsoring.html" class="fs-01" style="font-size: 1.2vw"
+            >Sponsoring</a
+          ><br class="br-footer" />
+          <a href="book.html" class="fs-01" style="font-size: 1.2vw"
+            >Buy tickets</a
+          ><br class="br-footer" />
+          <a href="podcast.html" class="fs-01" style="font-size: 1.2vw"
+            >Podcast</a
+          >
+        </div>
+        <div class="text-left footer-div3" style="width: 7%">
+          <a href="contact.html" class="fs-01" style="font-size: 1.2vw"
+            >Contact</a
+          >
+        </div>
+      </div>
+      <div class="mt-3 text-center sect-social footer-div0 mt-lg-0">
+        <p class="fs-01" style="font-size: 1.2vw">Connect with us</p>
+        <div class="footer-img">
+          <img src="asset/img/linkedin.png" />
+          <img src="asset/img/instagram.png" />
+          <img src="asset/img/twitter.png" />
+          <img src="asset/img/facebook.png" />
+          <img src="asset/img/tiktok.png" />
+        </div>
+      </div>
+
+      <div class="text-center">
+        <hr class="line col-1" />
+        <p class="fs-01" style="font-size: 1.2vw">
+          &copy; The Global Forum On Cities 2023 &copy;
+        </p>
+      </div>
+    </div>
+
+    <script src="asset/js/main.js"></script>
+    <script src="asset/js/social.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const iconContainerOne = document.getElementById("icon-container-one");
+      const iconContainerTwo = document.getElementById("icon-container-two");
+      const iconContainerThree = document.getElementById("icon-container-three");
+      const iconOne = document.querySelector(".icon-one");
+      const iconTwo = document.querySelector(".icon-two");
+      const iconThree = document.querySelector(".icon-three");
+
+      iconContainerOne.addEventListener("click", function () {
+        if (iconOne.textContent === "+") {
+          iconOne.textContent = "-";
+        } else {
+          iconOne.textContent = "+";
+        }
+      });
+
+      iconContainerTwo.addEventListener("click", function () {
+        if (iconTwo.textContent === "+") {
+          iconTwo.textContent = "-";
+        } else {
+          iconTwo.textContent = "+";
+        }
+      });
+
+      iconContainerThree.addEventListener("click", function () {
+        if (iconThree.textContent === "+") {
+          iconThree.textContent = "-";
+        } else {
+          iconThree.textContent = "+";
+        }
+      });
+    </script>
+  </body>
+</html>

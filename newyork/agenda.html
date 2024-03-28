@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Agenda</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="asset/css/style.css">
+  <link rel="stylesheet" href="asset/css/global.css">
+  <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+  <link rel="stylesheet" href="asset/css/all.css">
+   <link rel="stylesheet" href="asset/css/index.css">
+  <link rel="stylesheet" href="asset/css/Agenda_modif.css">
+
+  <script src="asset/js/jquery.slim.min.js"></script>
+  <script src="asset/js/popper.min.js"></script> 
+  <script src="asset/js/bootstrap.bundle.min.js"></script>
+  <script src="asset/js/jquery3-6-0.min.js"></script>
+  <!-- javascript -->
+  <script src="asset/js/jquery.min.js"></script>
+  <script src="asset/js/owl.carousel.js"></script>
+    <style>
+      
+    </style>
+</head>
+<body class="d-none">
+
+<!-- H E A D E R -->
+
+  <div class="container-custom header-1"> 
+    <div class="align-center" style="display: flex; flex-wrap: nowrap;">
+      <div class="sect-menu " style="width: 42%;">
+        <img src="asset/img/menu-web.png" class="menu-bugger" id="click-menu">
+      </div>
+      <div class="sect-logo " style="width: 42%;">
+        <img src="asset/img/logo.png">
+      </div>
+      <div class="text-center sect-bouton" style="width: 16%;">
+        <a href="book.html"><button class="col-12 btn-custom btn-1" style="margin-bottom: 8%; border: none;"><span class="text-button text-dark">BUY TICKETS</span></button></a> <br>
+        <a href="sponsoring.html"><button class="col-12 btn-custom btn-2" style="border: none;"><span class="text-button1 text-dark">SPONSOR</span></button></a> 
+      </div>
+    </div>
+  </div>
+
+  <!-- M E N U-->
+
+  <div class="container-custom menu hide-menu"
+    style="height: 100%; overflow-x: hidden!important;overflow-y: scroll!important;">
+    <div class="align-center" style="display: flex; flex-wrap: nowrap;">
+      <div class="sect-menu" style="width: 42%;">
+        <img src="asset/img/fermer.png" class="hide-menu">
+      </div>
+      <div class="sect-logo hide-menu" style="width: 42%;">
+        <img src="asset/img/logo.png">
+      </div>
+      <div class="text-center sect-bouton" style="width: 16%;">
+        <a href="book.html"><button class="col-12 btn-custom btn-1" style="margin-bottom: 8%; border: none;"><span class="text-button text-dark">BUY TICKETS</span></button></a> <br>
+        <a href="sponsoring.html"><button class="col-12 btn-custom btn-2" style="border: none;"><span class="text-button1 text-dark">SPONSOR</span></button></a> 
+      </div>
+    </div>
+
+    <div class="justify-center mt-5 text-center text-menu">
+      <a href="index.html" class="hide-menu">
+        <h4>About</h4>
+      </a><br>
+      <a href="speaker.html" class="hide-menu">
+        <h4>Speakers</h4>
+      </a><br>
+      <a href="sectors.html" class="hide-menu">
+        <h4>Sectors</h4>
+      </a><br>
+      <a href="landscape.html" class="hide-menu">
+        <h4>Agenda</h4>
+      </a><br>
+      <!-- <a href="agenda.html" class="hide-menu">
+        <h4>Agenda & Speaker</h4>
+      </a><br> -->
+      <a href="sponsoring.html" class="hide-menu">
+        <h4>Sponsoring</h4>
+      </a><br>
+      <a href="podcast.html" class="hide-menu">
+        <h4>Podcast</h4>
+      </a><br>
+      <a href="book.html" class="hide-menu">
+        <h4>Buy Tickets</h4>
+      </a><br>
+      <!-- <a href="speaker.html" class="hide-menu"><h4>Podcasts</h4></a><br> -->
+      <a href="contact.html" class="hide-menu">
+        <h4>Contact</h4>
+      </a><br>
+    </div>
+  </div>
+
+  <!-- S O C I A L -->
+
+  <div id="social" class="mt-3 container-custom social-fixe vp-hidden v-show">
+    <div class="text-right align-center">
+      <img src="asset/img/linkedin.png"><br>
+      <img src="asset/img/instagram.png"><br>
+      <img src="asset/img/twitter.png"><br>
+      <img src="asset/img/facebook.png"><br>
+      <img src="asset/img/tiktok.png">
+    </div>
+  </div>
+<!-- B O D Y -->
+
+<div class="mt-5 container-custom-2">
+  <h1 class="pb-5 mt-5 mb-5 titre" style="text-align: left !important; font-size: 4vw !important;">Agenda & Speakers</h1>
+</div>
+
+
+<!-- Checkbox -->
+
+<div class="">
+  <div class="box">
+    <div class="row btx">
+
+      <!-- checkbox 1 -->
+      <div class="container-custom checkbox01"> 
+
+        <div class="check00">
+          <input type="checkbox" class="checking">
+          <label>All Sessions</label>
+        </div>
+
+        <div class="check00">
+          <input type="checkbox" class="checking">
+          <label>Day</label>
+        </div>
+
+        <div class="check00">
+          <input type="checkbox" class="checking">
+          <label>Day 2</label>
+        </div>
+
+        <div class="check02">Time
+            <select >
+              <option selected>07:00 AM</option>
+              <option >08:00 AM</option>
+              <option >09:00 AM</option>
+              <option >10:00 AM</option>
+              <option >11:00 AM</option>
+              <option >12:00 AM</option>
+              <option >01:00 PM</option>
+              <option >02:00 PM</option>
+              <option >03:00 PM</option>
+              <option >04:00 PM</option>
+              <option >05:00 PM</option>
+              <option >06:00 PM</option>
+              <option >07:00 PM</option>
+              <option >08:00 PM</option>
+              <option >09:00 PM</option>
+              <option >10:00 PM</option>
+              <option >11:00 PM</option>
+              <option >12:00 PM</option>
+            </select>
+        </div>
+
+        <div class="check02">Duration
+            <select>
+              <option selected>10min</option>
+              <option >20min</option>
+              <option >30min</option>
+              <option >40min</option>
+              <option >45min</option>
+              <option >60min</option>
+
+            </select>
+        </div>
+
+        <div class="check03">
+          <input onclick="myFunction()" type="text" class="form" placeholder="Sectors/Topics">
+          <button><img src="asset/img/search.svg"></button>
+        </div>
+      </div>
+
+      <!-- Chexbox 2 !-->  
+      <div class="container-custom" style="padding-top: 1% !important;">
+
+        <div class="checkbox02">
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Biotechnology</label>
+        </div>
+
+        <div class="check01 ">
+          <input type="checkbox" class="checking">
+          <label>Construction</label>
+        </div>
+
+        <div class="check01 ">
+          <input type="checkbox" class="checking">
+          <label>Consulting & Serices</label>
+        </div>
+
+        <div class="check01 ">
+          <input type="checkbox" class="checking">
+          <label>Consumer Good</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Creative industries</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Design</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Digital Revolution</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Diversity</label>
+        </div>
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Education & Learning</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Environment</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Financial Services</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Food</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Gender</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Gouvernment</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Healthcare</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Hospitality</label>
+        </div>
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Industrial Automation</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Infratructure</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Insurance</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Investment</label>
+        </div>
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Legal</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Lifestyle & Luxury</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Logisticts</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Media & Film</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Pharmaceutials</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Public policy</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Real Estate</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Social impact</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Sport</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Technology</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Tourism</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Transport</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Travel</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Utility</label>
+        </div>
+
+        <div class="check01">
+          <input type="checkbox" class="checking">
+          <label>Women</label>
+        </div>
+
+      </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- boite -->
+
+<div class="container" style="margin-top: 5%; margin-bottom: 5%;">
+
+  <!-- box 1 -->
+  <div class="article01">
+    <img src="asset/img/fleche-noir.png" style="margin-right: 20px;width: 2vw;height: 1.8vw" class="">
+    
+    <div class="ligne01">  
+      <h4>TRANSPORT</h4>
+      <span>/</span>
+      <p>Logistics and Supply Chan</p>
+      <span>/</span>
+      <p><img src="asset/img/calendar.png"> </p>
+      <span>/</span>
+      <p><img src="asset/img/clock.png" style="transform: rotate(140deg);"> 07:00 AM</p>
+      <span>/</span>
+      <p><img src="asset/img/historique.png"> 60min</p>
+    </div>
+  </div>
+
+  <div class="article2">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="" style="width: 20%">
+          <div class="title">
+            <h6>Title :</h6>
+          <p>Gouvernement Investment strategies:<br>
+            The Importance of Transport to Economic Growth
+          </p>
+          </div>
+        </div>
+        <div class="card-white">
+          <div class="card01">
+            <div class="name-image">
+              <img src="asset/img/s-1.png">
+              <h5>Rikesh <br/>Shah</h5>
+            </div>
+              <p>Head of Commercial <br/> Innovation</p>
+              <h4>Transport <br/>for London</h4>
+          </div>
+        </div>
+        <div class="card-white">
+          <div class="card01">
+            <div class="name-image">
+              <img src="asset/img/Ecatarina-ok.png">
+              <h5>Ecatarina<br/> Harling</h5>
+            </div>
+              <p>Associate<br/> Director</p>
+              <h4>European <br/>Bank</h4>
+          </div>
+        </div>
+        <div class="card-white">
+          <div class="card01">
+            <div class="name-image">
+              <img src="asset/img/Emmanuel-ok.png">
+              <h5>Emmanuel<br/> Dossou-Yovo</h5>
+            </div>
+              <p>Founder & <br/>Managing Director</p>
+              <h4>Things <br/>Growth</h4>
+          </div>
+        </div>
+        <div class="card-white">
+          <div class="card01">
+            <div class="name-image">
+              <img src="asset/img/Jonathon-Spanos-ok.png">
+              <h5>Jonathon <br/>Spanos</h5>
+            </div>
+              <p>Head of Commercial<br/> & Innovation</p>
+              <h4>Virgin <br/>StartUp</h4>
+          </div>
+        </div>
+        <div class="card-white">
+          <div class="card01">
+            <div class="name-image">
+              <img src="asset/img/Rikesh-ok.png">
+              <h5>Edd <br/>Atcheson</h5>
+            </div>
+              <p>Principal of <br/>Experience Innovation</p>
+              <h4>Adobe</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- box 2 -->
+  <div class="article01">
+    <img src="asset/img/fleche-noir.png" style="margin-right: 20px;width: 2vw;height: 1.8vw" class="">
+
+    <div class="ligne01">  
+      <h4>TECHNOLOGY</h4>
+      <span>/</span>
+      <p>Information and supply Chain</p>
+      <span>/</span>
+      <p><img src="asset/img/calendar.png"> Day 1</p>
+      <span>/</span>
+      <p><img src="asset/img/clock.png" style="transform: rotate(140deg);"> 08:00 AM</p>
+      <span>/</span>
+      <p><img src="asset/img/historique.png"> 30min</p>
+    </div>
+  </div>
+
+  <div class="article2">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="" style="width: 20%;">
+          <div class="title">
+            <h6>Title :</h6>
+          <p>Gouvernement Investment strategies:<br>
+            The Importance of Transport to Economic Growth
+          </p>
+          </div>
+        </div>
+        <div class="card-white">
+          <div class="card01">
+            <div class="name-image">
+              <img src="asset/img/Rikesh-ok-1.png">
+              <h5>Marc<br/> Potton</h5>
+            </div>
+              <p>Innovation <br/>Development Manager</p>
+              <h4 style="padding-top: 10px !important">BT</h4>
+          </div>
+        </div>
+        <div class="card-white">
+          <div class="card01">
+            <div class="name-image">
+              <img src="asset/img/Ecatarina-ok-1.png">
+              <h5>Marc <br/>Massar</h5>
+            </div>
+              <p>Head of Product <br/>Strategy</p>
+              <h4>Worldpay</h4>
+          </div>
+        </div>
+        <div class="card-white">
+          <div class="card01">
+            <div class="name-image">
+              <img src="asset/img/Emmanuel-ok-1.png">
+              <h5>Jean-Charles<br/> Seghers</h5>
+            </div>
+              <p>Head of Climate<br/> & Pathways</p>
+              <h4>The Climate <br/>Group</h4>
+          </div>
+        </div>
+        <div class="card-white">
+          <div class="card01">
+            <div class="name-image">
+              <img src="asset/img/Jonathon-Spanos-ok-1.png">
+              <h5>Pedro Rente<br/> Lourenço</h5>
+            </div>
+              <p>Co-Founder</p>
+              <h4>Spike.ai</h4>
+          </div>
+        </div>
+        <div class="card-white">
+          <div class="card01">
+            <div class="name-image">
+              <img src="asset/img/Rikesh-ok-2.png">
+              <h5>Joel <br/>Huang</h5>
+            </div>
+              <p>Associate <br/>Director</p>
+              <h4>Publicis <br/>sapient</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- box 3 -->
+  <div class="article01">
+    <img src="asset/img/fleche-noir.png" style="margin-right: 20px;width: 2vw;height: 1.8vw" class="">
+    <div class="ligne01">  
+      <h4>CREATIVE</h4>
+      <span>/</span>
+      <p>Design</p>
+      <span>/</span>
+      <p><img src="asset/img/calendar.png"> Day 1</p>
+      <span>/</span>
+      <p><img src="asset/img/clock.png" style="transform: rotate(140deg);"> 10:00 AM</p>
+      <span>/</span>
+      <p><img src="asset/img/historique.png"> 60min</p>
+    </div>
+  </div>
+
+  <div class="article2">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="" style="width: 20%">
+          <div class="title">
+            <h6>Title :</h6>
+          <p>Gouvernement Investment strategies:<br>
+            The Importance of Transport to Economic Growth
+          </p>
+          </div>
+        </div>
+        <div class="card-white">
+          <div class="card01">
+            <div class="name-image">
+              <img src="asset/img/Rikesh-ok-3.png">
+              <h5>Ashish <br/>Saxena</h5>
+            </div>
+              <p>Head of Digital<br/> Transformation</p>
+              <h4>Cognizant</h4>
+          </div>
+        </div>
+        <div class="card-white">
+          <div class="card01">
+            <div class="name-image">
+              <img src="asset/img/Ecatarina-ok-2.png">
+              <h5>Noemi De <br/>Heviamendez</h5>
+            </div>
+              <p>Lead Telecoms<br/> Consultant</p>
+              <h4>CG</h4>
+          </div>
+        </div>
+        <div class="card-white">
+          <div class="card01">
+            <div class="name-image">
+              <img src="asset/img/Emmanuel-ok-2.png">
+              <h5>Jeff <br/>Peel</h5>
+            </div>
+              <p>Founder &<br/> Managing Director</p>
+              <h4>Quadriga <br/>Consulting</h4>
+          </div>
+        </div>
+        <div class="card-white">
+          <div class="card01">
+            <div class="name-image">
+              <img src="asset/img/Jonathon-Spanos-ok-2.png">
+              <h5>Gavin<br/> Jones</h5>
+            </div>
+              <p>Founder &<br/> Managing Director</p>
+              <h4>Gavin Jones<br/> Consulting</h4>
+          </div>
+        </div>
+        <div class="card-white">
+          <div class="card01">
+            <div class="name-image">
+              <img src="asset/img/Rikesh-ok-4.png">
+              <h5>Stamatoula<br/> Matsoukis</h5>
+            </div>
+              <p>Director &<br/> Founder</p>
+              <h4>Euclides Risk<br/> Solutions</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- box 3 -->
+  <div class="article01">
+    <img src="asset/img/fleche-noir.png" style="margin-right: 20px;width: 2vw;height: 1.8vw"  class="">
+    <div class="ligne01">  
+      <h4>SOCIAL IMPACT</h4>
+      <span>/</span>
+      <p>Design</p>
+      <span>/</span>
+      <p><img src="asset/img/calendar.png"> Day 1</p>
+      <span>/</span>
+      <p><img src="asset/img/clock.png" style="transform: rotate(140deg);"> 07:00 AM</p>
+      <span>/</span>
+      <p><img src="asset/img/historique.png"> 15min</p>
+    </div>
+  </div>
+
+  <div class="article2">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="" style="width: 20%;">
+          <div class="title">
+            <h6>Title :</h6>
+          <p>Gouvernement Investment strategies:<br>
+            The Importance of Transport to Economic Growth
+          </p>
+          </div>
+        </div>
+        <div class="card-white">
+          <div class="card01">
+            <div class="name-image">
+              <img src="asset/img/Rikesh-ok-6.png">
+              <h5>Tauni <br/>Lanier</h5>
+            </div>
+              <p>Managing <br/>Director</p>
+              <h4>Eco <br/>Capital</h4>
+          </div>
+        </div>
+        <div class="card-white">
+          <div class="card01">
+            <div class="name-image">
+              <img src="asset/img/Ecatarina-ok-3.png">
+              <h5>Mark<br/> Field</h5>
+            </div>
+              <p>Founder</p>
+              <h4>Grow<br/> Inspires</h4>
+          </div>
+        </div>
+        <div class="card-white">
+          <div class="card01">
+            <div class="name-image">
+              <img src="asset/img/Emmanuel-ok-3.png">
+              <h5>Gavin<br/> Jackson</h5>
+            </div>
+              <p>Co-Founder &<br/> Director</p>
+              <h4>4-22<br/> Foundation</h4>
+          </div>
+        </div>
+        <div class="card-white">
+          <div class="card01">
+            <div class="name-image">
+              <img src="asset/img/Jonathon-Spanos-ok-3.png">
+              <h5>Nick<br/> Murray</h5>
+            </div>
+              <p>Marketing & <br/>Partnership Lead</p>
+              <h4>AAI<br/> Employability</h4>
+          </div>
+        </div>
+        <div class="card-white">
+          <div class="card01">
+            <div class="name-image">
+              <img src="asset/img/Rikesh-ok-5.png">
+              <h5>Hugh <br/>Chatfield</h5>
+            </div>
+              <p>Head Of<br/> Growth</p>
+              <h4>Generation</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  <div class="height-75"></div>
+ <div class="py-5 pb-5 bg-white align-center container-custom" style="display: flex; flex-wrap: wrap;">
+      <div class="" style="width: 30%;">
+        <h2 class="title-citie black" style="font-size: 3.5vw !important;">Cities Notes</h2>
+      </div>
+      <div class="" style="width:30%;">
+        <h4 class="black" style="font-size: 1.7vw !important; text-align: left !important;">Subscribe to our quarterly <br> newsletter</h4>
+      </div>
+      <div class="" style="width: 25%;">
+        <form style="display: flex;flex-direction: row;">
+          <input type="email" name="email" placeholder=" Your Email" class="input-email">
+          <button class="bg-white border-0" style="border-bottom: 2px solid black!important;outline: none;">
+            <img src="asset/img/fleche-noir-droite.png" alt="" style="width: 1.8vw;height: auto;object-fit: contain;">
+          </button>
+        </form>
+      </div>
+  </div>
+  <div class="height-75"></div>
+
+  
+  <!-- F O O T E R -->
+
+  <div class="container footer-1 footer1">
+    <hr class="footer-line">
+    <div class="row">
+      <div class="sect-logo d-flex justify-content-center" style="width:30%;">
+        <img src="asset/img/logo.png">
+      </div>
+      <div class="text-center sect-social footer-div0" style="width:40%;">
+        <p class="fs-01" style="font-size: 1.2vw;">Connect with us</p>
+        <div class="footer-img">
+          <img src="asset/img/linkedin.png">
+          <img src="asset/img/instagram.png">
+          <img src="asset/img/twitter.png">
+          <img src="asset/img/facebook.png">
+          <img src="asset/img/tiktok.png">
+        </div>
+      </div>
+      <div class="text-left footer-div1" style="width:13%;">
+        <a href="index.html" class="fs-07" style="font-size: 1.2vw;">About</a><br class="br-footer">
+        <a href="speaker.html" class="fs-07" style="font-size: 1.2vw;">Speakers</a><br class="br-footer">
+        <a href="sectors.html" class="fs-07" style="font-size: 1.2vw;">Sector</a><br class="br-footer">
+        <!-- <a href="sectors.html" class="fs-07" style="font-size: 1.2vw;">Agenda & Speaker</a><br class="br-footer"> -->
+        <a href="landscape.html" class="fs-07" style="font-size: 1.2vw;">Agenda</a>
+      </div>
+      <div class="text-left footer-div2" style="width:10%;">
+        <a href="sponsoring.html" class="fs-07" style="font-size: 1.2vw;">Sponsoring</a><br class="br-footer">
+        <a href="book.html" class="fs-07" style="font-size: 1.2vw;">Buy tickets</a><br class="br-footer">
+        
+      </div>
+      <div class="text-left footer-div3" style="width:7%;">
+        <a href="podcast.html" class="fs-07" style="font-size: 1.2vw;">Podcasts</a>
+        <a href="contact.html" class="fs-07" style="font-size: 1.2vw;">Contact</a>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <hr class="line col-1">
+      <p class="fs-01" style="font-size: 1.2vw;"> &copy;The Global Forum On Cities 2023 &copy;</p>
+    </div>
+  </div>
+
+  <div class="container footer-1 footer2" style="display: none;">
+    <div class="row">
+      <div class="mr-4 sect-logo" style="width:30%;">
+        <img src="asset/img/logo.png">
+      </div>
+      <div class="text-left footer-div1" style="width:13%;">
+        <a href="index.html" class="fs-01" style="font-size: 1.2vw;">About</a><br class="br-footer">
+        <a href="speaker.html" class="fs-01" style="font-size: 1.2vw;">Speakers</a><br class="br-footer">
+        <a href="sectors.html" class="fs-01" style="font-size: 1.2vw;">Sector</a><br class="br-footer">
+        <!-- <a href="sectors.html" class="fs-01" style="font-size: 1.2vw;">Agenda & Speaker</a><br class="br-footer"> -->
+        <a href="landscape.html" class="fs-01" style="font-size: 1.2vw;">Agenda</a>
+      </div>
+      <div class="text-left footer-div2" style="width:10%;">
+        <a href="sponsoring.html" class="fs-01" style="font-size: 1.2vw;">Sponsoring</a><br class="br-footer">
+        <a href="book.html" class="fs-01" style="font-size: 1.2vw;">Buy tickets</a><br class="br-footer">
+        <a href="podcast.html" class="fs-01" style="font-size: 1.2vw;">Podcasts</a>
+      </div>
+      <div class="text-left footer-div3" style="width:7%;">
+        <a href="contact.html" class="fs-01" style="font-size: 1.2vw;">Contact</a>
+      </div>
+    </div>
+    <div class="mt-3 text-center sect-social footer-div0 mt-lg-0">
+      <p class="fs-01" style="font-size: 1.2vw;">Connect with us</p>
+      <div class="footer-img">
+        <img src="asset/img/linkedin.png">
+        <img src="asset/img/instagram.png">
+        <img src="asset/img/twitter.png">
+        <img src="asset/img/facebook.png">
+        <img src="asset/img/tiktok.png">
+      </div>
+    </div>
+
+    <div class="text-center">
+      <hr class="line col-1">
+      <p class="fs-01" style="font-size: 1.2vw;">&copy; The Global Forum On Cities 2023 &copy;</p>
+    </div>
+  </div>
+
+    <script src="asset/js/main.js"></script>
+    <script src="asset/js/social.js"></script>
+</body>
+</html>
